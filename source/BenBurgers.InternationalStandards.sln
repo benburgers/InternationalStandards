@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISO", "ISO", "{E6925893-4731-470E-9A4F-FB5FA15B7A20}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso", "BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj", "{806667CD-EC34-494F-8DBF-6B6E6B22D0E6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{D2D83C90-8403-4AF5-9305-28787E48E6B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E9DF2EF3-51FE-48D4-AAAF-ABDD67CBF565}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,18 +12,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E9
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.Json", "BenBurgers.InternationalStandards.Iso.Json\BenBurgers.InternationalStandards.Iso.Json.csproj", "{C4B8A241-C411-46C1-8851-B25A63A8ABC5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenBurgers.InternationalStandards.Iso.Json.Tests", "BenBurgers.InternationalStandards.Iso.Json.Tests\BenBurgers.InternationalStandards.Iso.Json.Tests.csproj", "{C5A50719-2EEF-4E61-A5A2-43953B309995}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenBurgers.InternationalStandards.Iso.Tests", "BenBurgers.InternationalStandards.Iso.Tests\BenBurgers.InternationalStandards.Iso.Tests.csproj", "{2B05224C-623F-436C-8F72-DDBBC5178B45}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{D2D83C90-8403-4AF5-9305-28787E48E6B9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{63F64171-CF55-47F5-8E7A-5FAAA4D13DB9}"
 	ProjectSection(SolutionItems) = preProject
 		..\.github\workflows\BuildTest.yml = ..\.github\workflows\BuildTest.yml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISO", "ISO", "{E6925893-4731-470E-9A4F-FB5FA15B7A20}"
+	ProjectSection(SolutionItems) = preProject
+		ISO\README.md = ISO\README.md
+		ISO\ReleaseNotes.txt = ISO\ReleaseNotes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DE764999-B7F5-40F3-8092-BCF48DE59AE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{55BC6EE8-B2BA-45E9-A23C-5548AF8669E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso", "ISO\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj", "{806667CD-EC34-494F-8DBF-6B6E6B22D0E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.Tests", "ISO\BenBurgers.InternationalStandards.Iso.Tests\BenBurgers.InternationalStandards.Iso.Tests.csproj", "{2B05224C-623F-436C-8F72-DDBBC5178B45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.IO", "ISO\BenBurgers.InternationalStandards.Iso.IO\BenBurgers.InternationalStandards.Iso.IO.csproj", "{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.IO.Tests", "ISO\BenBurgers.InternationalStandards.Iso.IO.Tests\BenBurgers.InternationalStandards.Iso.IO.Tests.csproj", "{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.Json", "ISO\BenBurgers.InternationalStandards.Iso.Json\BenBurgers.InternationalStandards.Iso.Json.csproj", "{C4B8A241-C411-46C1-8851-B25A63A8ABC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.Json.Tests", "ISO\BenBurgers.InternationalStandards.Iso.Json.Tests\BenBurgers.InternationalStandards.Iso.Json.Tests.csproj", "{C5A50719-2EEF-4E61-A5A2-43953B309995}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.CodeGenerator", "ISO\BenBurgers.InternationalStandards.Iso.CodeGenerator\BenBurgers.InternationalStandards.Iso.CodeGenerator.csproj", "{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +53,11 @@ Global
 		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Test|Any CPU.Build.0 = Test|Any CPU
 		{C4B8A241-C411-46C1-8851-B25A63A8ABC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4B8A241-C411-46C1-8851-B25A63A8ABC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B8A241-C411-46C1-8851-B25A63A8ABC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,22 +68,37 @@ Global
 		{C5A50719-2EEF-4E61-A5A2-43953B309995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5A50719-2EEF-4E61-A5A2-43953B309995}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{C5A50719-2EEF-4E61-A5A2-43953B309995}.Test|Any CPU.Build.0 = Test|Any CPU
-		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Test|Any CPU.ActiveCfg = Test|Any CPU
-		{2B05224C-623F-436C-8F72-DDBBC5178B45}.Test|Any CPU.Build.0 = Test|Any CPU
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2}.Test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
-		{C4B8A241-C411-46C1-8851-B25A63A8ABC5} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
-		{C5A50719-2EEF-4E61-A5A2-43953B309995} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
-		{2B05224C-623F-436C-8F72-DDBBC5178B45} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
 		{D2D83C90-8403-4AF5-9305-28787E48E6B9} = {E9DF2EF3-51FE-48D4-AAAF-ABDD67CBF565}
 		{63F64171-CF55-47F5-8E7A-5FAAA4D13DB9} = {D2D83C90-8403-4AF5-9305-28787E48E6B9}
+		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
+		{2B05224C-623F-436C-8F72-DDBBC5178B45} = {DE764999-B7F5-40F3-8092-BCF48DE59AE6}
+		{C4B8A241-C411-46C1-8851-B25A63A8ABC5} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
+		{C5A50719-2EEF-4E61-A5A2-43953B309995} = {DE764999-B7F5-40F3-8092-BCF48DE59AE6}
+		{FCB4CDC9-7BFE-4E5C-9C55-74D5F1EA082E} = {55BC6EE8-B2BA-45E9-A23C-5548AF8669E7}
+		{EC7AE40B-3823-4C08-9C0F-7115FD20EFBF} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
+		{DE764999-B7F5-40F3-8092-BCF48DE59AE6} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
+		{7A9CB7F8-8D50-441C-BF78-DEB584474FA2} = {DE764999-B7F5-40F3-8092-BCF48DE59AE6}
+		{55BC6EE8-B2BA-45E9-A23C-5548AF8669E7} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB9530E0-8BF2-47A8-BB25-EFFB4FEA889F}
