@@ -1,3 +1,6 @@
 .vs/
 bin/
 obj/
+*.Development.json
+*.Staging.json
+*.Production.json

@@ -1,0 +1,11 @@
+Version 0.2.0
+- ISO 639: Added ISO 639 language codes.
+- ISO 639/IO: Added ISO 639 Input/Output for importing Code Tables from authority.
+- ISO 639/CodeGenerator: Added Code Generator for generating the Iso639Code enum from imported data.
+- ISO 639/JSON: Added ISO 639 (de)serialization.
+- ISO 3166/JSON: Support for reading (in addition to writing) ISO 3166 numeric code as string.
+- Added support for .NET 7.0 .
+
+Version 0.1.0
+- ISO 3166: Added ISO 3166 country codes.
+- ISO 3166/JSON: Added ISO 3166 (de)serialization.
