@@ -5,7 +5,6 @@
 
 using BenBurgers.InternationalStandards.Iso.Iso639.Attributes;
 using BenBurgers.InternationalStandards.Iso.Iso639.Exceptions;
-using System.Diagnostics;
 
 namespace BenBurgers.InternationalStandards.Iso.Iso639;
 
@@ -118,14 +117,20 @@ public static class Iso639CodeExtensions
     /// <returns>
     /// The ISO 639-1 Alpha-2 code.
     /// </returns>
+    /// <exception cref="Iso639PartNotAssignedException">
+    /// An <see cref="Iso639PartNotAssignedException" /> is thrown if <paramref name="iso639Code" /> does not have a designation for ISO 639-1.
+    /// </exception>
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
     public static string ToPart1(this Iso639Code iso639Code, bool allowDeprecated = false)
     {
         var attributes = Iso639AttributesLookup[iso639Code];
+
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
+        if (!attributes.Iso639_1Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part1);
 
         var attribute =
             attributes
@@ -150,6 +155,9 @@ public static class Iso639CodeExtensions
     /// <returns>
     /// The ISO 639-2 Alpha-3 code.
     /// </returns>
+    /// <exception cref="Iso639PartNotAssignedException">
+    /// An <see cref="Iso639PartNotAssignedException" /> is thrown if <paramref name="iso639Code" /> does not have a designation for ISO 639-2T or ISO 639-2B.
+    /// </exception>
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
@@ -159,8 +167,11 @@ public static class Iso639CodeExtensions
         bool allowDeprecated = false)
     {
         var attributes = Iso639AttributesLookup[iso639Code];
+
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
+        if (!attributes.Iso639_2Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part2);
 
         var attribute =
             attributes
@@ -187,6 +198,9 @@ public static class Iso639CodeExtensions
     /// <returns>
     /// The ISO 639-3 Alpha-3 code for <paramref name="iso639Code" />.
     /// </returns>
+    /// <exception cref="Iso639PartNotAssignedException">
+    /// An <see cref="Iso639PartNotAssignedException" /> is thrown if <paramref name="iso639Code" /> does not have a designation for ISO 639-3.
+    /// </exception>
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
@@ -195,8 +209,11 @@ public static class Iso639CodeExtensions
         bool allowDeprecated = false)
     {
         var attributes = Iso639AttributesLookup[iso639Code];
+
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
+        if (!attributes.Iso639_3Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part3);
 
         var attribute =
             attributes
@@ -218,6 +235,9 @@ public static class Iso639CodeExtensions
     /// <returns>
     /// The <see cref="Iso639Code" />.
     /// </returns>
+    /// <exception cref="Iso639AlphaInvalidException">
+    /// An <see cref="Iso639AlphaInvalidException" /> is thrown if an invalid <paramref name="alpha" /> was specified.
+    /// </exception>
     /// <exception cref="Iso639CodeDeprecatedException">
     /// An <see cref="Iso639CodeDeprecatedException" /> is thrown if deprecated codes are not allowed and the current code is deprecated.
     /// </exception>
@@ -225,13 +245,16 @@ public static class Iso639CodeExtensions
         this string alpha,
         bool allowDeprecated = false)
     {
-        if (!Iso639AlphaLookup.TryGetValue(alpha, out var iso639Code))
+        if (alpha.Length is < 2 or > 3)
+            throw new Iso639AlphaInvalidException(alpha);
+
+        if (Iso639AlphaLookup.TryGetValue(alpha, out var iso639Code))
         {
             if (!allowDeprecated && Iso639AttributesLookup[iso639Code].ObsoleteAttribute is not null)
                 throw new Iso639CodeDeprecatedException(iso639Code);
             return iso639Code;
         }
-        // TODO Alpha invalid exception.
-        throw new Exception("TODO");
+
+        throw new Iso639AlphaInvalidException(alpha);
     }
 }

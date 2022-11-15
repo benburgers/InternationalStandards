@@ -30,7 +30,7 @@ public sealed class Iso3166NameMissingException : Iso3166Exception
         CultureInfo? cultureInfo)
         : base(GetExceptionMessage(iso3166Code, nameVariant, cultureInfo))
     {
-        this.Iso3166Code = Iso3166Code;
+        this.Iso3166Code = iso3166Code;
         this.NameVariant = nameVariant;
         this.CultureInfo = cultureInfo;
     }
@@ -57,8 +57,8 @@ public sealed class Iso3166NameMissingException : Iso3166Exception
     {
         var messageTemplate = nameVariant switch
         {
-            Iso3166NameVariant.Short => ExceptionMessages.Iso3166NameMissingShort,
-            Iso3166NameVariant.Long => ExceptionMessages.Iso3166NameMissingLong,
+            Iso3166NameVariant.Short => ExceptionMessages.NameMissingShort,
+            Iso3166NameVariant.Long => ExceptionMessages.NameMissingLong,
             _ => string.Empty
         };
         return string.Format(messageTemplate, iso3166Code, cultureInfo);

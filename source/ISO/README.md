@@ -28,6 +28,7 @@ The currently supported ISO standards are:
 | ---------------------------- | ------------------- |
 | ISO 639                      | Language codes      |
 | ISO 3166                     | Country codes       |
+| ISO 4217                     | Currency codes      |
 
 ### ISO 639
 
@@ -76,6 +77,24 @@ var nameLong = antarctica.GetName(Iso3166NameVariant.Long, cultureInfo); // "Ant
 
 var fromString2 = "AQ".ToIso3166(); // Iso3166Code.Antarctica
 var fromString3 = "ATA".ToIso3166(); // Iso3166Code.Antarctica
+```
+
+### ISO 4217
+
+The ISO 4217 standard defines currency codes. The list of currency codes may include EUR for Euro, or USD for US Dollar.
+
+The code can be expressed by an Alpha-3 three-letter code or a numeric code.
+
+#### Example
+```csharp
+using BenBurgers.InternationalStandards.Iso.Iso4217;
+
+var usDollar = Iso4217Code.USDollar;
+var alpha = usDollar.ToAlpha(); // "USD"
+var entities = string.Join(", ", usDollar.GetEntities()); // AMERICAN SAMOA, BONAIRE, SINT EUSTATIUS AND SABA, BRITISH INDIAN OCEAN TERRITORY (THE), ECUADOR, EL SALVADOR, GUAM, HAITI, MARSHALL ISLANDS (THE), MICRONESIA (FEDERATED STATES OF), NORTHERN MARIANA ISLANDS (THE), PALAU, PANAMA, PUERTO RICO, TIMOR-LESTE, TURKS AND CAICOS ISLANDS (THE), UNITED STATES MINOR OUTLYING ISLANDS (THE), UNITED STATES OF AMERICA (THE), VIRGIN ISLANDS (BRITISH), VIRGIN ISLANDS (U.S.)
+var referenceName = usDollar.GetReferenceName(); // US Dollar
+var minorUnits = usDollar.GetMinorUnits(); // 2
+var numeric = (int)usDollar; // 840
 ```
 
 ## BenBurgers.InternationalStandards.Iso.Json
@@ -136,6 +155,37 @@ writer.Flush();
 * The result will be:
 *
 * {"Antarctica":"AQ"}
+*/
+```
+
+### ISO 4217
+
+There are JSON Converters for ISO 4217 from and to the alpha-3 codes as well as the numeric code.
+The converters can be used directly or in the JSON serializer from `System.Text.Json`.
+
+#### Example
+
+```csharp
+using BenBurgers.InternationalStandards.Iso.Iso4217;
+using BenBurgers.InternationalStandards.Iso.Json.Iso4217.Alpha;
+using System.Text.Json;
+
+const Iso4217Code Value = Iso4217Code.Euro;
+var options = new Iso4217JsonConverterOptions();
+var jsonConverter = new Iso4217AlphaJsonConverter(options);
+using var stream = new MemoryStream();
+using var writer = new Utf8JsonWriter(stream);
+
+writer.WriteStartObject();
+writer.WritePropertyName("Currency");
+jsonConverter.Write(writer, Value, new JsonSerializerOptions());
+writer.WriteEndObject();
+writer.Flush();
+
+/*
+* The result will be:
+*
+* {"Currency":"EUR"}
 */
 ```
 

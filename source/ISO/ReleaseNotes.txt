@@ -1,10 +1,19 @@
+Version 0.3.0
+- ISO 639: Fixed bug; if an unassigned Part of ISO 639 was requested, an exception was thrown that said it was deprecated.
+- ISO 639: Implemented stub for conversion from string to ISO 639 code.
+- ISO 3166: Improved documentation.
+- ISO 4217: Added ISO 4217 currency codes.
+- ISO 4217/IO: Added ISO 4217 Input/Output for importing currency codes from authority.
+- ISO 4217/JSON: Added ISO 4217 (de)serialization.
+
+
 Version 0.2.0
 - ISO 639: Added ISO 639 language codes.
 - ISO 639/IO: Added ISO 639 Input/Output for importing Code Tables from authority.
-- ISO 639/CodeGenerator: Added Code Generator for generating the Iso639Code enum from imported data.
 - ISO 639/JSON: Added ISO 639 (de)serialization.
 - ISO 3166/JSON: Support for reading (in addition to writing) ISO 3166 numeric code as string.
 - Added support for .NET 7.0 .
+
 
 Version 0.1.0
 - ISO 3166: Added ISO 3166 country codes.

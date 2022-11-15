@@ -1,4 +1,9 @@
-﻿namespace BenBurgers.InternationalStandards.Iso.Iso639.Exceptions;
+﻿/*
+ * © 2022 Ben Burgers and contributors.
+ * This work is licensed by GNU General Public License version 3.
+ */
+
+namespace BenBurgers.InternationalStandards.Iso.Iso639.Exceptions;
 
 /// <summary>
 /// An exception that is thrown if an ISO 639 code is deprecated and deprecated codes are not allowed.
@@ -15,6 +20,6 @@ public sealed class Iso639CodeDeprecatedException : Iso639Exception
 
     private static string GetExceptionMessage(Iso639Code iso639Code)
     {
-        return string.Format(ExceptionMessages.Iso639CodeDeprecated, iso639Code);
+        return string.Format(ExceptionMessages.CodeDeprecated, iso639Code);
     }
 }

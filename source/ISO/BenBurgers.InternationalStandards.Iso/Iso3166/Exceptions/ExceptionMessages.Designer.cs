@@ -63,27 +63,27 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166.Exceptions {
         /// <summary>
         ///   Looks up a localized string similar to The provided Alpha code &apos;{0}&apos; for ISO 3166 is invalid..
         /// </summary>
-        internal static string Iso3166AlphaCodeInvalid {
+        internal static string AlphaInvalid {
             get {
-                return ResourceManager.GetString("Iso3166AlphaCodeInvalid", resourceCulture);
+                return ResourceManager.GetString("AlphaInvalid", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The long name for ISO 3166 &apos;{0}&apos; with culture &apos;{1}&apos; is missing..
         /// </summary>
-        internal static string Iso3166NameMissingLong {
+        internal static string NameMissingLong {
             get {
-                return ResourceManager.GetString("Iso3166NameMissingLong", resourceCulture);
+                return ResourceManager.GetString("NameMissingLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The short name for ISO 3166 &apos;{0}&apos; with culture &apos;{1}&apos; is missing..
         /// </summary>
-        internal static string Iso3166NameMissingShort {
+        internal static string NameMissingShort {
             get {
-                return ResourceManager.GetString("Iso3166NameMissingShort", resourceCulture);
+                return ResourceManager.GetString("NameMissingShort", resourceCulture);
             }
         }
     }

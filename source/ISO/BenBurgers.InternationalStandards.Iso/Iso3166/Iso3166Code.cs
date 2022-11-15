@@ -13,7 +13,7 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166;
 /// <remarks>
 /// <para>
 /// The <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166 Maintenance Agency</a> is the sole authority of ISO 3166 codes.
-/// Only they can issue ISO 3166 codes. This work is a derivation and enhancement and anything other than ISO 3166 is the responsibility of the respective copyright holders.
+/// Only they can designate ISO 3166 codes. This work is a derivation and enhancement and anything other than ISO 3166 is the responsibility of the respective copyright holders.
 /// </para>
 /// <para>
 /// If you notice any mistake in this work, please create a Pull Request or notify the repository owner or a contributor as soon as possible.
@@ -29,7 +29,11 @@ public enum Iso3166Code
     /// Afghanistan.
     /// </summary>
     /// <remarks>
-    /// 004, AF, AFG
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>004</description></item>
+    ///         <item><term>Alpha-2</term><description>AF</description></item>
+    ///         <item><term>Alpha-3</term><description>AFG</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AF", "AFG")]
     Afghanistan = 004,
@@ -38,7 +42,11 @@ public enum Iso3166Code
     /// Albania.
     /// </summary>
     /// <remarks>
-    /// 008, AL, ALB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>008</description></item>
+    ///         <item><term>Alpha-2</term><description>AL</description></item>
+    ///         <item><term>Alpha-3</term><description>ALB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AL", "ALB")]
     Albania = 008,
@@ -47,7 +55,11 @@ public enum Iso3166Code
     /// Algeria.
     /// </summary>
     /// <remarks>
-    /// 012, DZ, DZA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>012</description></item>
+    ///         <item><term>Alpha-2</term><description>DZ</description></item>
+    ///         <item><term>Alpha-3</term><description>DZA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DZ", "DZA")]
     Algeria = 012,
@@ -56,7 +68,11 @@ public enum Iso3166Code
     /// American Samoa.
     /// </summary>
     /// <remarks>
-    /// 016, AS, ASM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>016</description></item>
+    ///         <item><term>Alpha-2</term><description>AS</description></item>
+    ///         <item><term>Alpha-3</term><description>ASM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AS", "ASM")]
     AmericanSamoa = 016,
@@ -65,7 +81,11 @@ public enum Iso3166Code
     /// Andorra.
     /// </summary>
     /// <remarks>
-    /// 020, AD, AND
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>020</description></item>
+    ///         <item><term>Alpha-2</term><description>AD</description></item>
+    ///         <item><term>Alpha-3</term><description>AND</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AD", "AND")]
     Andorra = 020,
@@ -74,7 +94,11 @@ public enum Iso3166Code
     /// Angola.
     /// </summary>
     /// <remarks>
-    /// 024, AO, AGO
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>024</description></item>
+    ///         <item><term>Alpha-2</term><description>AO</description></item>
+    ///         <item><term>Alpha-3</term><description>AGO</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AO", "AGO")]
     Angola = 024,
@@ -83,7 +107,11 @@ public enum Iso3166Code
     /// Anguilla.
     /// </summary>
     /// <remarks>
-    /// 660, AI, AIA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>660</description></item>
+    ///         <item><term>Alpha-2</term><description>AI</description></item>
+    ///         <item><term>Alpha-3</term><description>AIA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AI", "AIA")]
     Anguilla = 660,
@@ -92,7 +120,11 @@ public enum Iso3166Code
     /// Antarctica.
     /// </summary>
     /// <remarks>
-    /// 010, AQ, ATA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>010</description></item>
+    ///         <item><term>Alpha-2</term><description>AQ</description></item>
+    ///         <item><term>Alpha-3</term><description>ATA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AQ", "ATA")]
     Antarctica = 010,
@@ -101,7 +133,11 @@ public enum Iso3166Code
     /// Antigua and Barbuda.
     /// </summary>
     /// <remarks>
-    /// 028, AG, ATG
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>028</description></item>
+    ///         <item><term>Alpha-2</term><description>AG</description></item>
+    ///         <item><term>Alpha-3</term><description>ATG</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AG", "ATG")]
     AntiguaAndBarbuda = 028,
@@ -110,7 +146,11 @@ public enum Iso3166Code
     /// Argentina.
     /// </summary>
     /// <remarks>
-    /// 032, AR, ARG
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>032</description></item>
+    ///         <item><term>Alpha-2</term><description>AR</description></item>
+    ///         <item><term>Alpha-3</term><description>ARG</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AR", "ARG")]
     Argentina = 032,
@@ -119,7 +159,11 @@ public enum Iso3166Code
     /// Armenia.
     /// </summary>
     /// <remarks>
-    /// 051, AM, ARM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>051</description></item>
+    ///         <item><term>Alpha-2</term><description>AM</description></item>
+    ///         <item><term>Alpha-3</term><description>ARM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AM", "ARM")]
     Armenia = 051,
@@ -128,7 +172,11 @@ public enum Iso3166Code
     /// Aruba.
     /// </summary>
     /// <remarks>
-    /// 533, AW, ABW
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>533</description></item>
+    ///         <item><term>Alpha-2</term><description>AW</description></item>
+    ///         <item><term>Alpha-3</term><description>ABW</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AW", "ABW")]
     Aruba = 533,
@@ -137,7 +185,11 @@ public enum Iso3166Code
     /// Australia.
     /// </summary>
     /// <remarks>
-    /// 036, AU, AUS
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>036</description></item>
+    ///         <item><term>Alpha-2</term><description>AU</description></item>
+    ///         <item><term>Alpha-3</term><description>AUS</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AU", "AUS")]
     Australia = 036,
@@ -146,7 +198,11 @@ public enum Iso3166Code
     /// Austria.
     /// </summary>
     /// <remarks>
-    /// 040, AT, AUT
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>040</description></item>
+    ///         <item><term>Alpha-2</term><description>AT</description></item>
+    ///         <item><term>Alpha-3</term><description>AUT</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AT", "AUT")]
     Austria = 040,
@@ -155,7 +211,11 @@ public enum Iso3166Code
     /// Azerbaijan.
     /// </summary>
     /// <remarks>
-    /// 031, AZ, AZE
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>031</description></item>
+    ///         <item><term>Alpha-2</term><description>AZ</description></item>
+    ///         <item><term>Alpha-3</term><description>AZE</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AZ", "AZE")]
     Azerbaijan = 031,
@@ -164,7 +224,11 @@ public enum Iso3166Code
     /// Bahamas (the).
     /// </summary>
     /// <remarks>
-    /// 044, BS, BHS
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>044</description></item>
+    ///         <item><term>Alpha-2</term><description>BS</description></item>
+    ///         <item><term>Alpha-3</term><description>BHS</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BS", "BHS")]
     Bahamas = 044,
@@ -173,7 +237,11 @@ public enum Iso3166Code
     /// Bahrain.
     /// </summary>
     /// <remarks>
-    /// 048, BH, BHR
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>048</description></item>
+    ///         <item><term>Alpha-2</term><description>BH</description></item>
+    ///         <item><term>Alpha-3</term><description>BHR</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BH", "BHR")]
     Bahrain = 048,
@@ -182,7 +250,11 @@ public enum Iso3166Code
     /// Bangladesh.
     /// </summary>
     /// <remarks>
-    /// 050, BD, BGD
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>050</description></item>
+    ///         <item><term>Alpha-2</term><description>BD</description></item>
+    ///         <item><term>Alpha-3</term><description>BGD</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BD", "BGD")]
     Bangladesh = 050,
@@ -191,7 +263,11 @@ public enum Iso3166Code
     /// Barbados.
     /// </summary>
     /// <remarks>
-    /// 052, BB, BRB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>052</description></item>
+    ///         <item><term>Alpha-2</term><description>BB</description></item>
+    ///         <item><term>Alpha-3</term><description>BRB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BB", "BRB")]
     Barbados = 052,
@@ -200,7 +276,11 @@ public enum Iso3166Code
     /// Belarus.
     /// </summary>
     /// <remarks>
-    /// 112, BY, BLR
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>112</description></item>
+    ///         <item><term>Alpha-2</term><description>BY</description></item>
+    ///         <item><term>Alpha-3</term><description>BLR</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BY", "BLR")]
     Belarus = 112,
@@ -209,7 +289,11 @@ public enum Iso3166Code
     /// Belgium.
     /// </summary>
     /// <remarks>
-    /// 056, BE, BEL
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>056</description></item>
+    ///         <item><term>Alpha-2</term><description>BE</description></item>
+    ///         <item><term>Alpha-3</term><description>BEL</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BE", "BEL")]
     Belgium = 056,
@@ -218,7 +302,11 @@ public enum Iso3166Code
     /// Belize.
     /// </summary>
     /// <remarks>
-    /// 084, BZ, BLZ
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>084</description></item>
+    ///         <item><term>Alpha-2</term><description>BZ</description></item>
+    ///         <item><term>Alpha-3</term><description>BLZ</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BZ", "BLZ")]
     Belize = 084,
@@ -227,7 +315,11 @@ public enum Iso3166Code
     /// Benin.
     /// </summary>
     /// <remarks>
-    /// 204, BJ, BEN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>204</description></item>
+    ///         <item><term>Alpha-2</term><description>BJ</description></item>
+    ///         <item><term>Alpha-3</term><description>BEN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BJ", "BEN")]
     Benin = 204,
@@ -236,7 +328,11 @@ public enum Iso3166Code
     /// Bermuda.
     /// </summary>
     /// <remarks>
-    /// 060, BM, BMU
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>060</description></item>
+    ///         <item><term>Alpha-2</term><description>BM</description></item>
+    ///         <item><term>Alpha-3</term><description>BMU</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BM", "BMU")]
     Bermuda = 060,
@@ -245,7 +341,11 @@ public enum Iso3166Code
     /// Åland Islands.
     /// </summary>
     /// <remarks>
-    /// 248, AX, ALA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>248</description></item>
+    ///         <item><term>Alpha-2</term><description>AX</description></item>
+    ///         <item><term>Alpha-3</term><description>ALA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("AX", "ALA")]
     ÅlandIslands = 248,
@@ -254,7 +354,11 @@ public enum Iso3166Code
     /// Bhutan.
     /// </summary>
     /// <remarks>
-    /// 064, BT, BTN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>064</description></item>
+    ///         <item><term>Alpha-2</term><description>BT</description></item>
+    ///         <item><term>Alpha-3</term><description>BTN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BT", "BTN")]
     Bhutan = 064,
@@ -263,7 +367,11 @@ public enum Iso3166Code
     /// Bolivia (Plurinational State of).
     /// </summary>
     /// <remarks>
-    /// 068, BO, BOL
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>068</description></item>
+    ///         <item><term>Alpha-2</term><description>BO</description></item>
+    ///         <item><term>Alpha-3</term><description>BOL</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BO", "BOL")]
     Bolivia = 068,
@@ -272,7 +380,11 @@ public enum Iso3166Code
     /// Bonaire, Sint Eustatius and Saba.
     /// </summary>
     /// <remarks>
-    /// 535, BQ, BES
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>535</description></item>
+    ///         <item><term>Alpha-2</term><description>BQ</description></item>
+    ///         <item><term>Alpha-3</term><description>BES</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BQ", "BES")]
     BonaireSintEustatiusAndSaba = 535,
@@ -281,7 +393,11 @@ public enum Iso3166Code
     /// Bosnia and Herzegovina.
     /// </summary>
     /// <remarks>
-    /// 070, BA, BIH
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>070</description></item>
+    ///         <item><term>Alpha-2</term><description>BA</description></item>
+    ///         <item><term>Alpha-3</term><description>BIH</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BA", "BIH")]
     BosniaAndHerzegovina = 070,
@@ -290,7 +406,11 @@ public enum Iso3166Code
     /// Botswana.
     /// </summary>
     /// <remarks>
-    /// 072, BW, BWA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>072</description></item>
+    ///         <item><term>Alpha-2</term><description>BW</description></item>
+    ///         <item><term>Alpha-3</term><description>BWA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BW", "BWA")]
     Botswana = 072,
@@ -299,7 +419,11 @@ public enum Iso3166Code
     /// Bouvet Island.
     /// </summary>
     /// <remarks>
-    /// 074, BV, BVT
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>074</description></item>
+    ///         <item><term>Alpha-2</term><description>BV</description></item>
+    ///         <item><term>Alpha-3</term><description>BVT</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BV", "BVT")]
     BouvetIsland = 074,
@@ -308,7 +432,11 @@ public enum Iso3166Code
     /// Brazil.
     /// </summary>
     /// <remarks>
-    /// 076, BR, BRA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>076</description></item>
+    ///         <item><term>Alpha-2</term><description>BR</description></item>
+    ///         <item><term>Alpha-3</term><description>BRA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BR", "BRA")]
     Brazil = 076,
@@ -317,7 +445,11 @@ public enum Iso3166Code
     /// British Indian Ocean Territory (the).
     /// </summary>
     /// <remarks>
-    /// 086, IO, IOT
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>086</description></item>
+    ///         <item><term>Alpha-2</term><description>IO</description></item>
+    ///         <item><term>Alpha-3</term><description>IOT</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("IO", "IOT")]
     BritishIndianOceanTerritory = 086,
@@ -326,7 +458,11 @@ public enum Iso3166Code
     /// Brunei Darussalam.
     /// </summary>
     /// <remarks>
-    /// 096, BN, BRN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>096</description></item>
+    ///         <item><term>Alpha-2</term><description>BN</description></item>
+    ///         <item><term>Alpha-3</term><description>BRN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BN", "BRN")]
     BruneiDarussalam = 096,
@@ -335,7 +471,11 @@ public enum Iso3166Code
     /// Bulgaria.
     /// </summary>
     /// <remarks>
-    /// 100, BG, BGR
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>100</description></item>
+    ///         <item><term>Alpha-2</term><description>BG</description></item>
+    ///         <item><term>Alpha-3</term><description>BGR</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BG", "BGR")]
     Bulgaria = 100,
@@ -344,7 +484,11 @@ public enum Iso3166Code
     /// Burkina Faso.
     /// </summary>
     /// <remarks>
-    /// 854, BF, BFA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>854</description></item>
+    ///         <item><term>Alpha-2</term><description>BF</description></item>
+    ///         <item><term>Alpha-3</term><description>BFA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BF", "BFA")]
     BurkinaFaso = 854,
@@ -353,7 +497,11 @@ public enum Iso3166Code
     /// Burundi.
     /// </summary>
     /// <remarks>
-    /// 108, BI, BDI
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>108</description></item>
+    ///         <item><term>Alpha-2</term><description>BI</description></item>
+    ///         <item><term>Alpha-3</term><description>BDI</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("BI", "BDI")]
     Burundi = 108,
@@ -362,7 +510,11 @@ public enum Iso3166Code
     /// Cabo Verde.
     /// </summary>
     /// <remarks>
-    /// 132, CV, CPV
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>132</description></item>
+    ///         <item><term>Alpha-2</term><description>CV</description></item>
+    ///         <item><term>Alpha-3</term><description>CPV</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CV", "CPV")]
     CaboVerde = 132,
@@ -371,7 +523,11 @@ public enum Iso3166Code
     /// Cambodia.
     /// </summary>
     /// <remarks>
-    /// 116, KH, KHM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>116</description></item>
+    ///         <item><term>Alpha-2</term><description>KH</description></item>
+    ///         <item><term>Alpha-3</term><description>KHM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("KH", "KHM")]
     Cambodia = 116,
@@ -380,7 +536,11 @@ public enum Iso3166Code
     /// Cameroon.
     /// </summary>
     /// <remarks>
-    /// 120, CM, CMR
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>120</description></item>
+    ///         <item><term>Alpha-2</term><description>CM</description></item>
+    ///         <item><term>Alpha-3</term><description>CMR</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CM", "CMR")]
     Cameroon = 120,
@@ -389,7 +549,11 @@ public enum Iso3166Code
     /// Canada.
     /// </summary>
     /// <remarks>
-    /// 124, CA, CAN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>124</description></item>
+    ///         <item><term>Alpha-2</term><description>CA</description></item>
+    ///         <item><term>Alpha-3</term><description>CAN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CA", "CAN")]
     Canada = 124,
@@ -398,7 +562,11 @@ public enum Iso3166Code
     /// Cayman Islands (the).
     /// </summary>
     /// <remarks>
-    /// 136, KY, CYM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>136</description></item>
+    ///         <item><term>Alpha-2</term><description>KY</description></item>
+    ///         <item><term>Alpha-3</term><description>CYM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("KY", "CYM")]
     CaymanIslands = 136,
@@ -407,7 +575,11 @@ public enum Iso3166Code
     /// Central African Republic (the).
     /// </summary>
     /// <remarks>
-    /// 140, CF, CAF
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>140</description></item>
+    ///         <item><term>Alpha-2</term><description>CF</description></item>
+    ///         <item><term>Alpha-3</term><description>CAF</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CF", "CAF")]
     CentralAfricanRepublic = 140,
@@ -416,7 +588,11 @@ public enum Iso3166Code
     /// Chad.
     /// </summary>
     /// <remarks>
-    /// 148, TD, TCD
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>148</description></item>
+    ///         <item><term>Alpha-2</term><description>TD</description></item>
+    ///         <item><term>Alpha-3</term><description>TCD</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("TD", "TCD")]
     Chad = 148,
@@ -425,7 +601,11 @@ public enum Iso3166Code
     /// Chile.
     /// </summary>
     /// <remarks>
-    /// 152, CL, CHL
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>152</description></item>
+    ///         <item><term>Alpha-2</term><description>CL</description></item>
+    ///         <item><term>Alpha-3</term><description>CHL</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CL", "CHL")]
     Chile = 152,
@@ -434,7 +614,11 @@ public enum Iso3166Code
     /// China.
     /// </summary>
     /// <remarks>
-    /// 156, CN, CHN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>156</description></item>
+    ///         <item><term>Alpha-2</term><description>CN</description></item>
+    ///         <item><term>Alpha-3</term><description>CHN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CN", "CHN")]
     China = 156,
@@ -443,7 +627,11 @@ public enum Iso3166Code
     /// Christmas Island.
     /// </summary>
     /// <remarks>
-    /// 162, CX, CXR
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>162</description></item>
+    ///         <item><term>Alpha-2</term><description>CX</description></item>
+    ///         <item><term>Alpha-3</term><description>CXR</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CX", "CXR")]
     ChristmasIsland = 162,
@@ -452,7 +640,11 @@ public enum Iso3166Code
     /// Cocos (Keeling) Islands (the).
     /// </summary>
     /// <remarks>
-    /// 166, CC, CCK
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>166</description></item>
+    ///         <item><term>Alpha-2</term><description>CC</description></item>
+    ///         <item><term>Alpha-3</term><description>CCK</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CC", "CCK")]
     CocosIslands = 166,
@@ -461,7 +653,11 @@ public enum Iso3166Code
     /// Colombia.
     /// </summary>
     /// <remarks>
-    /// 170, CO, COL
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>170</description></item>
+    ///         <item><term>Alpha-2</term><description>CO</description></item>
+    ///         <item><term>Alpha-3</term><description>COL</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CO", "COL")]
     Colombia = 170,
@@ -470,7 +666,11 @@ public enum Iso3166Code
     /// Comoros (the).
     /// </summary>
     /// <remarks>
-    /// 174, KM, COM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>174</description></item>
+    ///         <item><term>Alpha-2</term><description>KM</description></item>
+    ///         <item><term>Alpha-3</term><description>COM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("KM", "COM")]
     Comoros = 174,
@@ -479,7 +679,11 @@ public enum Iso3166Code
     /// Congo (the Democratic Republic of the).
     /// </summary>
     /// <remarks>
-    /// 180, CD, COD
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>180</description></item>
+    ///         <item><term>Alpha-2</term><description>CD</description></item>
+    ///         <item><term>Alpha-3</term><description>COD</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CD", "COD")]
     CongoDemocraticRepublic = 180,
@@ -488,7 +692,11 @@ public enum Iso3166Code
     /// Congo (the).
     /// </summary>
     /// <remarks>
-    /// 178, CG, COG
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>178</description></item>
+    ///         <item><term>Alpha-2</term><description>CG</description></item>
+    ///         <item><term>Alpha-3</term><description>COG</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CG", "COG")]
     Congo = 178,
@@ -497,7 +705,11 @@ public enum Iso3166Code
     /// Cook Islands (the).
     /// </summary>
     /// <remarks>
-    /// 184, CK, COK
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>184</description></item>
+    ///         <item><term>Alpha-2</term><description>CK</description></item>
+    ///         <item><term>Alpha-3</term><description>COK</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CK", "COK")]
     CookIslands = 184,
@@ -506,7 +718,11 @@ public enum Iso3166Code
     /// Costa Rica.
     /// </summary>
     /// <remarks>
-    /// 188, CR, CRI
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>188</description></item>
+    ///         <item><term>Alpha-2</term><description>CR</description></item>
+    ///         <item><term>Alpha-3</term><description>CRI</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CR", "CRI")]
     CostaRica = 188,
@@ -515,7 +731,11 @@ public enum Iso3166Code
     /// Croatia.
     /// </summary>
     /// <remarks>
-    /// 191, HR, HRV
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>191</description></item>
+    ///         <item><term>Alpha-2</term><description>HR</description></item>
+    ///         <item><term>Alpha-3</term><description>HRV</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("HR", "HRV")]
     Croatia = 191,
@@ -524,7 +744,11 @@ public enum Iso3166Code
     /// Cuba.
     /// </summary>
     /// <remarks>
-    /// 192, CU, CUB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>192</description></item>
+    ///         <item><term>Alpha-2</term><description>CU</description></item>
+    ///         <item><term>Alpha-3</term><description>CUB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CU", "CUB")]
     Cuba = 192,
@@ -533,7 +757,11 @@ public enum Iso3166Code
     /// Curaçao.
     /// </summary>
     /// <remarks>
-    /// 531, CW, CUW
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>531</description></item>
+    ///         <item><term>Alpha-2</term><description>CW</description></item>
+    ///         <item><term>Alpha-3</term><description>CUW</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CW", "CUW")]
     Curaçao = 531,
@@ -542,7 +770,11 @@ public enum Iso3166Code
     /// Cyprus.
     /// </summary>
     /// <remarks>
-    /// 196, CY, CYP
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>196</description></item>
+    ///         <item><term>Alpha-2</term><description>CY</description></item>
+    ///         <item><term>Alpha-3</term><description>CYP</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CY", "CYP")]
     Cyprus = 196,
@@ -551,7 +783,11 @@ public enum Iso3166Code
     /// Czechia.
     /// </summary>
     /// <remarks>
-    /// 203, CZ, CZE
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>203</description></item>
+    ///         <item><term>Alpha-2</term><description>CZ</description></item>
+    ///         <item><term>Alpha-3</term><description>CZE</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CZ", "CZE")]
     Czechia = 203,
@@ -560,7 +796,11 @@ public enum Iso3166Code
     /// Côte d'Ivoire.
     /// </summary>
     /// <remarks>
-    /// 384, CI, CIV
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>384</description></item>
+    ///         <item><term>Alpha-2</term><description>CI</description></item>
+    ///         <item><term>Alpha-3</term><description>CIV</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("CI", "CIV")]
     CôteDIvoire = 384,
@@ -569,7 +809,11 @@ public enum Iso3166Code
     /// Denmark.
     /// </summary>
     /// <remarks>
-    /// 208, DK, DNK
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>208</description></item>
+    ///         <item><term>Alpha-2</term><description>DK</description></item>
+    ///         <item><term>Alpha-3</term><description>DNK</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DK", "DNK")]
     Denmark = 208,
@@ -578,7 +822,11 @@ public enum Iso3166Code
     /// Djibouti.
     /// </summary>
     /// <remarks>
-    /// 262, DJ, DJI
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>262</description></item>
+    ///         <item><term>Alpha-2</term><description>DJ</description></item>
+    ///         <item><term>Alpha-3</term><description>DJI</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DJ", "DJI")]
     Djibouti = 262,
@@ -587,7 +835,11 @@ public enum Iso3166Code
     /// Dominica.
     /// </summary>
     /// <remarks>
-    /// 212, DM, DMA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>212</description></item>
+    ///         <item><term>Alpha-2</term><description>DM</description></item>
+    ///         <item><term>Alpha-3</term><description>DMA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DM", "DMA")]
     Dominica = 212,
@@ -596,7 +848,11 @@ public enum Iso3166Code
     /// Dominican Republic (the).
     /// </summary>
     /// <remarks>
-    /// 214, DO, DOM
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>214</description></item>
+    ///         <item><term>Alpha-2</term><description>DO</description></item>
+    ///         <item><term>Alpha-3</term><description>DOM</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DO", "DOM")]
     DominicanRepublic = 214,
@@ -605,7 +861,11 @@ public enum Iso3166Code
     /// Ecuador.
     /// </summary>
     /// <remarks>
-    /// 218, EC, ECU
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>218</description></item>
+    ///         <item><term>Alpha-2</term><description>EC</description></item>
+    ///         <item><term>Alpha-3</term><description>ECU</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("EC", "ECU")]
     Ecuador = 218,
@@ -614,7 +874,11 @@ public enum Iso3166Code
     /// Egypt.
     /// </summary>
     /// <remarks>
-    /// 818, EG, EGY
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>818</description></item>
+    ///         <item><term>Alpha-2</term><description>EG</description></item>
+    ///         <item><term>Alpha-3</term><description>EGY</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("EG", "EGY")]
     Egypt = 818,
@@ -623,7 +887,11 @@ public enum Iso3166Code
     /// El Salvador.
     /// </summary>
     /// <remarks>
-    /// 222, SV, SLV
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>222</description></item>
+    ///         <item><term>Alpha-2</term><description>SV</description></item>
+    ///         <item><term>Alpha-3</term><description>SLV</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("SV", "SLV")]
     ElSalvador = 222,
@@ -632,7 +900,11 @@ public enum Iso3166Code
     /// Equatorial Guinea.
     /// </summary>
     /// <remarks>
-    /// 226, GQ, GNQ
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>226</description></item>
+    ///         <item><term>Alpha-2</term><description>GQ</description></item>
+    ///         <item><term>Alpha-3</term><description>GNQ</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GQ", "GNQ")]
     EquatorialGuinea = 226,
@@ -641,7 +913,11 @@ public enum Iso3166Code
     /// Eritrea.
     /// </summary>
     /// <remarks>
-    /// 232, ER, ERI
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>232</description></item>
+    ///         <item><term>Alpha-2</term><description>ER</description></item>
+    ///         <item><term>Alpha-3</term><description>ERI</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("ER", "ERI")]
     Eritrea = 232,
@@ -650,7 +926,11 @@ public enum Iso3166Code
     /// Estonia.
     /// </summary>
     /// <remarks>
-    /// 233, EE, EST
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>233</description></item>
+    ///         <item><term>Alpha-2</term><description>EE</description></item>
+    ///         <item><term>Alpha-3</term><description>EST</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("EE", "EST")]
     Estonia = 233,
@@ -659,7 +939,11 @@ public enum Iso3166Code
     /// Eswatini.
     /// </summary>
     /// <remarks>
-    /// 748, SZ, SWZ
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>748</description></item>
+    ///         <item><term>Alpha-2</term><description>SZ</description></item>
+    ///         <item><term>Alpha-3</term><description>SWZ</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("SZ", "SWZ")]
     Eswatini = 748,
@@ -668,7 +952,11 @@ public enum Iso3166Code
     /// Ethiopia.
     /// </summary>
     /// <remarks>
-    /// 231, ET, ETH
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>231</description></item>
+    ///         <item><term>Alpha-2</term><description>ET</description></item>
+    ///         <item><term>Alpha-3</term><description>ETH</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("ET", "ETH")]
     Ethiopia = 231,
@@ -677,7 +965,11 @@ public enum Iso3166Code
     /// Falkland Islands (the) [Malvinas].
     /// </summary>
     /// <remarks>
-    /// 238, FK, FLK
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>238</description></item>
+    ///         <item><term>Alpha-2</term><description>FK</description></item>
+    ///         <item><term>Alpha-3</term><description>FLK</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("FK", "FLK")]
     FalklandIslandsMalvinas = 238,
@@ -686,7 +978,11 @@ public enum Iso3166Code
     /// Faroe Islands (the).
     /// </summary>
     /// <remarks>
-    /// 234, FO, FRO
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>234</description></item>
+    ///         <item><term>Alpha-2</term><description>FO</description></item>
+    ///         <item><term>Alpha-3</term><description>FRO</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("FO", "FRO")]
     FaroeIslands = 234,
@@ -695,7 +991,11 @@ public enum Iso3166Code
     /// Fiji.
     /// </summary>
     /// <remarks>
-    /// 242, FJ, FJI
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>242</description></item>
+    ///         <item><term>Alpha-2</term><description>FJ</description></item>
+    ///         <item><term>Alpha-3</term><description>FJI</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("FJ", "FJI")]
     Fiji = 242,
@@ -704,7 +1004,11 @@ public enum Iso3166Code
     /// Finland.
     /// </summary>
     /// <remarks>
-    /// 246, FI, FIN
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>246</description></item>
+    ///         <item><term>Alpha-2</term><description>FI</description></item>
+    ///         <item><term>Alpha-3</term><description>FIN</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("FI", "FIN")]
     Finland = 246,
@@ -713,7 +1017,11 @@ public enum Iso3166Code
     /// France.
     /// </summary>
     /// <remarks>
-    /// 250, FR, FRA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>250</description></item>
+    ///         <item><term>Alpha-2</term><description>FR</description></item>
+    ///         <item><term>Alpha-3</term><description>FRA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("FR", "FRA")]
     France = 250,
@@ -722,7 +1030,11 @@ public enum Iso3166Code
     /// French Guiana.
     /// </summary>
     /// <remarks>
-    /// 254, GF, GUF
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>254</description></item>
+    ///         <item><term>Alpha-2</term><description>GF</description></item>
+    ///         <item><term>Alpha-3</term><description>GUF</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GF", "GUF")]
     FrenchGuiana = 254,
@@ -731,7 +1043,11 @@ public enum Iso3166Code
     /// French Polynesia.
     /// </summary>
     /// <remarks>
-    /// 258, PF, PYF
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>258</description></item>
+    ///         <item><term>Alpha-2</term><description>PF</description></item>
+    ///         <item><term>Alpha-3</term><description>PYF</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("PF", "PYF")]
     FrenchPolynesia = 258,
@@ -740,7 +1056,11 @@ public enum Iso3166Code
     /// French Southern Territories (the).
     /// </summary>
     /// <remarks>
-    /// 260, TF, ATF
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>260</description></item>
+    ///         <item><term>Alpha-2</term><description>TF</description></item>
+    ///         <item><term>Alpha-3</term><description>ATF</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("TF", "ATF")]
     FrenchSouthernTerritories = 260,
@@ -749,7 +1069,11 @@ public enum Iso3166Code
     /// Gabon.
     /// </summary>
     /// <remarks>
-    /// 266, GA, GAB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>266</description></item>
+    ///         <item><term>Alpha-2</term><description>GA</description></item>
+    ///         <item><term>Alpha-3</term><description>GAB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GA", "GAB")]
     Gabon = 266,
@@ -758,7 +1082,11 @@ public enum Iso3166Code
     /// Gambia (the).
     /// </summary>
     /// <remarks>
-    /// 270, GM, GMB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>270</description></item>
+    ///         <item><term>Alpha-2</term><description>GM</description></item>
+    ///         <item><term>Alpha-3</term><description>GMB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GM", "GMB")]
     Gambia = 270,
@@ -767,7 +1095,11 @@ public enum Iso3166Code
     /// Georgia.
     /// </summary>
     /// <remarks>
-    /// 268, GE, GEO
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>268</description></item>
+    ///         <item><term>Alpha-2</term><description>GE</description></item>
+    ///         <item><term>Alpha-3</term><description>GEO</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GE", "GEO")]
     Georgia = 268,
@@ -776,7 +1108,11 @@ public enum Iso3166Code
     /// Germany.
     /// </summary>
     /// <remarks>
-    /// 276, DE, DEU
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>276</description></item>
+    ///         <item><term>Alpha-2</term><description>DE</description></item>
+    ///         <item><term>Alpha-3</term><description>DEU</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("DE", "DEU")]
     Germany = 276,
@@ -785,7 +1121,11 @@ public enum Iso3166Code
     /// Ghana.
     /// </summary>
     /// <remarks>
-    /// 288, GH, GHA
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>288</description></item>
+    ///         <item><term>Alpha-2</term><description>GH</description></item>
+    ///         <item><term>Alpha-3</term><description>GHA</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GH", "GHA")]
     Ghana = 288,
@@ -794,7 +1134,11 @@ public enum Iso3166Code
     /// Gibraltar.
     /// </summary>
     /// <remarks>
-    /// 292, GI, GIB
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>292</description></item>
+    ///         <item><term>Alpha-2</term><description>GI</description></item>
+    ///         <item><term>Alpha-3</term><description>GIB</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GI", "GIB")]
     Gibraltar = 292,
@@ -803,7 +1147,11 @@ public enum Iso3166Code
     /// Greece.
     /// </summary>
     /// <remarks>
-    /// 300, GR, GRC
+    ///     <list type="table">
+    ///         <item><term>Numeric</term><description>300</description></item>
+    ///         <item><term>Alpha-2</term><description>GR</description></item>
+    ///         <item><term>Alpha-3</term><description>GRC</description></item>
+    ///     </list>
     /// </remarks>
     [Iso3166("GR", "GRC")]
     Greece = 300,
