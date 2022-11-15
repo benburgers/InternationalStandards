@@ -19,7 +19,7 @@ public sealed class Iso639JsonConverterException : Exception
     /// <param name="innerException">
     /// An inner exception.
     /// </param>
-    public Iso639JsonConverterException(string message, Exception? innerException)
+    internal Iso639JsonConverterException(string message, Exception? innerException = null)
         : base(message, innerException)
     {
     }

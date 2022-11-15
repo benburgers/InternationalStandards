@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Iso3166AlphaCodeInvalid" xml:space="preserve">
+  <data name="AlphaInvalid" xml:space="preserve">
     <value>Le code Alpha spécifié '{0}' pour ISO 3166 n'est pas valide.</value>
   </data>
-  <data name="Iso3166NameMissingLong" xml:space="preserve">
+  <data name="NameMissingLong" xml:space="preserve">
     <value>Le nom long pour ISO 3166 '{0}' avec la culture '{1}' n'est pas disponible.</value>
   </data>
-  <data name="Iso3166NameMissingShort" xml:space="preserve">
+  <data name="NameMissingShort" xml:space="preserve">
     <value>Le nom bref pour ISO 3166 '{0}' avec la culture '{1}' n'est pas disponible.</value>
   </data>
 </root>

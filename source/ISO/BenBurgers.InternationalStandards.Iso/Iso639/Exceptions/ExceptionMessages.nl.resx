@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Iso639CodeDeprecated" xml:space="preserve">
+  <data name="AlphaInvalid" xml:space="preserve">
+    <value>De Alpha code '{0}' is niet een geldige ISO 639 code.</value>
+  </data>
+  <data name="CodeDeprecated" xml:space="preserve">
     <value>De ISO 639 code '{0}' is vervallen en vervallen codes worden op dit moment niet toegestaan.</value>
+  </data>
+  <data name="PartNotAssigned" xml:space="preserve">
+    <value>De ISO 639 code ' {0}' heeft geen toewijzing voor deel '{1}'.</value>
   </data>
 </root>

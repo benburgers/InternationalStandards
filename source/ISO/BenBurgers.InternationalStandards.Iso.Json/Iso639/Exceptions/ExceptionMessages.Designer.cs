@@ -68,5 +68,14 @@ namespace BenBurgers.InternationalStandards.Iso.Json.Iso639.Exceptions {
                 return ResourceManager.GetString("AlphaCouldNotBeRead", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not write the Alpha code for ISO 639. See the inner exception for more information..
+        /// </summary>
+        internal static string AlphaCouldNotBeWritten {
+            get {
+                return ResourceManager.GetString("AlphaCouldNotBeWritten", resourceCulture);
+            }
+        }
     }
 }

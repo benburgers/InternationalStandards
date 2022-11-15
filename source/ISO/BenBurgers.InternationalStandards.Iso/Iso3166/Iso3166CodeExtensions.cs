@@ -23,10 +23,10 @@ public static class Iso3166CodeExtensions
     private static readonly IReadOnlyDictionary<string, Iso3166Code> AlphaLookup =
         Attributes
             .SelectMany(kvp =>
-            new[]
+            new KeyValuePair<string, Iso3166Code>[]
             {
-                new KeyValuePair<string, Iso3166Code>(kvp.Value.Alpha2.ToString(), kvp.Key),
-                new KeyValuePair<string, Iso3166Code>(kvp.Value.Alpha3.ToString(), kvp.Key)
+                new(kvp.Value.Alpha2.ToString(), kvp.Key),
+                new(kvp.Value.Alpha3.ToString(), kvp.Key)
             })
             .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
 

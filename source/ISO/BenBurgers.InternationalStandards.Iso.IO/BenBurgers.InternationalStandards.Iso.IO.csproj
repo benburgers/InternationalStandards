@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup Label="Project Properties">
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>ISO standards Input/Output features</Title>
-		<Version>0.2.0</Version>
+		<Version>0.3.0</Version>
 		<Authors>benburgers</Authors>
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
@@ -16,7 +16,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/benburgers/InternationalStandards</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>International;Standards;ISO;Code;Country;Language;ISO639;ISO3166;Table;Import</PackageTags>
+		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;ISO639;ISO3166;ISO4217;Table;Import</PackageTags>
 		<PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>
@@ -24,7 +24,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.2.0" />
+		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.3.0" />
 	</ItemGroup>
 
 	<ItemGroup Label="Resources">

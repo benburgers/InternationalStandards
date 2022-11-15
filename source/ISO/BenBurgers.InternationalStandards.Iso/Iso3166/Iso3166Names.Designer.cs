@@ -3967,7 +3967,7 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Republic of China.
+        ///   Looks up a localized string similar to Taiwan (Republic of China / Province of China).
         /// </summary>
         internal static string TaiwanLong {
             get {

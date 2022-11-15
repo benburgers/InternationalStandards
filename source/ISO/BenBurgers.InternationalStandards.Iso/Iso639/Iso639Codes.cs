@@ -41,8 +41,16 @@ public static class Iso639Codes
         Iso639AttributesLookup
             .SelectMany(kvp =>
             {
-                var records = new List<KeyValuePair<string, Iso639Code>>();
-                // TODO implement
+                var records = new Dictionary<string, Iso639Code>();
+                if (kvp.Value.Iso639_1Attributes.Any())
+                    records[kvp.Value.Iso639_1Attributes.First().Iso639Part1.ToString()] = kvp.Key;
+                if (kvp.Value.Iso639_2Attributes.Any())
+                {
+                    var part2Attribute = kvp.Value.Iso639_2Attributes.First();
+                    records[part2Attribute.Iso639Part2T.ToString()] = kvp.Key;
+                }
+                if (kvp.Value.Iso639_3Attributes.Any())
+                    records[kvp.Value.Iso639_3Attributes.First().Iso639Part3.ToString()] = kvp.Key;
                 return records;
             })
             .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);

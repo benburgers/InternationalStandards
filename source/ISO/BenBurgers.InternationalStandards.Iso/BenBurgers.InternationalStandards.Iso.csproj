@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>ISO standards</Title>
-		<Version>0.2.0</Version>
+		<Version>0.3.0</Version>
 		<Authors>benburgers</Authors>
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
@@ -16,7 +16,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/benburgers/InternationalStandards</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>International;Standards;ISO;Code;Country;Language;ISO639;ISO3166</PackageTags>
+		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;ISO639;ISO3166;ISO4217</PackageTags>
 		<PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>

@@ -61,11 +61,29 @@ namespace BenBurgers.InternationalStandards.Iso.Iso639.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Alpha code &apos;{0}&apos; is not a valid ISO 639 code..
+        /// </summary>
+        internal static string AlphaInvalid {
+            get {
+                return ResourceManager.GetString("AlphaInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The ISO 639 code &apos;{0}&apos; is deprecated and deprecated codes are currently not allowed..
         /// </summary>
-        internal static string Iso639CodeDeprecated {
+        internal static string CodeDeprecated {
             get {
-                return ResourceManager.GetString("Iso639CodeDeprecated", resourceCulture);
+                return ResourceManager.GetString("CodeDeprecated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ISO 639 code &apos; {0}&apos; does not have a designation for the part &apos;{1}&apos;..
+        /// </summary>
+        internal static string PartNotAssigned {
+            get {
+                return ResourceManager.GetString("PartNotAssigned", resourceCulture);
             }
         }
     }

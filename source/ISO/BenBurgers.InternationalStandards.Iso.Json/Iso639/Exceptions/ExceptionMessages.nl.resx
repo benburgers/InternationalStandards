@@ -120,4 +120,7 @@
   <data name="AlphaCouldNotBeRead" xml:space="preserve">
     <value>Kon de Alpha code voor ISO 639 niet lezen. Zie de interne Exception voor meer informatie.</value>
   </data>
+  <data name="AlphaCouldNotBeWritten" xml:space="preserve">
+    <value>Kon de Alpha code voor ISO 639 niet schrijven. Zie de interne Exception voor meer informatie.</value>
+  </data>
 </root>

@@ -19,10 +19,16 @@ public sealed class Iso3166AlphaInvalidException : Iso3166Exception
     internal Iso3166AlphaInvalidException(string alpha)
         : base(GetExceptionMessage(alpha))
     {
+        this.Alpha = alpha;
     }
+
+    /// <summary>
+    /// Gets the invalid Alpha code.
+    /// </summary>
+    public string Alpha { get; }
 
     private static string GetExceptionMessage(string alpha)
     {
-        return string.Format(ExceptionMessages.Iso3166AlphaCodeInvalid, alpha);
+        return string.Format(ExceptionMessages.AlphaInvalid, alpha);
     }
 }

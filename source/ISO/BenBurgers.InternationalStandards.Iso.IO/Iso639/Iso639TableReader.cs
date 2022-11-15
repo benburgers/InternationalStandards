@@ -13,7 +13,7 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 /// <summary>
 /// An ISO 639 Table Reader base implementation.
 /// </summary>
-public sealed class Iso639TableReader<TRecord> : IDisposable
+public sealed partial class Iso639TableReader<TRecord> : IDisposable
     where TRecord : class
 {
     private static readonly IReadOnlyList<(string ColumnName, Type PropertyType)> ConstructorParameters =
@@ -152,30 +152,5 @@ public sealed class Iso639TableReader<TRecord> : IDisposable
         {
             throw new Iso639IOException(ExceptionMessages.Iso639Part3NameIndexReaderFailed, ex);
         }
-    }
-
-    /// <summary>
-    /// Disposes resources that have been in use.
-    /// </summary>
-    /// <param name="disposing">
-    /// A <see cref="bool" /> value that indicates whether this method was called by code, rather than the Garbage Collector.
-    /// </param>
-    private void Dispose(bool disposing)
-    {
-        if (!disposedValue)
-        {
-            if (disposing)
-                this.streamReader.Dispose();
-            disposedValue = true;
-        }
-    }
-
-    /// <summary>
-    /// Disposes any resources held by <see cref="Iso639TableReader{TRecord}" />.
-    /// </summary>
-    public void Dispose()
-    {
-        this.Dispose(disposing: true);
-        GC.SuppressFinalize(this);
     }
 }
