@@ -87,6 +87,24 @@ public static class Iso3166CodeExtensions
     }
 
     /// <summary>
+    /// Returns a model that contains the data for <paramref name="iso3166Code" />.
+    /// </summary>
+    /// <param name="iso3166Code">
+    /// The ISO 3166 code.
+    /// </param>
+    /// <returns>
+    /// A model that contains the data for <paramref name="iso3166Code" />.
+    /// </returns>
+    public static Iso3166Model ToModel(this Iso3166Code iso3166Code)
+    {
+        var attributes = Attributes[iso3166Code];
+        var numeric = (short)iso3166Code;
+        var alpha2 = attributes.Alpha2;
+        var alpha3 = attributes.Alpha3;
+        return new Iso3166Model(numeric, alpha2, alpha3);
+    }
+
+    /// <summary>
     /// Converts an <paramref name="alpha" /> code for ISO 3166 to the generic <see cref="Iso3166Code" />.
     /// </summary>
     /// <param name="alpha">

@@ -49,11 +49,15 @@ internal static class Iso4217Generator
                 {
                     var first = g.First();
                     return new Iso4217Model(
-                        g.Select(e => e.CountryName).OrderBy(cn => cn).ToArray(),
                         first.CurrencyName,
                         first.Currency,
                         first.CurrencyNumber,
-                        first.CurrencyMinorUnits);
+                        first.CurrencyMinorUnits)
+                    {
+                        Entities = g.Select(e => new Iso4217Entity(e.CountryName))
+                                    .OrderBy(cn => cn.Name)
+                                    .ToArray()
+                    };
                 })
                 .OrderBy(m => m.Currency?.Value)
                 .ToArray();

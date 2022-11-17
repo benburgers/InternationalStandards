@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>ISO standards Input/Output features</Title>
-		<Version>0.3.0</Version>
+		<Version>0.4.0</Version>
 		<Authors>benburgers</Authors>
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
@@ -22,10 +22,6 @@
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>
 		<Configurations>Debug;Release;Test</Configurations>
 	</PropertyGroup>
-
-	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.3.0" />
-	</ItemGroup>
 
 	<ItemGroup Label="Resources">
 		<Compile Update="**\ExceptionMessages.Designer.cs">
@@ -55,6 +51,10 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj" />
 	</ItemGroup>
 
 	<Target Name="ReleaseNotes" BeforeTargets="GenerateNuspec">

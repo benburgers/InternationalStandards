@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>ISO standards JSON features</Title>
-		<Version>0.3.0</Version>
+		<Version>0.4.0</Version>
 		<Authors>benburgers</Authors>
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
@@ -24,7 +24,6 @@
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.3.0" />
 		<PackageReference Include="System.Text.Json" Version="7.0.0" />
 	</ItemGroup>
 
@@ -56,6 +55,10 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj" />
 	</ItemGroup>
 
 	<Target Name="ReleaseNotes" BeforeTargets="GenerateNuspec">

@@ -14,10 +14,12 @@ My open source contributions are available free of charge (but subject to licens
 
 ## ISO
 
-| Name                                         | Description                       |
-| -------------------------------------------- | --------------------------------- |
-| `BenBurgers.InternationalStandards.Iso`      | ISO standards                     |
-| `BenBurgers.InternationalStandards.Iso.IO`   | Read Code Tables from authorities |
-| `BenBurgers.InternationalStandards.Iso.Json` | JSON (de)serialization            |
+| Name                                                     | Description                                                            |
+| ---------------------------------------------------------|------------------------------------------------------------------------|
+| `BenBurgers.InternationalStandards.Iso`                  | The main package with the codes and metadata.                          |
+| `BenBurgers.InternationalStandards.Iso.EFCore`           | Features for storing codes using Entity Framework Core.                |
+| `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer` | Features for storing codes using Entity Framework Core and SQL Server. |
+| `BenBurgers.InternationalStandards.Iso.IO`               | Features for reading Code Tables from authorities.                     |
+| `BenBurgers.InternationalStandards.Iso.Json`             | Features for serializing and deserializing codes in JSON.              |
 
 Please refer to the README files of the respective packages for more details.

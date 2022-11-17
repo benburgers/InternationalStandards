@@ -1,6 +1,6 @@
 # Introduction
 
-The collection of packages to which this package belongs contain codes, features and tools for standards of the International Organization for Standardization (ISO).
+The collection of packages to which this package belongs contains codes, features and tools for standards of the International Organization for Standardization (ISO).
 
 > The *International Organization for Standardization* (*ISO*) is an international standard development organization composed of representatives from the national standards organizations of member countries.
 > The organization develops and publishes standardization in all technical and nontechnical fields other than electrical and electronic engineering.[^1]
@@ -14,11 +14,13 @@ My open source contributions are available free of charge (but subject to licens
 
 # Packages
 
-| Name                                         | Description                                        |
-| ---------------------------------------------|----------------------------------------------------|
-| `BenBurgers.InternationalStandards.Iso`      | The main package with the codes and metadata.      |
-| `BenBurgers.InternationalStandards.Iso.IO`   | Features for reading Code Tables from authorities. |
-| `BenBurgers.InternationalStandards.Iso.Json` | Features for serializing and deserializing JSON.   |
+| Name                                                     | Description                                                            |
+| ---------------------------------------------------------|------------------------------------------------------------------------|
+| `BenBurgers.InternationalStandards.Iso`                  | The main package with the codes and metadata.                          |
+| `BenBurgers.InternationalStandards.Iso.EFCore`           | Features for storing codes using Entity Framework Core.                |
+| `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer` | Features for storing codes using Entity Framework Core and SQL Server. |
+| `BenBurgers.InternationalStandards.Iso.IO`               | Features for reading Code Tables from authorities.                     |
+| `BenBurgers.InternationalStandards.Iso.Json`             | Features for serializing and deserializing codes in JSON.              |
 
 ## BenBurgers.InternationalStandards.Iso
 

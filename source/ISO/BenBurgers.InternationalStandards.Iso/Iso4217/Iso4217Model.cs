@@ -8,9 +8,6 @@ namespace BenBurgers.InternationalStandards.Iso.Iso4217;
 /// <summary>
 /// A model for an ISO 4217 record.
 /// </summary>
-/// <param name="Entities">
-/// The currency's entities.
-/// </param>
 /// <param name="CurrencyName">
 /// The currency name.
 /// </param>
@@ -23,9 +20,14 @@ namespace BenBurgers.InternationalStandards.Iso.Iso4217;
 /// <param name="CurrencyMinorUnits">
 /// The number of minor units in the currency.
 /// </param>
-public record Iso4217Model(
-    string[] Entities,
+public sealed record Iso4217Model(
     string CurrencyName,
     Alpha3? Currency,
     int? CurrencyNumber,
-    int? CurrencyMinorUnits);
+    int? CurrencyMinorUnits)
+{
+    /// <summary>
+    /// Gets or initializes the ISO 4217 entities that trade the currency.
+    /// </summary>
+    public IReadOnlyList<Iso4217Entity> Entities { get; init; } = new List<Iso4217Entity>();
+};

@@ -3,20 +3,20 @@
  * This work is licensed by GNU General Public License version 3.
  */
 
-namespace BenBurgers.InternationalStandards.Iso.Json.Iso3166.Alpha;
+namespace BenBurgers.InternationalStandards.Iso.Iso3166;
 
 /// <summary>
-/// The ISO 3166 alpha mode.
+/// A choice of ISO 3166 Alpha code.
 /// </summary>
 public enum Iso3166AlphaMode
 {
     /// <summary>
-    /// The Alpha-2 two-letter code for an ISO 3166 code.
+    /// The Alpha-2 two-letter ISO 3166 code.
     /// </summary>
     Alpha2,
 
     /// <summary>
-    /// The Alpha-3 three-letter code for an ISO 3166 code.
+    /// The Alpha-3 three-letter ISO 3166 code.
     /// </summary>
     Alpha3
 }

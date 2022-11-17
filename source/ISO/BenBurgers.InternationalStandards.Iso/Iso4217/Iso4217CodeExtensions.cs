@@ -33,6 +33,27 @@ public static class Iso4217CodeExtensions
     }
 
     /// <summary>
+    /// Converts the <paramref name="iso4217Code" /> to an <see cref="Iso4217Model" />.
+    /// </summary>
+    /// <param name="iso4217Code">
+    /// The ISO 4217 code to convert.
+    /// </param>
+    /// <returns>
+    /// The ISO 4217 model.
+    /// </returns>
+    public static Iso4217Model ToModel(this Iso4217Code iso4217Code)
+    {
+        return new Iso4217Model(
+            iso4217Code.GetReferenceName(),
+            new Alpha3(iso4217Code.ToAlpha()),
+            (int)iso4217Code,
+            iso4217Code.GetMinorUnits())
+        {
+            Entities = iso4217Code.GetEntities().Select(e => new Iso4217Entity(e)).ToArray()
+        };
+    }
+
+    /// <summary>
     /// Gets the entities that trade the currency.
     /// </summary>
     /// <remarks>

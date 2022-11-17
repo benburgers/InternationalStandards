@@ -15,7 +15,7 @@ using static Iso639Codes;
 /// </summary>
 public static class Iso639CodeExtensions
 {
-    private static TAttribute GetAttribute<TAttribute>(
+    private static TAttribute? GetAttribute<TAttribute>(
         this TAttribute[] attributes,
         Iso639Code code,
         bool allowDeprecated = false)
@@ -26,9 +26,24 @@ public static class Iso639CodeExtensions
                 ? attributes.Select(a => (Attribute: a, Order: a.Deprecated ? 1 : 0))
                             .OrderBy(ad => ad.Order)
                             .Select(ad => ad.Attribute)
-                            .First() // Prefer non-deprecated, but if there is no active code, pick the first one.
+                            .FirstOrDefault() // Prefer non-deprecated, but if there is no active code, pick the first one.
                 : attributes.FirstOrDefault() ?? throw new Iso639CodeDeprecatedException(code);
         return attribute;
+    }
+
+    private static Iso639Part GetPart(Iso639Part2Type part2Type)
+    {
+        return part2Type switch
+        {
+            Iso639Part2Type.Terminological => Iso639Part.Part2T,
+            Iso639Part2Type.Bibliographic => Iso639Part.Part2B,
+#if NET6_0
+            _ => Iso639Part.Part2T
+#endif
+#if NET7_0_OR_GREATER
+            _ => throw new System.Diagnostics.UnreachableException()
+#endif
+        };
     }
 
     /// <summary>
@@ -61,7 +76,7 @@ public static class Iso639CodeExtensions
     {
         return
             Iso639AttributesLookup[iso639Code]
-                .Iso639_1Attributes
+                .Iso639Part1Attributes
                 .Any(attr => allowDeprecated || !attr.Deprecated);
     }
 
@@ -81,7 +96,7 @@ public static class Iso639CodeExtensions
     {
         return
             Iso639AttributesLookup[iso639Code]
-                .Iso639_2Attributes
+                .Iso639Part2Attributes
                 .Any(attr => allowDeprecated || !attr.Deprecated);
     }
 
@@ -101,7 +116,7 @@ public static class Iso639CodeExtensions
     {
         return
             Iso639AttributesLookup[iso639Code]
-                .Iso639_3Attributes
+                .Iso639Part3Attributes
                 .Any(attr => allowDeprecated || !attr.Deprecated);
     }
 
@@ -123,21 +138,21 @@ public static class Iso639CodeExtensions
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
-    public static string ToPart1(this Iso639Code iso639Code, bool allowDeprecated = false)
+    public static string? ToPart1(this Iso639Code iso639Code, bool allowDeprecated = false)
     {
         var attributes = Iso639AttributesLookup[iso639Code];
 
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
-        if (!attributes.Iso639_1Attributes.Any())
-            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part1);
+        if (!attributes.Iso639Part1Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, Iso639Part.Part1);
 
         var attribute =
             attributes
-                .Iso639_1Attributes
+                .Iso639Part1Attributes
                 .GetAttribute(iso639Code, allowDeprecated);
 
-        return attribute.Iso639Part1.ToString();
+        return attribute?.Iso639Part1.ToString();
     }
 
     /// <summary>
@@ -161,7 +176,7 @@ public static class Iso639CodeExtensions
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
-    public static string ToPart2(
+    public static string? ToPart2(
         this Iso639Code iso639Code,
         Iso639Part2Type part2Type,
         bool allowDeprecated = false)
@@ -170,19 +185,24 @@ public static class Iso639CodeExtensions
 
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
-        if (!attributes.Iso639_2Attributes.Any())
-            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part2);
+        if (!attributes.Iso639Part2Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, GetPart(part2Type));
 
         var attribute =
             attributes
-                .Iso639_2Attributes
+                .Iso639Part2Attributes
                 .GetAttribute(iso639Code, allowDeprecated);
 
         return part2Type switch
         {
-            Iso639Part2Type.Terminological => attribute.Iso639Part2T.ToString(),
-            Iso639Part2Type.Bibliographic => attribute.Iso639Part2B.ToString(),
-            _ => attribute.Iso639Part2T.ToString() // preferred
+            Iso639Part2Type.Terminological => attribute?.Iso639Part2T.ToString(),
+            Iso639Part2Type.Bibliographic => attribute?.Iso639Part2B.ToString(),
+#if NET6_0
+            _ => attribute?.Iso639Part2T.ToString() // preferable
+#endif
+#if NET7_0_OR_GREATER
+            _ => throw new System.Diagnostics.UnreachableException()
+#endif
         };
     }
 
@@ -204,7 +224,7 @@ public static class Iso639CodeExtensions
     /// <exception cref="Iso639CodeDeprecatedException">
     /// If <paramref name="allowDeprecated" /> is <see langword="false" /> and there is no active code, an <see cref="Iso639CodeDeprecatedException" /> is thrown.
     /// </exception>
-    public static string ToPart3(
+    public static string? ToPart3(
         this Iso639Code iso639Code,
         bool allowDeprecated = false)
     {
@@ -212,15 +232,59 @@ public static class Iso639CodeExtensions
 
         if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
             throw new Iso639CodeDeprecatedException(iso639Code);
-        if (!attributes.Iso639_3Attributes.Any())
-            throw new Iso639PartNotAssignedException(iso639Code, Iso639PartType.Part3);
+        if (!attributes.Iso639Part3Attributes.Any())
+            throw new Iso639PartNotAssignedException(iso639Code, Iso639Part.Part3);
 
         var attribute =
             attributes
-                .Iso639_3Attributes
+                .Iso639Part3Attributes
                 .GetAttribute(iso639Code, allowDeprecated);
 
-        return attribute.Iso639Part3.ToString();
+        return attribute?.Iso639Part3.ToString();
+    }
+
+    /// <summary>
+    /// Converts the <paramref name="iso639Code" /> to an <see cref="Iso639Model" />.
+    /// </summary>
+    /// <param name="iso639Code">
+    /// 
+    /// </param>
+    /// <param name="allowDeprecated"></param>
+    /// <returns></returns>
+    /// <exception cref="Iso639CodeDeprecatedException"></exception>
+    public static Iso639Model ToModel(
+        this Iso639Code iso639Code,
+        bool allowDeprecated = false)
+    {
+        var attributes = Iso639AttributesLookup[iso639Code];
+
+        if (attributes.ObsoleteAttribute is not null && !allowDeprecated)
+            throw new Iso639CodeDeprecatedException(iso639Code);
+
+        // TODO filter out deprecated codes rather than throwing an exception
+        var part1Attribute =
+            attributes
+                .Iso639Part1Attributes
+                .GetAttribute(iso639Code, true);
+        var part2Attribute =
+            attributes
+                .Iso639Part2Attributes
+                .GetAttribute(iso639Code, true);
+        var part3Attribute =
+            attributes
+                .Iso639Part3Attributes
+                .GetAttribute(iso639Code, true);
+
+        return new Iso639Model(
+            part1Attribute?.Iso639Part1,
+            part2Attribute?.Iso639Part2T,
+            part2Attribute?.Iso639Part2B,
+            part3Attribute?.Iso639Part3,
+            attributes.ScopeAttribute.Scope,
+            attributes.LanguageTypeAttribute.LanguageType,
+            "",
+            "",
+            "");
     }
 
     /// <summary>

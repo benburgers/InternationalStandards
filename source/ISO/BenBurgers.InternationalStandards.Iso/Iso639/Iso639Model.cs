@@ -35,7 +35,7 @@ namespace BenBurgers.InternationalStandards.Iso.Iso639;
 /// <param name="InvertedName">
 /// The inverted name.
 /// </param>
-public record Iso639Model(
+public sealed record Iso639Model(
     Alpha2? Part1,
     Alpha3? Part2T,
     Alpha3? Part2B,

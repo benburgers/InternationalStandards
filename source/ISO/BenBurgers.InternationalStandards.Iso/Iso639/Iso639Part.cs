@@ -8,7 +8,7 @@ namespace BenBurgers.InternationalStandards.Iso.Iso639;
 /// <summary>
 /// The ISO 639-1, ISO 639-2T or ISO 639-2B, or ISO 639-3 part.
 /// </summary>
-internal enum Iso639PartType
+public enum Iso639Part
 {
     /// <summary>
     /// ISO 639-1.
@@ -16,9 +16,14 @@ internal enum Iso639PartType
     Part1,
 
     /// <summary>
-    /// ISO 639-2T or ISO 639-2B.
+    /// ISO 639-2T.
     /// </summary>
-    Part2,
+    Part2T,
+
+    /// <summary>
+    /// ISO 639-2B.
+    /// </summary>
+    Part2B,
 
     /// <summary>
     /// ISO 639-3.

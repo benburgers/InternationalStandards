@@ -3,6 +3,8 @@
  * This work is licensed by GNU General Public License version 3.
  */
 
+using BenBurgers.InternationalStandards.Iso.Exceptions;
+
 namespace BenBurgers.InternationalStandards.Iso;
 
 /// <summary>
@@ -16,6 +18,9 @@ public sealed class Alpha3 : Alpha
     /// <param name="value">
     /// The Alpha-3 value.
     /// </param>
+    /// <exception cref="AlphaLengthException">
+    /// An <see cref="AlphaLengthException" /> is thrown if the <paramref name="value" /> does not have the required length (3).
+    /// </exception>
     public Alpha3(string value)
         : base(value, 3)
     {
