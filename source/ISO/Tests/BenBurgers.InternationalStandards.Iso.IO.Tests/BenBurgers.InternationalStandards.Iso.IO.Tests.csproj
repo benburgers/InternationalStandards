@@ -5,6 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<IsPackable>false</IsPackable>
+		<Configurations>Debug;Release;Test</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
@@ -24,6 +25,10 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup Label="Project References">
+		<ProjectReference Include="..\..\BenBurgers.InternationalStandards.Iso.IO\BenBurgers.InternationalStandards.Iso.IO.csproj" />
+	</ItemGroup>
+
 	<ItemGroup Label="Settings">
 		<None Remove="appsettings.json" />
 		<Content Include="appsettings.json">
@@ -34,10 +39,6 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<DependentUpon>appsettings.json</DependentUpon>
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\..\BenBurgers.InternationalStandards.Iso.IO\BenBurgers.InternationalStandards.Iso.IO.csproj" />
 	</ItemGroup>
 
 </Project>

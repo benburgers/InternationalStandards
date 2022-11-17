@@ -14,9 +14,9 @@ namespace BenBurgers.InternationalStandards.Iso.Iso639;
 public static class Iso639Codes
 {
     internal record Iso639Attributes(
-        Iso639Part1Attribute[] Iso639_1Attributes,
-        Iso639Part2Attribute[] Iso639_2Attributes,
-        Iso639Part3Attribute[] Iso639_3Attributes,
+        Iso639Part1Attribute[] Iso639Part1Attributes,
+        Iso639Part2Attribute[] Iso639Part2Attributes,
+        Iso639Part3Attribute[] Iso639Part3Attributes,
         Iso639ScopeAttribute ScopeAttribute,
         Iso639LanguageTypeAttribute LanguageTypeAttribute,
         ObsoleteAttribute? ObsoleteAttribute);
@@ -42,15 +42,15 @@ public static class Iso639Codes
             .SelectMany(kvp =>
             {
                 var records = new Dictionary<string, Iso639Code>();
-                if (kvp.Value.Iso639_1Attributes.Any())
-                    records[kvp.Value.Iso639_1Attributes.First().Iso639Part1.ToString()] = kvp.Key;
-                if (kvp.Value.Iso639_2Attributes.Any())
+                if (kvp.Value.Iso639Part1Attributes.Any())
+                    records[kvp.Value.Iso639Part1Attributes.First().Iso639Part1.ToString()] = kvp.Key;
+                if (kvp.Value.Iso639Part2Attributes.Any())
                 {
-                    var part2Attribute = kvp.Value.Iso639_2Attributes.First();
+                    var part2Attribute = kvp.Value.Iso639Part2Attributes.First();
                     records[part2Attribute.Iso639Part2T.ToString()] = kvp.Key;
                 }
-                if (kvp.Value.Iso639_3Attributes.Any())
-                    records[kvp.Value.Iso639_3Attributes.First().Iso639Part3.ToString()] = kvp.Key;
+                if (kvp.Value.Iso639Part3Attributes.Any())
+                    records[kvp.Value.Iso639Part3Attributes.First().Iso639Part3.ToString()] = kvp.Key;
                 return records;
             })
             .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
@@ -73,11 +73,11 @@ public static class Iso639Codes
 
         var query = Iso639AttributesLookup.AsEnumerable();
         if (filter.MustHavePart1)
-            query = query.Where(kvp => kvp.Value.Iso639_1Attributes.Any(CheckDeprecated));
+            query = query.Where(kvp => kvp.Value.Iso639Part1Attributes.Any(CheckDeprecated));
         if (filter.MustHavePart2)
-            query = query.Where(kvp => kvp.Value.Iso639_2Attributes.Any(CheckDeprecated));
+            query = query.Where(kvp => kvp.Value.Iso639Part2Attributes.Any(CheckDeprecated));
         if (filter.MustHavePart3)
-            query = query.Where(kvp => kvp.Value.Iso639_3Attributes.Any(CheckDeprecated));
+            query = query.Where(kvp => kvp.Value.Iso639Part3Attributes.Any(CheckDeprecated));
         if ((int)filter.Scope > 0)
             query = query.Where(kvp => (kvp.Value.ScopeAttribute.Scope & filter.Scope) > 0);
         if ((int)filter.LanguageType > 0)

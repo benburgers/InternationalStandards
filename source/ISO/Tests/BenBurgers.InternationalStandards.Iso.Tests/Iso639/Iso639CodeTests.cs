@@ -6,6 +6,7 @@
 using BenBurgers.InternationalStandards.Iso.Iso639;
 using BenBurgers.InternationalStandards.Iso.Iso639.Attributes;
 using BenBurgers.InternationalStandards.Iso.Iso639.Exceptions;
+using NuGet.Frameworks;
 using System.Reflection;
 
 namespace BenBurgers.InternationalStandards.Iso.Tests.Iso639;
@@ -89,7 +90,7 @@ public class Iso639CodeTests
                 iso639Code.ToPart1();
             });
             Assert.Equal(iso639Code, exception.Code);
-            Assert.Equal(Iso639PartType.Part1, exception.Part);
+            Assert.Equal(Iso639Part.Part1, exception.Part);
         }
         else
         {
@@ -131,13 +132,18 @@ public class Iso639CodeTests
     {
         if (throwException)
         {
-            var exception = Assert.Throws<Iso639PartNotAssignedException>(() =>
+            var exceptionT = Assert.Throws<Iso639PartNotAssignedException>(() =>
             {
                 iso639Code.ToPart2(Iso639Part2Type.Terminological);
+            });
+            Assert.Equal(iso639Code, exceptionT.Code);
+            Assert.Equal(Iso639Part.Part2T, exceptionT.Part);
+            var exceptionB = Assert.Throws<Iso639PartNotAssignedException>(() =>
+            {
                 iso639Code.ToPart2(Iso639Part2Type.Bibliographic);
             });
-            Assert.Equal(iso639Code, exception.Code);
-            Assert.Equal(Iso639PartType.Part2, exception.Part);
+            Assert.Equal(iso639Code, exceptionB.Code);
+            Assert.Equal(Iso639Part.Part2B, exceptionB.Part);
         }
         else
         {

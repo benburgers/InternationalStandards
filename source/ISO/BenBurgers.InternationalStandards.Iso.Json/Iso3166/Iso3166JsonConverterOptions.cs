@@ -3,7 +3,7 @@
  * This work is licensed by GNU General Public License version 3.
  */
 
-using BenBurgers.InternationalStandards.Iso.Json.Iso3166.Alpha;
+using BenBurgers.InternationalStandards.Iso.Iso3166;
 
 namespace BenBurgers.InternationalStandards.Iso.Json.Iso3166;
 

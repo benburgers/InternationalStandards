@@ -1,3 +1,8 @@
+Version 0.4.0
+- Added Entity Framework Core features for value converters and model builders.
+- ISO 3166: Breaking change; Iso3166AlphaMode moved from JSON package to main package.
+
+
 Version 0.3.0
 - ISO 639: Fixed bug; if an unassigned Part of ISO 639 was requested, an exception was thrown that said it was deprecated.
 - ISO 639: Implemented stub for conversion from string to ISO 639 code.

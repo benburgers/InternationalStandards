@@ -23,7 +23,7 @@ public sealed class Iso639PartNotAssignedException : Exception
     /// <param name="part">
     /// The ISO 639-1, ISO 639-2T or ISO 639-2B, or ISO 639-3 part.
     /// </param>
-    internal Iso639PartNotAssignedException(Iso639Code code, Iso639PartType part)
+    internal Iso639PartNotAssignedException(Iso639Code code, Iso639Part part)
         : base(GetExceptionMessage(code, part))
     {
         this.Code = code;
@@ -38,9 +38,9 @@ public sealed class Iso639PartNotAssignedException : Exception
     /// <summary>
     /// Gets the ISO 639-1, ISO 639-2T or ISO 639-2B, or ISO 639-3 part that is not assigned.
     /// </summary>
-    internal Iso639PartType Part { get; }
+    internal Iso639Part Part { get; }
 
-    private static string GetExceptionMessage(Iso639Code code, Iso639PartType part)
+    private static string GetExceptionMessage(Iso639Code code, Iso639Part part)
     {
         return string.Format(ExceptionMessages.PartNotAssigned, code, part);
     }
