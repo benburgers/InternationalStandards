@@ -43,11 +43,12 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-		<Content Include="..\README.md" Link="README.md">
+		<Content Include="..\ReleaseNotes.txt" Link="ReleaseNotes.txt">
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-		<Content Include="..\ReleaseNotes.txt" Link="ReleaseNotes.txt">
+		<None Remove="README.md" />
+		<Content Include="README.md">
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>

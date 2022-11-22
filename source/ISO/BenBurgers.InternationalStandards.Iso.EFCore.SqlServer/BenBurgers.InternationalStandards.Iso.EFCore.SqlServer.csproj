@@ -32,6 +32,10 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup Label="Project References">
+		<ProjectReference Include="..\BenBurgers.InternationalStandards.Iso.EFCore\BenBurgers.InternationalStandards.Iso.EFCore.csproj" />
+	</ItemGroup>
+
 	<ItemGroup Label="Resources">
 		<Compile Update="**\Exceptions\ExceptionMessages.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -52,18 +56,15 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-		<Content Include="..\README.md" Link="README.md">
-			<Pack>true</Pack>
-			<PackagePath>\</PackagePath>
-		</Content>
 		<Content Include="..\ReleaseNotes.txt" Link="ReleaseNotes.txt">
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\BenBurgers.InternationalStandards.Iso.EFCore\BenBurgers.InternationalStandards.Iso.EFCore.csproj" />
+		<None Remove="README.md" />
+		<Content Include="README.md">
+			<Pack>true</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
 	</ItemGroup>
 
 	<Target Name="ReleaseNotes" BeforeTargets="GenerateNuspec">
