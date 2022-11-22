@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	
+
 	<PropertyGroup Label="Project Properties">
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -37,7 +37,7 @@
 			<DependentUpon>ExceptionMessages.resx</DependentUpon>
 		</EmbeddedResource>
 		<Compile Update="Exceptions\ExceptionMessages.Designer.cs">
-		  <DesignTime>True</DesignTime>
+			<DesignTime>True</DesignTime>
 		</Compile>
 		<Compile Update="Iso3166\Iso3166Names.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -58,11 +58,12 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-		<Content Include="..\README.md" Link="README.md">
+		<Content Include="..\ReleaseNotes.txt" Link="ReleaseNotes.txt">
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-		<Content Include="..\ReleaseNotes.txt" Link="ReleaseNotes.txt">
+		<None Remove="README.md" />
+		<Content Include="README.md">
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>

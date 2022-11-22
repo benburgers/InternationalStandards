@@ -204,7 +204,7 @@ internal static class Iso4217Generator
             var entities =
                 model
                     .Entities
-                    .Select(e => new CodeAttributeDeclaration(nameof(Iso4217EntityAttribute), new CodeAttributeArgument(new CodePrimitiveExpression(e))))
+                    .Select(e => new CodeAttributeDeclaration(nameof(Iso4217EntityAttribute), new CodeAttributeArgument(new CodePrimitiveExpression(e.Name))))
                     .ToArray();
             var currency =
                 new CodeAttributeDeclaration(

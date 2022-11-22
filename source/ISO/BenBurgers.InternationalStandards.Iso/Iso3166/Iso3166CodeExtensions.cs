@@ -48,6 +48,9 @@ public static class Iso3166CodeExtensions
     /// <exception cref="Iso3166NameMissingException">
     /// An exception that is thrown if the name is missing for the <paramref name="iso3166Code" /> and variant <paramref name="nameVariant" />.
     /// </exception>
+    /// <remarks>
+    /// The localized names are not part of the ISO 3166 standard.
+    /// </remarks>
     public static string GetName(
         this Iso3166Code iso3166Code,
         Iso3166NameVariant nameVariant = Iso3166NameVariant.Short,
