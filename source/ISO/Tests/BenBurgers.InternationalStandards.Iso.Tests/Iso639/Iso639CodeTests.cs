@@ -6,7 +6,6 @@
 using BenBurgers.InternationalStandards.Iso.Iso639;
 using BenBurgers.InternationalStandards.Iso.Iso639.Attributes;
 using BenBurgers.InternationalStandards.Iso.Iso639.Exceptions;
-using NuGet.Frameworks;
 using System.Reflection;
 
 namespace BenBurgers.InternationalStandards.Iso.Tests.Iso639;
@@ -182,5 +181,26 @@ public class Iso639CodeTests
     {
         var actual = input.ToIso639();
         Assert.Equal(expected, actual);
+    }
+
+    public static readonly IEnumerable<object?[]> TryToIso639Parameters =
+        new[]
+        {
+            new object?[] { "az", true, false, Iso639Code.Azerbaijani },
+            new object?[] { "aze", true, false, Iso639Code.Azerbaijani },
+            new object?[] { "a", false, false, null }
+        };
+
+    [Theory(DisplayName = "ISO 639 :: TryTo639")]
+    [MemberData(nameof(TryToIso639Parameters))]
+    public void TryToIso639Test(
+        string input,
+        bool expectedValid,
+        bool allowDeprecated,
+        Iso639Code? expectedCode)
+    {
+        var actualValid = input.TryToIso639(out var actualCode, allowDeprecated);
+        Assert.Equal(expectedValid, actualValid);
+        Assert.Equal(expectedCode, actualCode);
     }
 }

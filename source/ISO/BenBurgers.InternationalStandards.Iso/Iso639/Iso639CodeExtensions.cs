@@ -321,4 +321,46 @@ public static class Iso639CodeExtensions
 
         throw new Iso639AlphaInvalidException(alpha);
     }
+
+    /// <summary>
+    /// Attempts to conver an <paramref name="alpha" /> code for ISO 639 to the generic <see cref="Iso639Code" />.
+    /// </summary>
+    /// <param name="alpha">
+    /// The Alpha-2 or Alpha-3 code for ISO 639.
+    /// </param>
+    /// <param name="iso639Code">
+    /// The ISO 639 code that was evaluated, or <see langword="null" /> if invalid.
+    /// </param>
+    /// <param name="allowDeprecated">
+    /// A <see cref="bool" /> that indicates whether deprecated codes should be considered valid.
+    /// </param>
+    /// <returns>
+    /// A <see cref="bool" /> that indicates whether the <see cref="Iso639Code" /> was successfully converted.
+    /// </returns>
+    public static bool TryToIso639(
+        this string alpha,
+        out Iso639Code? iso639Code,
+        bool allowDeprecated = false)
+    {
+        if (alpha.Length is < 2 or > 3)
+        {
+            iso639Code = null;
+            return false;
+        }
+
+        if (!Iso639AlphaLookup.TryGetValue(alpha, out var iso639CodeLookup))
+        {
+            iso639Code = null;
+            return false;
+        }
+
+        if (!allowDeprecated && Iso639AttributesLookup[iso639CodeLookup].ObsoleteAttribute is not null)
+        {
+            iso639Code = null;
+            return false;
+        }
+
+        iso639Code = iso639CodeLookup;
+        return true;
+    }
 }

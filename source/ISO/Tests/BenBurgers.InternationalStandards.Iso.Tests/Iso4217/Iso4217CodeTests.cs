@@ -126,4 +126,20 @@ public class Iso4217CodeTests
         var actual = iso4217Code.GetMinorUnits();
         Assert.Equal(expected, actual);
     }
+
+    public static readonly IEnumerable<object?[]> TryToIso4217Parameters =
+        new[]
+        {
+            new object?[] { "EGP", true, Iso4217Code.EgyptianPound },
+            new object?[] { "INR", true, Iso4217Code.IndianRupee }
+        };
+
+    [Theory(DisplayName = "ISO 4217 :: TryTo4217")]
+    [MemberData(nameof(TryToIso4217Parameters))]
+    public void TryToIso4217Test(string input, bool expectedValid, Iso4217Code expectedCode)
+    {
+        var actualValid = input.TryToIso4217(out var actualCode);
+        Assert.Equal(expectedValid, actualValid);
+        Assert.Equal(expectedCode, actualCode);
+    }
 }
