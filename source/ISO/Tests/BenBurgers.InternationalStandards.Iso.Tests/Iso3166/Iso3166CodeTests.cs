@@ -67,4 +67,22 @@ public class Iso3166CodeTests
                     && !string.IsNullOrWhiteSpace(v.NameLong))
                 );
     }
+
+    public static readonly IEnumerable<object?[]> TryToIso3166Parameters =
+        new[]
+        {
+            new object?[] { "AQ", true, Iso3166Code.Antarctica },
+            new object?[] { "ATA", true, Iso3166Code.Antarctica },
+            new object?[] { "ZZ", false, null },
+            new object?[] { "A", false, null }
+        };
+
+    [Theory(DisplayName = "ISO 3166 :: TryTo3166")]
+    [MemberData(nameof(TryToIso3166Parameters))]
+    public void TryToIso3166Test(string input, bool expectedValid, Iso3166Code? expectedCode)
+    {
+        var actualValid = input.TryToIso3166(out var actualCode);
+        Assert.Equal(expectedValid, actualValid);
+        Assert.Equal(actualCode, expectedCode);
+    }
 }

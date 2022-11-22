@@ -4,6 +4,7 @@
  */
 
 using BenBurgers.InternationalStandards.Iso.Iso4217.Exceptions;
+using System.Runtime.CompilerServices;
 
 namespace BenBurgers.InternationalStandards.Iso.Iso4217;
 
@@ -133,5 +134,30 @@ public static class Iso4217CodeExtensions
             // We should never arrive here, since the parameter is not nullable, but in runtime a null value could nevertheless be passed.
             _ => throw new ArgumentNullException(nameof(alpha))
         };
+    }
+
+    /// <summary>
+    /// Attempts to convert an <paramref name="alpha" /> code for ISO 4217 to the generic <see cref="Iso4217Code" />.
+    /// </summary>
+    /// <param name="alpha">
+    /// The Alpha-3 code for ISO 4217.
+    /// </param>
+    /// <param name="iso4217Code">
+    /// The ISO 4217 code that was evaluated, or <see langword="null" /> if invalid.
+    /// </param>
+    /// <returns>
+    /// A <see cref="bool" /> that indicates whether the <see cref="Iso4217Code" /> was successfully converted.
+    /// </returns>
+    public static bool TryToIso4217(this string alpha, out Iso4217Code? iso4217Code)
+    {
+        if (alpha is not { Length: 3 }
+            || !AlphaLookup.TryGetValue(alpha, out Iso4217Code iso4217CodeLookup))
+        {
+            iso4217Code = null;
+            return false;
+        }
+
+        iso4217Code = iso4217CodeLookup;
+        return true;
     }
 }

@@ -131,4 +131,29 @@ public static class Iso3166CodeExtensions
             _ => throw new ArgumentNullException(nameof(alpha))
         };
     }
+
+    /// <summary>
+    /// Attempts to convert an <paramref name="alpha" /> code for ISO 3166 to the generic <see cref="Iso3166Code" />.
+    /// </summary>
+    /// <param name="alpha">
+    /// The Alpha-2 or Alpha-3 code for ISO 3166.
+    /// </param>
+    /// <param name="iso3166Code">
+    /// The ISO 3166 code that was evaluated, or <see langword="null" /> if failed.
+    /// </param>
+    /// <returns>
+    /// A <see cref="bool" /> that indicates whether the <see cref="Iso3166Code" /> was successfully converted.
+    /// </returns>
+    public static bool TryToIso3166(this string alpha, out Iso3166Code? iso3166Code)
+    {
+        if (alpha is not { Length: >= 2 or <= 3 }
+            || !AlphaLookup.TryGetValue(alpha, out Iso3166Code iso3166CodeLookup))
+        {
+            iso3166Code = null;
+            return false;
+        }
+
+        iso3166Code = iso3166CodeLookup;
+        return true;
+    }
 }
