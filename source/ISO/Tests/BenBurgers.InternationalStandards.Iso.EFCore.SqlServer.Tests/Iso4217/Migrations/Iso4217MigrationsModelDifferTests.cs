@@ -45,7 +45,14 @@ public class Iso4217MigrationsModelDifferTests
                 .Value;
         var connectionString = testOptions.ConnectionString;
         var schemaName = testOptions.SchemaName;
-        var isoSqlServerOptions = new IsoSqlServerOptions(connectionString, true, schemaName);
+        var isoSqlServerOptions =
+            new IsoSqlServerOptions
+            {
+                ConnectionString = connectionString,
+                MigrationsAssembly = typeof(Iso4217MigrationsModelDifferTests).Assembly.FullName,
+                EnableSensitiveDataLogging = true,
+                SchemaName = schemaName
+            };
 
         var dbContextOptions =
             new DbContextOptionsBuilder<DbContext>()

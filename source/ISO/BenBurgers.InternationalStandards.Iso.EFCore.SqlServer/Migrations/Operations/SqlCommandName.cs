@@ -8,7 +8,7 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.Oper
 /// <summary>
 /// The name of a SQL command.
 /// </summary>
-internal enum SqlCommandName
+public enum SqlCommandName
 {
     /// <summary>
     /// DELETE

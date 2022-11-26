@@ -10,7 +10,7 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.Oper
 /// <summary>
 /// A SQL Permission Verb.
 /// </summary>
-internal enum SqlPermissionVerb
+public enum SqlPermissionVerb
 {
     /// <summary>
     /// DENY

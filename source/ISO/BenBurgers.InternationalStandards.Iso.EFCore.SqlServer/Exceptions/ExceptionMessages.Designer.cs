@@ -62,11 +62,29 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Exceptions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Database Context Options Extension for ISO standards has not been configured..
+        ///   Looks up a localized string similar to The Database Context Options Extension for ISO standards using Entity Framework Core SQL Server has not been configured..
         /// </summary>
-        internal static string IsoDbContextOptionsExtensionNotConfigured {
+        internal static string IsoSqlServerDbContextOptionsExtensionNotConfigured {
             get {
-                return ResourceManager.GetString("IsoDbContextOptionsExtensionNotConfigured", resourceCulture);
+                return ResourceManager.GetString("IsoSqlServerDbContextOptionsExtensionNotConfigured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Entity Framework Core SQL Server design time services are not configured..
+        /// </summary>
+        internal static string IsoSqlServerDesignTimeServicesNotConfigured {
+            get {
+                return ResourceManager.GetString("IsoSqlServerDesignTimeServicesNotConfigured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Entity Framework Core SQL Server services are not configured..
+        /// </summary>
+        internal static string IsoSqlServerNotConfigured {
+            get {
+                return ResourceManager.GetString("IsoSqlServerNotConfigured", resourceCulture);
             }
         }
     }

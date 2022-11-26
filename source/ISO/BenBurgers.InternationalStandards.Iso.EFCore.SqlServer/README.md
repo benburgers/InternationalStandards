@@ -82,3 +82,24 @@ Property builders and a Database Context for migrations and queries may be found
 
 - `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Iso4217`
 - `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Iso4217.Metadata.Builders`
+
+## Migrations
+
+### Bootstrapping
+
+In order to access migrations through the `dotnet-ef` tool, it is possible to create your own Migrations assembly and inherit the class `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Design.IsoDesignTimeDbContextFactory`, 
+with a particular Database Context for the desired standard as its type parameter.
+
+An inherited class of `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Design.IsoDesignTimeServices` will be necessary for generating the C# migrations.
+
+### Configuration
+
+The configuration options for the Database Context Factory may be provided by overriding the `IsoSqlServerOptions` property, or command line arguments with the `dotnet-ef` tool.
+
+The configuration parameters may be found in `BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Configuration.IsoSqlServerOptions`.
+
+### Multiple Database Contexts for multiple ISO standards
+
+If there are multiple Database Contexts, it will be necessary to tell the `dotnet-ef` tool which one to generate migrations for in a particular run.
+
+The migrations will populate a specified database with a lookup table for any supported standard. The lookup table will be read-only for public database users.
