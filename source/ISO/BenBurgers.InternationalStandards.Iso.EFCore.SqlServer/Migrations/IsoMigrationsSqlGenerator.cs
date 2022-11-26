@@ -39,7 +39,7 @@ internal sealed class IsoMigrationsSqlGenerator : SqlServerMigrationsSqlGenerato
         MigrationsSqlGenerationOptions options = MigrationsSqlGenerationOptions.Default)
     {
         // Execute internal.
-        model = model ?? this.Dependencies.CurrentContext.Context.Model;
+        model ??= this.Dependencies.CurrentContext.Context.Model;
         var operationsSchemaPermissions =
             operations
                 .OfType<SqlSchemaPermissionMigrationOperation>()
@@ -51,18 +51,20 @@ internal sealed class IsoMigrationsSqlGenerator : SqlServerMigrationsSqlGenerato
         var commands = base.Generate(operationsBase, model, options).ToList();
 
         // Add additional commands.
-        var permissionCommandBuilder = this.Dependencies.CommandBuilderFactory.Create();
         foreach (var operation in operationsSchemaPermissions)
         {
+            var permissionCommandBuilder = this.Dependencies.CommandBuilderFactory.Create();
             var verb = operation.Verb.ToString().ToUpperInvariant();
             var commandName = operation.CommandName.ToString().ToUpperInvariant();
             var schemaName = operation.SchemaName;
             var databasePrincipal = operation.DatabasePrincipal;
+            IsoConsole.WriteLines($"Generating SQL for permission operation. ({verb}, {commandName}, {schemaName}, {databasePrincipal})");
             permissionCommandBuilder
+                .Append("EXEC ('")
                 .Append($"{verb} {commandName} ON SCHEMA :: {schemaName} TO {databasePrincipal}")
-                .AppendLine();
+                .Append("')");
+            commands.Add(new MigrationCommand(permissionCommandBuilder.Build(), this.Dependencies.CurrentContext.Context, this.Dependencies.Logger));
         }
-        commands.Add(new MigrationCommand(permissionCommandBuilder.Build(), this.Dependencies.CurrentContext.Context, this.Dependencies.Logger));
 
         return commands;
     }

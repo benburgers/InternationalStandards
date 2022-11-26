@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="IsoDbContextOptionsExtensionNotConfigured" xml:space="preserve">
-    <value>The Database Context Options Extension for ISO standards has not been configured.</value>
+  <data name="IsoSqlServerDbContextOptionsExtensionNotConfigured" xml:space="preserve">
+    <value>The Database Context Options Extension for ISO standards using Entity Framework Core SQL Server has not been configured.</value>
+  </data>
+  <data name="IsoSqlServerDesignTimeServicesNotConfigured" xml:space="preserve">
+    <value>The Entity Framework Core SQL Server design time services are not configured.</value>
+  </data>
+  <data name="IsoSqlServerNotConfigured" xml:space="preserve">
+    <value>The Entity Framework Core SQL Server services are not configured.</value>
   </data>
 </root>
