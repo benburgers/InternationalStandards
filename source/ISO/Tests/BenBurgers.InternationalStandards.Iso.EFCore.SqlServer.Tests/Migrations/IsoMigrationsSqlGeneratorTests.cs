@@ -75,10 +75,9 @@ public class IsoMigrationsSqlGeneratorTests
 
         // Assert
         Assert.NotEmpty(commands);
-        Assert.Equal(4, commands.Count);
-        var permissions = commands[3].CommandText.Split(Environment.NewLine);
-        Assert.Equal("DENY DELETE ON SCHEMA :: BBIso TO public", permissions[0]);
-        Assert.Equal("DENY INSERT ON SCHEMA :: BBIso TO public", permissions[1]);
-        Assert.Equal("DENY UPDATE ON SCHEMA :: BBIso TO public", permissions[2]);
+        Assert.Equal(6, commands.Count);
+        Assert.Equal("EXEC ('DENY DELETE ON SCHEMA :: BBIso TO public')", commands[3].CommandText);
+        Assert.Equal("EXEC ('DENY INSERT ON SCHEMA :: BBIso TO public')", commands[4].CommandText);
+        Assert.Equal("EXEC ('DENY UPDATE ON SCHEMA :: BBIso TO public')", commands[5].CommandText);
     }
 }
