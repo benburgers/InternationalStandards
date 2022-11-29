@@ -25,4 +25,22 @@ public sealed class Alpha3 : Alpha
         : base(value, 3)
     {
     }
+
+    /// <inheritdoc />
+    public override bool Equals(object? obj)
+    {
+        return obj switch
+        {
+            null => false,
+            _ when ReferenceEquals(this, obj) => true,
+            Alpha3 alpha3 => this.Value.Equals(alpha3.Value),
+            _ => false
+        };
+    }
+
+    /// <inheritdoc />
+    public override int GetHashCode()
+    {
+        return this.Value.GetHashCode();
+    }
 }

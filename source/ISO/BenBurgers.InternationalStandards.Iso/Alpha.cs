@@ -41,6 +41,24 @@ public class Alpha
     /// </summary>
     public string Value { get; }
 
+    /// <inheritdoc />
+    public override bool Equals(object? obj)
+    {
+        return obj switch
+        {
+            null => false,
+            _ when ReferenceEquals(this, obj) => true,
+            Alpha alpha => this.Value.Equals(alpha.Value),
+            _ => false
+        };
+    }
+
+    /// <inheritdoc />
+    public override int GetHashCode()
+    {
+        return this.Value.GetHashCode();
+    }
+
     /// <summary>
     /// Returns the Alpha value.
     /// </summary>

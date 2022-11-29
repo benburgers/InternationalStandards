@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalSta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.EFCore.Tests", "ISO\Tests\BenBurgers.InternationalStandards.Iso.EFCore.Tests\BenBurgers.InternationalStandards.Iso.EFCore.Tests.csproj", "{82C7FFB2-8617-4BD4-9269-05AEE0A8B9F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations", "ISO\Tests\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.csproj", "{31533B17-5E41-4EF1-9D29-01DA0FC7B714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations", "ISO\Tests\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.csproj", "{31533B17-5E41-4EF1-9D29-01DA0FC7B714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,9 +121,7 @@ Global
 		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Test|Any CPU.ActiveCfg = Debug|Any CPU
-		{31533B17-5E41-4EF1-9D29-01DA0FC7B714}.Test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

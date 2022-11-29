@@ -4,8 +4,6 @@
  */
 
 using System.Globalization;
-using System.Reflection;
-using BenBurgers.InternationalStandards.Iso.Iso3166.Attributes;
 using BenBurgers.InternationalStandards.Iso.Iso3166.Exceptions;
 
 namespace BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -15,21 +13,6 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166;
 /// </summary>
 public static class Iso3166CodeExtensions
 {
-    private static readonly IReadOnlyDictionary<Iso3166Code, Iso3166Attribute> Attributes =
-        typeof(Iso3166Code)
-            .GetFields(BindingFlags.Static | BindingFlags.Public)
-            .ToDictionary(f => (Iso3166Code)f.GetValue(null)!, f => f.GetCustomAttribute<Iso3166Attribute>()!);
-
-    private static readonly IReadOnlyDictionary<string, Iso3166Code> AlphaLookup =
-        Attributes
-            .SelectMany(kvp =>
-            new KeyValuePair<string, Iso3166Code>[]
-            {
-                new(kvp.Value.Alpha2.ToString(), kvp.Key),
-                new(kvp.Value.Alpha3.ToString(), kvp.Key)
-            })
-            .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-
     /// <summary>
     /// Gets the name for the <paramref name="iso3166Code" />.
     /// </summary>
@@ -72,7 +55,7 @@ public static class Iso3166CodeExtensions
     /// </returns>
     public static string ToAlpha2(this Iso3166Code iso3166Code)
     {
-        return Attributes[iso3166Code].Alpha2.ToString();
+        return Iso3166Codes.Attributes[iso3166Code].Alpha2.ToString();
     }
 
     /// <summary>
@@ -86,7 +69,7 @@ public static class Iso3166CodeExtensions
     /// </returns>
     public static string ToAlpha3(this Iso3166Code iso3166Code)
     {
-        return Attributes[iso3166Code].Alpha3.ToString();
+        return Iso3166Codes.Attributes[iso3166Code].Alpha3.ToString();
     }
 
     /// <summary>
@@ -100,7 +83,7 @@ public static class Iso3166CodeExtensions
     /// </returns>
     public static Iso3166Model ToModel(this Iso3166Code iso3166Code)
     {
-        var attributes = Attributes[iso3166Code];
+        var attributes = Iso3166Codes.Attributes[iso3166Code];
         var numeric = (short)iso3166Code;
         var alpha2 = attributes.Alpha2;
         var alpha3 = attributes.Alpha3;
@@ -128,7 +111,7 @@ public static class Iso3166CodeExtensions
         {
             // Check length first to save up time from looking in the dictionary if the length is incorrect.
             { Length: < 2 or > 3 } => throw new Iso3166AlphaInvalidException(alpha),
-            { } when AlphaLookup.TryGetValue(alpha, out Iso3166Code iso3166Code) => iso3166Code,
+            { } when Iso3166Codes.AlphaLookup.TryGetValue(alpha, out Iso3166Code iso3166Code) => iso3166Code,
             { } => throw new Iso3166AlphaInvalidException(alpha),
             // We should never arrive here, since the parameter is not nullable, but in runtime a null value could nevertheless be passed.
             _ => throw new ArgumentNullException(nameof(alpha))
@@ -150,7 +133,7 @@ public static class Iso3166CodeExtensions
     public static bool TryToIso3166(this string alpha, out Iso3166Code? iso3166Code)
     {
         if (alpha is not { Length: >= 2 or <= 3 }
-            || !AlphaLookup.TryGetValue(alpha, out Iso3166Code iso3166CodeLookup))
+            || !Iso3166Codes.AlphaLookup.TryGetValue(alpha, out Iso3166Code iso3166CodeLookup))
         {
             iso3166Code = null;
             return false;
