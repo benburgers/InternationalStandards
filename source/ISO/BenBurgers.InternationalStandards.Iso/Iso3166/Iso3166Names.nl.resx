@@ -267,16 +267,16 @@
   <data name="BhutanShort" xml:space="preserve">
     <value>Bhutan</value>
   </data>
-  <data name="BoliviaLong" xml:space="preserve">
+  <data name="Bolivia_PlurinationalStateOfLong" xml:space="preserve">
     <value>Plurinationale Staat Bolivia</value>
   </data>
-  <data name="BoliviaShort" xml:space="preserve">
+  <data name="Bolivia_PlurinationalStateOfShort" xml:space="preserve">
     <value>Bolivia</value>
   </data>
-  <data name="BonaireSintEustatiusAndSabaLong" xml:space="preserve">
+  <data name="Bonaire_SintEustatiusAndSabaLong" xml:space="preserve">
     <value>Bonaire, Sint Eustatius en Saba</value>
   </data>
-  <data name="BonaireSintEustatiusAndSabaShort" xml:space="preserve">
+  <data name="Bonaire_SintEustatiusAndSabaShort" xml:space="preserve">
     <value>Bonaire, Sint Eustatius en Saba</value>
   </data>
   <data name="BosniaAndHerzegovinaLong" xml:space="preserve">
@@ -393,10 +393,10 @@
   <data name="ChristmasIslandShort" xml:space="preserve">
     <value>Kersteiland</value>
   </data>
-  <data name="CocosIslandsLong" xml:space="preserve">
+  <data name="Cocos_Keeling_IslandsLong" xml:space="preserve">
     <value>Cocoseilanden</value>
   </data>
-  <data name="CocosIslandsShort" xml:space="preserve">
+  <data name="Cocos_Keeling_IslandsShort" xml:space="preserve">
     <value>Cocoseilanden</value>
   </data>
   <data name="ColombiaLong" xml:space="preserve">
@@ -411,17 +411,17 @@
   <data name="ComorosShort" xml:space="preserve">
     <value>Comoren</value>
   </data>
-  <data name="CongoDemocraticRepublicLong" xml:space="preserve">
-    <value>Democratische Republiek Congo</value>
-  </data>
-  <data name="CongoDemocraticRepublicShort" xml:space="preserve">
-    <value>Congo-Kinshasa</value>
-  </data>
   <data name="CongoLong" xml:space="preserve">
     <value>Republiek Congo</value>
   </data>
   <data name="CongoShort" xml:space="preserve">
     <value>Congo-Brazzaville</value>
+  </data>
+  <data name="Congo_theDemocraticRepublicOfTheLong" xml:space="preserve">
+    <value>Democratische Republiek Congo</value>
+  </data>
+  <data name="Congo_theDemocraticRepublicOfTheShort" xml:space="preserve">
+    <value>Congo-Kinshasa</value>
   </data>
   <data name="CookIslandsLong" xml:space="preserve">
     <value>Cook Eilanden</value>
@@ -465,10 +465,10 @@
   <data name="CzechiaShort" xml:space="preserve">
     <value>Tsjechië</value>
   </data>
-  <data name="CôteDIvoireLong" xml:space="preserve">
+  <data name="CôteD_IvoireLong" xml:space="preserve">
     <value>Republiek Côte d'Ivoire</value>
   </data>
-  <data name="CôteDIvoireShort" xml:space="preserve">
+  <data name="CôteD_IvoireShort" xml:space="preserve">
     <value>Ivoorkust</value>
   </data>
   <data name="DenmarkLong" xml:space="preserve">
@@ -543,10 +543,10 @@
   <data name="EthiopiaShort" xml:space="preserve">
     <value>Ethiopië</value>
   </data>
-  <data name="FalklandIslandsMalvinasLong" xml:space="preserve">
+  <data name="FalklandIslands_the__MalvinasLong" xml:space="preserve">
     <value>Falklandeilanden (Islas Malvinas)</value>
   </data>
-  <data name="FalklandIslandsMalvinasShort" xml:space="preserve">
+  <data name="FalklandIslands_the__MalvinasShort" xml:space="preserve">
     <value>Falklandeilanden (Islas Malvinas)</value>
   </data>
   <data name="FaroeIslandsLong" xml:space="preserve">
@@ -669,17 +669,17 @@
   <data name="GuernseyShort" xml:space="preserve">
     <value>Guernsey</value>
   </data>
-  <data name="GuineaBissauLong" xml:space="preserve">
-    <value>Republiek Guinee-Bissau</value>
-  </data>
-  <data name="GuineaBissauShort" xml:space="preserve">
-    <value>Guinee-Bissau</value>
-  </data>
   <data name="GuineaLong" xml:space="preserve">
     <value>Republiek Guinee</value>
   </data>
   <data name="GuineaShort" xml:space="preserve">
     <value>Guinee</value>
+  </data>
+  <data name="Guinea_BissauLong" xml:space="preserve">
+    <value>Republiek Guinee-Bissau</value>
+  </data>
+  <data name="Guinea_BissauShort" xml:space="preserve">
+    <value>Guinee-Bissau</value>
   </data>
   <data name="GuyanaLong" xml:space="preserve">
     <value>Coöperatieve Republiek Guyana</value>
@@ -741,10 +741,10 @@
   <data name="IndonesiaShort" xml:space="preserve">
     <value>Indonesië</value>
   </data>
-  <data name="IranLong" xml:space="preserve">
+  <data name="Iran_IslamicRepublicOfLong" xml:space="preserve">
     <value>Islamitische Republiek Iran</value>
   </data>
-  <data name="IranShort" xml:space="preserve">
+  <data name="Iran_IslamicRepublicOfShort" xml:space="preserve">
     <value>Iran</value>
   </data>
   <data name="IraqLong" xml:space="preserve">
@@ -819,16 +819,16 @@
   <data name="KiribatiShort" xml:space="preserve">
     <value>Kiribati</value>
   </data>
-  <data name="KoreaDemocraticPeoplesRepublicLong" xml:space="preserve">
+  <data name="Korea_theDemocraticPeople_sRepublicOfLong" xml:space="preserve">
     <value>Democratische Volksrepubliek Korea</value>
   </data>
-  <data name="KoreaDemocraticPeoplesRepublicShort" xml:space="preserve">
+  <data name="Korea_theDemocraticPeople_sRepublicOfShort" xml:space="preserve">
     <value>Noord-Korea</value>
   </data>
-  <data name="KoreaRepublicLong" xml:space="preserve">
+  <data name="Korea_theRepublicOfLong" xml:space="preserve">
     <value>Republiek Korea</value>
   </data>
-  <data name="KoreaRepublicShort" xml:space="preserve">
+  <data name="Korea_theRepublicOfShort" xml:space="preserve">
     <value>Zuid-Korea</value>
   </data>
   <data name="KuwaitLong" xml:space="preserve">
@@ -843,10 +843,10 @@
   <data name="KyrgyzstanShort" xml:space="preserve">
     <value>Kirgizië</value>
   </data>
-  <data name="LaoPeoplesDemocraticRepublicLong" xml:space="preserve">
+  <data name="LaoPeople_sDemocraticRepublicLong" xml:space="preserve">
     <value>Democratische Volksrepubliek Laos</value>
   </data>
-  <data name="LaoPeoplesDemocraticRepublicShort" xml:space="preserve">
+  <data name="LaoPeople_sDemocraticRepublicShort" xml:space="preserve">
     <value>Laos</value>
   </data>
   <data name="LatviaLong" xml:space="preserve">
@@ -975,16 +975,16 @@
   <data name="MexicoShort" xml:space="preserve">
     <value>Mexico</value>
   </data>
-  <data name="MicronesiaLong" xml:space="preserve">
+  <data name="Micronesia_FederatedStatesOfLong" xml:space="preserve">
     <value>Federale Staten van Micronesië</value>
   </data>
-  <data name="MicronesiaShort" xml:space="preserve">
+  <data name="Micronesia_FederatedStatesOfShort" xml:space="preserve">
     <value>Micronesië</value>
   </data>
-  <data name="MoldovaLong" xml:space="preserve">
+  <data name="Moldova_theRepublicOfLong" xml:space="preserve">
     <value>Republiek Moldavië</value>
   </data>
-  <data name="MoldovaShort" xml:space="preserve">
+  <data name="Moldova_theRepublicOfShort" xml:space="preserve">
     <value>Moldavië</value>
   </data>
   <data name="MonacoLong" xml:space="preserve">
@@ -1131,10 +1131,10 @@
   <data name="PalauShort" xml:space="preserve">
     <value>Palau</value>
   </data>
-  <data name="PalestineLong" xml:space="preserve">
+  <data name="Palestine_StateOfLong" xml:space="preserve">
     <value>Staat Palestina</value>
   </data>
-  <data name="PalestineShort" xml:space="preserve">
+  <data name="Palestine_StateOfShort" xml:space="preserve">
     <value>Palestine</value>
   </data>
   <data name="PanamaLong" xml:space="preserve">
@@ -1167,10 +1167,10 @@
   <data name="PhilippinesShort" xml:space="preserve">
     <value>Filipijnen</value>
   </data>
-  <data name="PitcairnIslandsLong" xml:space="preserve">
+  <data name="PitcairnLong" xml:space="preserve">
     <value>Pitcairn, Henderson, Ducie en Oeno Eilanden</value>
   </data>
-  <data name="PitcairnIslandsShort" xml:space="preserve">
+  <data name="PitcairnShort" xml:space="preserve">
     <value>Pitcairn Eilanden</value>
   </data>
   <data name="PolandLong" xml:space="preserve">
@@ -1227,10 +1227,10 @@
   <data name="SaintBarthélemyShort" xml:space="preserve">
     <value>Saint-Barthélemy</value>
   </data>
-  <data name="SaintHelenaAscensionAndTristanDaCunhaLong" xml:space="preserve">
+  <data name="SaintHelena_AscensionAndTristanDaCunhaLong" xml:space="preserve">
     <value>Sint-Helena, Ascension en Tristan da Cunha</value>
   </data>
-  <data name="SaintHelenaAscensionAndTristanDaCunhaShort" xml:space="preserve">
+  <data name="SaintHelena_AscensionAndTristanDaCunhaShort" xml:space="preserve">
     <value>Sint-Helena, Ascension en Tristan da Cunha</value>
   </data>
   <data name="SaintKittsAndNevisLong" xml:space="preserve">
@@ -1245,10 +1245,10 @@
   <data name="SaintLuciaShort" xml:space="preserve">
     <value>Saint Lucia</value>
   </data>
-  <data name="SaintMartinLong" xml:space="preserve">
+  <data name="SaintMartin_FrenchPartLong" xml:space="preserve">
     <value>Collectiviteit van Sint-Maarten</value>
   </data>
-  <data name="SaintMartinShort" xml:space="preserve">
+  <data name="SaintMartin_FrenchPartShort" xml:space="preserve">
     <value>Sint-Maarten</value>
   </data>
   <data name="SaintPierreAndMiquelonLong" xml:space="preserve">
@@ -1257,10 +1257,10 @@
   <data name="SaintPierreAndMiquelonShort" xml:space="preserve">
     <value>Saint-Pierre en Miquelon</value>
   </data>
-  <data name="SaintVincentAndGrenadinesLong" xml:space="preserve">
+  <data name="SaintVincentAndTheGrenadinesLong" xml:space="preserve">
     <value>Saint Vincent en de Grenadines</value>
   </data>
-  <data name="SaintVincentAndGrenadinesShort" xml:space="preserve">
+  <data name="SaintVincentAndTheGrenadinesShort" xml:space="preserve">
     <value>Saint Vincent en de Grenadines</value>
   </data>
   <data name="SamoaLong" xml:space="preserve">
@@ -1317,10 +1317,10 @@
   <data name="SingaporeShort" xml:space="preserve">
     <value>Singapore</value>
   </data>
-  <data name="SintMaartenLong" xml:space="preserve">
+  <data name="SintMaarten_DutchPartLong" xml:space="preserve">
     <value>Sint Maarten</value>
   </data>
-  <data name="SintMaartenShort" xml:space="preserve">
+  <data name="SintMaarten_DutchPartShort" xml:space="preserve">
     <value>Sint Maarten</value>
   </data>
   <data name="SlovakiaLong" xml:space="preserve">
@@ -1353,10 +1353,10 @@
   <data name="SouthAfricaShort" xml:space="preserve">
     <value>Zuid-Afrika</value>
   </data>
-  <data name="SouthGeorgiaAndSouthSandwichIslandsLong" xml:space="preserve">
+  <data name="SouthGeorgiaAndTheSouthSandwichIslandsLong" xml:space="preserve">
     <value>Zuid-Georgia en de Zuidelijke Sandwicheilanden</value>
   </data>
-  <data name="SouthGeorgiaAndSouthSandwichIslandsShort" xml:space="preserve">
+  <data name="SouthGeorgiaAndTheSouthSandwichIslandsShort" xml:space="preserve">
     <value>Zuid-Georgia en de Zuidelijke Sandwicheilanden</value>
   </data>
   <data name="SouthSudanLong" xml:space="preserve">
@@ -1425,10 +1425,10 @@
   <data name="TajikistanShort" xml:space="preserve">
     <value>Tadzjikistan</value>
   </data>
-  <data name="TanzaniaLong" xml:space="preserve">
+  <data name="Tanzania_TheUnitedRepublicOfLong" xml:space="preserve">
     <value>Verenigde Republiek Tanzania</value>
   </data>
-  <data name="TanzaniaShort" xml:space="preserve">
+  <data name="Tanzania_TheUnitedRepublicOfShort" xml:space="preserve">
     <value>Tanzania</value>
   </data>
   <data name="ThailandLong" xml:space="preserve">
@@ -1437,10 +1437,10 @@
   <data name="ThailandShort" xml:space="preserve">
     <value>Thailand</value>
   </data>
-  <data name="TimorLesteLong" xml:space="preserve">
+  <data name="Timor_LesteLong" xml:space="preserve">
     <value>Democratische Republiek Oost-Timor</value>
   </data>
-  <data name="TimorLesteShort" xml:space="preserve">
+  <data name="Timor_LesteShort" xml:space="preserve">
     <value>Timor-Leste</value>
   </data>
   <data name="TogoLong" xml:space="preserve">
@@ -1515,10 +1515,10 @@
   <data name="UnitedArabEmiratesShort" xml:space="preserve">
     <value>Verenigde Arabische Emiraten</value>
   </data>
-  <data name="UnitedKingdomLong" xml:space="preserve">
+  <data name="UnitedKingdomOfGreatBritainAndNorthernIrelandLong" xml:space="preserve">
     <value>Verenigd Koninkrijk van Groot-Brittannië en Noord-Ierland</value>
   </data>
-  <data name="UnitedKingdomShort" xml:space="preserve">
+  <data name="UnitedKingdomOfGreatBritainAndNorthernIrelandShort" xml:space="preserve">
     <value>Verenigd Koninkrijk</value>
   </data>
   <data name="UnitedStatesMinorOutlyingIslandsLong" xml:space="preserve">
@@ -1551,10 +1551,10 @@
   <data name="VanuatuShort" xml:space="preserve">
     <value>Vanuatu</value>
   </data>
-  <data name="VenezuelaLong" xml:space="preserve">
+  <data name="Venezuela_BolivarianRepublicOfLong" xml:space="preserve">
     <value>Bolivariaanse Republiek Venezuela</value>
   </data>
-  <data name="VenezuelaShort" xml:space="preserve">
+  <data name="Venezuela_BolivarianRepublicOfShort" xml:space="preserve">
     <value>Venezuela</value>
   </data>
   <data name="VietNamLong" xml:space="preserve">
@@ -1563,16 +1563,16 @@
   <data name="VietNamShort" xml:space="preserve">
     <value>Vietnam</value>
   </data>
-  <data name="VirginIslandsBritishLong" xml:space="preserve">
+  <data name="VirginIslands_BritishLong" xml:space="preserve">
     <value>Britse Maagdeneilanden</value>
   </data>
-  <data name="VirginIslandsBritishShort" xml:space="preserve">
+  <data name="VirginIslands_BritishShort" xml:space="preserve">
     <value>Britse Maagdeneilanden</value>
   </data>
-  <data name="VirginIslandsUnitedStatesLong" xml:space="preserve">
+  <data name="VirginIslands_U_SLong" xml:space="preserve">
     <value>Amerikaanse Maagdeneilanden</value>
   </data>
-  <data name="VirginIslandsUnitedStatesShort" xml:space="preserve">
+  <data name="VirginIslands_U_SShort" xml:space="preserve">
     <value>Amerikaanse Maagdeneilanden</value>
   </data>
   <data name="WallisAndFutunaLong" xml:space="preserve">

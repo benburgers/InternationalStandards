@@ -1,7 +1,9 @@
 Version 0.4.0
 - Added Entity Framework Core features for value converters and model builders.
 - ISO 3166: Breaking change; Iso3166AlphaMode moved from JSON package to main package.
-- ISO 639, 3166, 4217: Added ToModel method for retrieving the full model of an ISO 639 code.
+- ISO 3166: Country codes are now generated from the data from the ISO 3166 Maintenance Agency (Online Browsing Platform), some field names may have changed. Properties "Independent" and official full names and short names in some languages added.
+- ISO 639: Comparers added.
+- ISO 639, 3166, 4217: Added ToModel method for retrieving the full model of an ISO code.
 - ISO 639, 3166, 4217: Added TryTo[ISO] method for attempting to convert a string to its ISO code equivalent, without throwing an exception if it fails.
 
 

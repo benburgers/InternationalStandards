@@ -8,16 +8,11 @@ namespace BenBurgers.InternationalStandards.Iso.CodeGenerator.Configuration.Iso4
 /// <summary>
 /// Options for generating ISO 4217 currency codes.
 /// </summary>
-public class Iso4217Options
+public sealed class Iso4217Options : IsoOptionsBase
 {
     /// <summary>
     /// Gets or sets the file name (including path) to the main list of ISO 4217 currency codes (XML file) 
     /// as provided by SIX Financial Information AG, the Maintenance Agency of ISO 4217 currency codes.
     /// </summary>
-    public string ListOneFileName { get; set; } = default!;
-
-    /// <summary>
-    /// Gets or sets the path to the BenBurgers.InternationalStandards.Iso project.
-    /// </summary>
-    public string ProjectFolder { get;set; } = default!;
+    public string ListOneFileName { get; init; } = default!;
 }

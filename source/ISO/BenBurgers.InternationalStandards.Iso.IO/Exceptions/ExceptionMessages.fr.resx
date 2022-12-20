@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidXmlAttribute" xml:space="preserve">
+    <value>L'attribut XML '{1}' sur l'élément '{0}' n'est pas valide ou ce n'est pas trouvé.</value>
+  </data>
+  <data name="InvalidXmlElement" xml:space="preserve">
+    <value>Le XML pour l'élément '{0}' n'avait pas le format attendu, ou l'élément n'était pas trouvé.</value>
+  </data>
   <data name="Iso639Part3CodeTableReaderFailed" xml:space="preserve">
     <value>Impossible de lire le tableau de codes ISO 639-3. Veuillez consulter l'Exception interne pour plus de détails.</value>
   </data>

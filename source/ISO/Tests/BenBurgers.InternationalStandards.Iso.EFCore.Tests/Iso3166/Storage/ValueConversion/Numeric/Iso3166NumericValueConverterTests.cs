@@ -14,7 +14,7 @@ public class Iso3166NumericValueConverterTests
         new[]
         {
             new object?[] { Iso3166Code.Greece, 300 },
-            new object?[] { Iso3166Code.Moldova, 498 }
+            new object?[] { Iso3166Code.Moldova_theRepublicOf, 498 }
         };
 
     [Theory(DisplayName = "ISO 3166 Numeric Value Converter converts to numeric code.")]

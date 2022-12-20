@@ -27,6 +27,6 @@ internal static class ModelBuilderExtensions
     /// </returns>
     internal static ModelBuilder ApplyIso3166(this ModelBuilder modelBuilder, string schemaName)
     {
-        return modelBuilder.ApplyConfiguration(new Iso3166SqlServerModelConfiguration(schemaName));
+        return modelBuilder.ApplyConfiguration(new Iso3166ModelEntityTypeConfiguration(schemaName));
     }
 }

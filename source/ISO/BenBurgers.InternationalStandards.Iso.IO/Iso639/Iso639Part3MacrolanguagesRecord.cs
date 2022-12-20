@@ -4,6 +4,7 @@
  */
 
 using BenBurgers.InternationalStandards.Iso.Iso639;
+using BenBurgers.Text.Csv.Attributes;
 
 namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 
@@ -19,12 +20,7 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 /// <param name="IndividualStatus">
 /// The status of the individual language.
 /// </param>
-public record Iso639Part3MacrolanguagesRecord(
-    [property: Iso639TableColumn("M_Id")]
-    Alpha3 MacroId,
-
-    [property: Iso639TableColumn("I_Id")]
-    Alpha3 IndividualId,
-
-    [property: Iso639TableColumn("I_Status")]
-    Iso639Status IndividualStatus);
+public sealed record Iso639Part3MacrolanguagesRecord(
+    [property: CsvColumn("M_Id")] Alpha3 MacroId,
+    [property: CsvColumn("I_Id")] Alpha3 IndividualId,
+    [property: CsvColumn("I_Status")] Iso639Status IndividualStatus) : IIso639Part3TableRecord;

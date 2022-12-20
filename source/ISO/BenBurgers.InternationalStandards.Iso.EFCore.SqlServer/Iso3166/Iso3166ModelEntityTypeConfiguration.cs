@@ -16,17 +16,17 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Iso3166;
 /// Entity Type Configuration for <see cref="Iso3166Model" />.
 /// </summary>
 [SuppressMessage("Usage", "EF1001:Internal EF Core API usage.", Justification = "Enhancement of EF Core API.")]
-internal sealed class Iso3166SqlServerModelConfiguration : IEntityTypeConfiguration<Iso3166Model>
+internal sealed class Iso3166ModelEntityTypeConfiguration : IEntityTypeConfiguration<Iso3166Model>
 {
     private readonly string schemaName;
 
     /// <summary>
-    /// Initializes a new instance of <see cref="Iso3166SqlServerModelConfiguration" />.
+    /// Initializes a new instance of <see cref="Iso3166ModelEntityTypeConfiguration" />.
     /// </summary>
     /// <param name="schemaName">
     /// The name of the SQL Server Schema for ISO tables.
     /// </param>
-    internal Iso3166SqlServerModelConfiguration(string schemaName)
+    internal Iso3166ModelEntityTypeConfiguration(string schemaName)
     {
         this.schemaName = schemaName;
     }
@@ -51,6 +51,9 @@ internal sealed class Iso3166SqlServerModelConfiguration : IEntityTypeConfigurat
             .Property(m => m.Alpha3)
             .HasConversion(new Alpha3ValueConverter())
             .HasColumnType(alpha3TypeMapping.StoreType);
+        builder.Ignore(m => m.FullName);
+        builder.Ignore(m => m.ShortName);
+        builder.Ignore(m => m.ShortNameUpperCase);
         builder.HasData(Enum.GetValues<Iso3166Code>().Select(c => c.ToModel()));
     }
 }

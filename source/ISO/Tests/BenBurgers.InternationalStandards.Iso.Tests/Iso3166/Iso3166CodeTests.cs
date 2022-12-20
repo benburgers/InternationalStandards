@@ -31,7 +31,7 @@ public class Iso3166CodeTests
         // Act
         var attributes =
             fields
-                .Select(f => f.GetCustomAttribute<Iso3166Attribute>())
+                .Select(f => f.GetCustomAttribute<Iso3166AlphaAttribute>())
                 .ToArray();
 
         // Assert

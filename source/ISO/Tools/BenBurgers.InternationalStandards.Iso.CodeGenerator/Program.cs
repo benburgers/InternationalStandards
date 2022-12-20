@@ -4,6 +4,7 @@
  */
 
 using BenBurgers.InternationalStandards.Iso.CodeGenerator.Configuration;
+using BenBurgers.InternationalStandards.Iso.CodeGenerator.Workflow.Iso3166;
 using BenBurgers.InternationalStandards.Iso.CodeGenerator.Workflow.Iso4217;
 using BenBurgers.InternationalStandards.Iso.CodeGenerator.Workflow.Iso639;
 using Microsoft.Extensions.Configuration;
@@ -41,6 +42,8 @@ var cancellationToken = cancellationTokenSource.Token;
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
 var options = serviceProvider.GetRequiredService<IOptions<CodeGeneratorOptions>>().Value;
 if (options.Iso639 is { } iso639Options)
-    await Iso639Generator.GenerateAsync(iso639Options, logger, cancellationToken);
+    await Iso639CodeGenerator.GenerateAsync(iso639Options, logger, cancellationToken);
+if (options.Iso3166 is { } iso3166Options)
+    await Iso3166CodeGenerator.GenerateAsync(iso3166Options, logger, cancellationToken);
 if (options.Iso4217 is { } iso4217Options)
-    await Iso4217Generator.GenerateAsync(iso4217Options, logger, cancellationToken);
+    await Iso4217CodeGenerator.GenerateAsync(iso4217Options, logger, cancellationToken);

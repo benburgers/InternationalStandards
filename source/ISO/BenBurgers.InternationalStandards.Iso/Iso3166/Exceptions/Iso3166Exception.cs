@@ -16,8 +16,11 @@ public abstract class Iso3166Exception : Exception
     /// <param name="message">
     /// The exception message.
     /// </param>
-    protected Iso3166Exception(string message)
-        : base(message)
+    /// <param name="innerException">
+    /// The optional inner exception.
+    /// </param>
+    protected Iso3166Exception(string message, Exception? innerException = null)
+        : base(message, innerException)
     {
     }
 }

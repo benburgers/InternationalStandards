@@ -5,6 +5,7 @@
 
 using System.Globalization;
 using BenBurgers.InternationalStandards.Iso.Iso3166.Exceptions;
+using BenBurgers.InternationalStandards.Iso.Iso639;
 
 namespace BenBurgers.InternationalStandards.Iso.Iso3166;
 
@@ -13,6 +14,21 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166;
 /// </summary>
 public static class Iso3166CodeExtensions
 {
+    private static GlobalizedString ToGlobalizedString(
+        this IEnumerable<ILocalizedNameAttribute> fullName,
+        Iso639Code? languageDefault = null) =>
+        new(
+            fullName.ToDictionary(fna => fna.Iso639Code, fna => fna.Name),
+            languageDefault);
+
+    /// <summary>
+    /// Gets the full name of the ISO 3166 country.
+    /// </summary>
+    /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <returns>The full name of the ISO 3166 country.</returns>
+    public static GlobalizedString GetFullName(this Iso3166Code iso3166Code) =>
+        Iso3166Codes.Attributes[iso3166Code].FullNameAttributes.ToGlobalizedString();
+
     /// <summary>
     /// Gets the name for the <paramref name="iso3166Code" />.
     /// </summary>
@@ -45,6 +61,38 @@ public static class Iso3166CodeExtensions
     }
 
     /// <summary>
+    /// Gets the short name of the <paramref name="iso3166Code" /> country.
+    /// </summary>
+    /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <returns>The short name of the <paramref name="iso3166Code" /> country.</returns>
+    public static GlobalizedString GetShortName(this Iso3166Code iso3166Code) =>
+        Iso3166Codes.Attributes[iso3166Code].ShortNameAttributes.ToGlobalizedString();
+
+    /// <summary>
+    /// Gets the short name in upper case of the <paramref name="iso3166Code" /> country.
+    /// </summary>
+    /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <returns>The short name in upper case of the <paramref name="iso3166Code" /> country.</returns>
+    public static GlobalizedString GetShortNameUpperCase(this Iso3166Code iso3166Code) =>
+        Iso3166Codes.Attributes[iso3166Code].ShortNameUpperCaseAttributes.ToGlobalizedString();
+
+    /// <summary>
+    /// Gets the status of the <paramref name="iso3166Code" />.
+    /// </summary>
+    /// <param name="iso3166Code">The ISO 3166 code for which to get the status.</param>
+    /// <returns>The status of the <paramref name="iso3166Code" />.</returns>
+    public static Iso3166Status GetStatus(this Iso3166Code iso3166Code) =>
+        Iso3166Codes.Attributes[iso3166Code].StatusAttribute.Status;
+
+    /// <summary>
+    /// Gets a value that indicates whether the <paramref name="iso3166Code" /> country is independent according to the ISO 3166 Maintenance Agency.
+    /// </summary>
+    /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <returns>A value that indicates whether the <paramref name="iso3166Code" /> country is independent according to the ISO 3166 Maintenance Agency.</returns>
+    public static bool IsIndependent(this Iso3166Code iso3166Code) =>
+        Iso3166Codes.Attributes[iso3166Code].IndependentAttribute.Independent;
+
+    /// <summary>
     /// Converts the <paramref name="iso3166Code" /> to its Alpha-2 two-letter code equivalent.
     /// </summary>
     /// <param name="iso3166Code">
@@ -55,7 +103,7 @@ public static class Iso3166CodeExtensions
     /// </returns>
     public static string ToAlpha2(this Iso3166Code iso3166Code)
     {
-        return Iso3166Codes.Attributes[iso3166Code].Alpha2.ToString();
+        return Iso3166Codes.Attributes[iso3166Code].AlphaAttribute.Alpha2.ToString();
     }
 
     /// <summary>
@@ -69,7 +117,7 @@ public static class Iso3166CodeExtensions
     /// </returns>
     public static string ToAlpha3(this Iso3166Code iso3166Code)
     {
-        return Iso3166Codes.Attributes[iso3166Code].Alpha3.ToString();
+        return Iso3166Codes.Attributes[iso3166Code].AlphaAttribute.Alpha3.ToString();
     }
 
     /// <summary>
@@ -78,16 +126,34 @@ public static class Iso3166CodeExtensions
     /// <param name="iso3166Code">
     /// The ISO 3166 code.
     /// </param>
+    /// <param name="languageDefault">
+    /// The default language that is used for retrieving localized names if a specified language does not have an associated value.
+    /// </param>
     /// <returns>
     /// A model that contains the data for <paramref name="iso3166Code" />.
     /// </returns>
-    public static Iso3166Model ToModel(this Iso3166Code iso3166Code)
+    public static Iso3166Model ToModel(
+        this Iso3166Code iso3166Code,
+        Iso639Code? languageDefault = null)
     {
         var attributes = Iso3166Codes.Attributes[iso3166Code];
         var numeric = (short)iso3166Code;
-        var alpha2 = attributes.Alpha2;
-        var alpha3 = attributes.Alpha3;
-        return new Iso3166Model(numeric, alpha2, alpha3);
+        var alpha2 = attributes.AlphaAttribute.Alpha2;
+        var alpha3 = attributes.AlphaAttribute.Alpha3;
+        var independent = attributes.IndependentAttribute.Independent;
+        var status = attributes.StatusAttribute.Status;
+        var fullName = attributes.FullNameAttributes.ToGlobalizedString(languageDefault);
+        var shortName = attributes.ShortNameAttributes.ToGlobalizedString(languageDefault);
+        var shortNameUpperCase = attributes.ShortNameUpperCaseAttributes.ToGlobalizedString(languageDefault);
+        return new Iso3166Model(
+            numeric,
+            alpha2,
+            alpha3,
+            independent,
+            status,
+            fullName,
+            shortName,
+            shortNameUpperCase);
     }
 
     /// <summary>

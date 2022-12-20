@@ -3,6 +3,8 @@
  * This work is licensed by GNU General Public License version 3.
  */
 
+using BenBurgers.Text.Csv.Attributes;
+
 namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 
 /// <summary>
@@ -26,21 +28,10 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 /// <param name="Effective">
 /// The date from which the retirement is effective.
 /// </param>
-public record Iso639Part3RetirementsRecord(
-    [property: Iso639TableColumn("Id")]
+public sealed record Iso639Part3RetirementsRecord(
     Alpha3 Id,
-
-    [property: Iso639TableColumn("Ref_Name")]
-    string RefName,
-
-    [property: Iso639TableColumn("Ret_Reason")]
-    string RetReason,
-
-    [property: Iso639TableColumn("Change_To")]
-    string ChangeTo,
-
-    [property: Iso639TableColumn("Ret_Remedy")]
-    string RetRemedy,
-
-    [property: Iso639TableColumn("Effective")]
-    DateOnly Effective);
+    [property: CsvColumn("Ref_Name")] string RefName,
+    [property: CsvColumn("Ret_Reason")] string RetReason,
+    [property: CsvColumn("Change_To")] string ChangeTo,
+    [property: CsvColumn("Ret_Remedy")] string RetRemedy,
+    DateOnly Effective) : IIso639Part3TableRecord;
