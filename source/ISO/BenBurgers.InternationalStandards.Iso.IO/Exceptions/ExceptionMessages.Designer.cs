@@ -61,6 +61,24 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The XML attribute &apos;{1}&apos; on element &apos;{0}&apos; is invalid or missing..
+        /// </summary>
+        internal static string InvalidXmlAttribute {
+            get {
+                return ResourceManager.GetString("InvalidXmlAttribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The XML for element &apos;{0}&apos; is not in the expected format, or the element was not found..
+        /// </summary>
+        internal static string InvalidXmlElement {
+            get {
+                return ResourceManager.GetString("InvalidXmlElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to read the ISO 639-3 Code Table. Please see the inner exception for more details..
         /// </summary>
         internal static string Iso639Part3CodeTableReaderFailed {

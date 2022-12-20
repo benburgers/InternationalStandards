@@ -4,6 +4,7 @@
  */
 
 using BenBurgers.InternationalStandards.Iso.Iso639;
+using BenBurgers.Text.Csv.Attributes;
 
 namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 
@@ -34,27 +35,12 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 /// <param name="Comment">
 /// An optional comment.
 /// </param>
-public record Iso639Part3CodeTableRecord(
-    [property: Iso639TableColumn("Part1")]
+public sealed record Iso639Part3CodeTableRecord(
     Alpha2? Part1,
-
-    [property: Iso639TableColumn("Part2T")]
     Alpha3? Part2T,
-
-    [property: Iso639TableColumn("Part2B")]
     Alpha3? Part2B,
-
-    [property: Iso639TableColumn("Id")]
-    Alpha3? Part3,
-
-    [property: Iso639TableColumn("Scope")]
+    [property: CsvColumn("Id")] Alpha3? Part3,
     Iso639Scope Scope,
-
-    [property: Iso639TableColumn("Language_Type")]
-    Iso639LanguageType LanguageType,
-
-    [property: Iso639TableColumn("Ref_Name")]
-    string RefName,
-
-    [property: Iso639TableColumn("Comment")]
-    string? Comment);
+    [property: CsvColumn("Language_Type")] Iso639LanguageType LanguageType,
+    [property: CsvColumn("Ref_Name")] string RefName,
+    string? Comment) : IIso639Part3TableRecord;

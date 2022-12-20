@@ -10,7 +10,7 @@ namespace BenBurgers.InternationalStandards.Iso;
 /// <summary>
 /// An Alpha code with a fixed length. Alpha-2 has two, Alpha-3 has three.
 /// </summary>
-public class Alpha
+public class Alpha : IComparable
 {
     /// <summary>
     /// Initializes a new instance of <see cref="Alpha" />.
@@ -40,6 +40,16 @@ public class Alpha
     /// Gets the Alpha value.
     /// </summary>
     public string Value { get; }
+
+    /// <inheritdoc />
+    public int CompareTo(object? obj) =>
+        obj switch
+        {
+            null => -1,
+            string s => this.Value.CompareTo(s),
+            Alpha a => this.Value.CompareTo(a.Value),
+            _ => -1
+        };
 
     /// <inheritdoc />
     public override bool Equals(object? obj)

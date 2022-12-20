@@ -27,14 +27,14 @@ public class Iso3166CodesTests
                 new Iso3166FilterOptions(
                     Alpha2Codes: new[]
                     {
-                        new Alpha2("AL"),
                         new Alpha2("AD"),
+                        new Alpha2("AL"),
                         new Alpha2("AQ")
                     }),
                 new Iso3166Code[]
                 {
-                    Iso3166Code.Albania,
                     Iso3166Code.Andorra,
+                    Iso3166Code.Albania,
                     Iso3166Code.Antarctica
                 }
             },
@@ -44,14 +44,14 @@ public class Iso3166CodesTests
                     Alpha3Codes: new[]
                     {
                         new Alpha3("ALB"),
-                        new Alpha3("ROU"),
-                        new Alpha3("REU")
+                        new Alpha3("REU"),
+                        new Alpha3("ROU")
                     }),
                 new Iso3166Code[]
                 {
                     Iso3166Code.Albania,
-                    Iso3166Code.Romania,
-                    Iso3166Code.Réunion
+                    Iso3166Code.Réunion,
+                    Iso3166Code.Romania
                 }
             }
         };

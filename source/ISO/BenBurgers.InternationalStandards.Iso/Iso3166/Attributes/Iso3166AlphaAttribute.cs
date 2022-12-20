@@ -6,13 +6,13 @@
 namespace BenBurgers.InternationalStandards.Iso.Iso3166.Attributes;
 
 /// <summary>
-/// An attribute for metadata of <see cref="Iso3166Code" />.
+/// An attribute for the alpha codes of <see cref="Iso3166Code" />.
 /// </summary>
 [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
-internal sealed class Iso3166Attribute : Attribute
+internal sealed class Iso3166AlphaAttribute : Attribute
 {
     /// <summary>
-    /// Initializes a new instance of <see cref="Iso3166Attribute" />.
+    /// Initializes a new instance of <see cref="Iso3166AlphaAttribute" />.
     /// </summary>
     /// <param name="alpha2">
     /// The Alpha-2 code for the ISO 3166 country.
@@ -20,7 +20,7 @@ internal sealed class Iso3166Attribute : Attribute
     /// <param name="alpha3">
     /// The Alpha-3 code for the ISO 3166 country.
     /// </param>
-    internal Iso3166Attribute(string alpha2, string alpha3)
+    internal Iso3166AlphaAttribute(string alpha2, string alpha3)
     {
         Alpha2 = new Alpha2(alpha2);
         Alpha3 = new Alpha3(alpha3);

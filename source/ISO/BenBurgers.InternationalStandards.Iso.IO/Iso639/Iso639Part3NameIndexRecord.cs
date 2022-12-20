@@ -3,6 +3,8 @@
  * This work is licensed by GNU General Public License version 3.
  */
 
+using BenBurgers.Text.Csv.Attributes;
+
 namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 
 /// <summary>
@@ -17,12 +19,7 @@ namespace BenBurgers.InternationalStandards.Iso.IO.Iso639;
 /// <param name="InvertedName">
 /// The ISO 639-3 inverted name.
 /// </param>
-public record Iso639Part3NameIndexRecord(
-    [property: Iso639TableColumn("Id")]
+public sealed record Iso639Part3NameIndexRecord(
     Alpha3 Id,
-
-    [property: Iso639TableColumn("Print_Name")]
-    string PrintName,
-
-    [property: Iso639TableColumn("Inverted_Name")]
-    string InvertedName);
+    [property: CsvColumn("Print_Name")] string PrintName,
+    [property: CsvColumn("Inverted_Name")] string InvertedName) : IIso639Part3TableRecord;

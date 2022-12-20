@@ -58,6 +58,14 @@
 	  <ProjectReference Include="..\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Iso3166\Csv\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BenBurgers.Text.Csv" Version="1.1.0" />
+	</ItemGroup>
+
 	<Target Name="ReleaseNotes" BeforeTargets="GenerateNuspec">
 		<ReadLinesFromFile File="../ReleaseNotes.txt">
 			<Output TaskParameter="Lines" ItemName="ReleaseNotesLines" />

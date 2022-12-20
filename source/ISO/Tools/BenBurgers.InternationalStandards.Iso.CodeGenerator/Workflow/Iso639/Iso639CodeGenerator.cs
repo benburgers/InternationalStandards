@@ -19,7 +19,7 @@ namespace BenBurgers.InternationalStandards.Iso.CodeGenerator.Workflow.Iso639;
 /// <summary>
 /// Generates code for the ISO 639 standard.
 /// </summary>
-internal static class Iso639Generator
+internal static class Iso639CodeGenerator
 {
     private static readonly CodeTypeReference Iso639Part1Attribute = new(typeof(Iso639Part1Attribute));
     private static readonly CodeTypeReference Iso639Part2Attribute = new(typeof(Iso639Part2Attribute));
@@ -137,7 +137,7 @@ internal static class Iso639Generator
         logger.LogInformation("Generation completed.");
     }
 
-    private static readonly Regex SanitizeRegex = new(@"[ \-,()'\.’]");
+    private static readonly Regex SanitizeRegex = new(@"[ \-,()'\.’\[\]]");
     private static string NormalizeName(string name)
     {
         static string CapitalizeFirstLetter(string value)

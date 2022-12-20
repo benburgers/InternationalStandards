@@ -14,13 +14,13 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Iso639;
 /// <summary>
 /// Entity Type Configuration for <see cref="Iso639Model" />.
 /// </summary>
-internal sealed class Iso639SqlServerModelConfiguration : IEntityTypeConfiguration<Iso639Model>
+internal sealed class Iso639ModelEntityTypeConfiguration : IEntityTypeConfiguration<Iso639Model>
 {
     private readonly string schemaName;
     private readonly bool allowDeprecated;
 
     /// <summary>
-    /// Initializes a new instance of <see cref="Iso639SqlServerModelConfiguration" />.
+    /// Initializes a new instance of <see cref="Iso639ModelEntityTypeConfiguration" />.
     /// </summary>
     /// <param name="schemaName">
     /// The name of the SQL Server Schema for ISO tables.
@@ -28,7 +28,7 @@ internal sealed class Iso639SqlServerModelConfiguration : IEntityTypeConfigurati
     /// <param name="allowDeprecated">
     /// A <see cref="bool" /> value that indicates whether deprecated codes are allowed.
     /// </param>
-    internal Iso639SqlServerModelConfiguration(
+    internal Iso639ModelEntityTypeConfiguration(
         string schemaName,
         bool allowDeprecated = false)
     {

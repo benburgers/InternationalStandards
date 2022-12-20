@@ -3,20 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{D2D83C90-8403-4AF5-9305-28787E48E6B9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E9DF2EF3-51FE-48D4-AAAF-ABDD67CBF565}"
-	ProjectSection(SolutionItems) = preProject
-		..\.gitignore = ..\.gitignore
-		..\LICENSE = ..\LICENSE
-		..\README.md = ..\README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{63F64171-CF55-47F5-8E7A-5FAAA4D13DB9}"
-	ProjectSection(SolutionItems) = preProject
-		..\.github\workflows\BuildTest.yml = ..\.github\workflows\BuildTest.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISO", "ISO", "{E6925893-4731-470E-9A4F-FB5FA15B7A20}"
 	ProjectSection(SolutionItems) = preProject
 		ISO\README.md = ISO\README.md
@@ -50,6 +36,22 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.EFCore.Tests", "ISO\Tests\BenBurgers.InternationalStandards.Iso.EFCore.Tests\BenBurgers.InternationalStandards.Iso.EFCore.Tests.csproj", "{82C7FFB2-8617-4BD4-9269-05AEE0A8B9F4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations", "ISO\Tests\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.csproj", "{31533B17-5E41-4EF1-9D29-01DA0FC7B714}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Git", ".Git", "{698CBBBF-617F-46E0-B964-4C1BF0F00347}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{AFB067BC-D66E-48C8-AFEC-3AB5D931B3DC}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\BuildTest.yml = ..\.github\workflows\BuildTest.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Documentation", ".Documentation", "{01E95EC6-AC45-400C-97DF-A0BC3348B295}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,8 +129,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D2D83C90-8403-4AF5-9305-28787E48E6B9} = {E9DF2EF3-51FE-48D4-AAAF-ABDD67CBF565}
-		{63F64171-CF55-47F5-8E7A-5FAAA4D13DB9} = {D2D83C90-8403-4AF5-9305-28787E48E6B9}
 		{DE764999-B7F5-40F3-8092-BCF48DE59AE6} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
 		{55BC6EE8-B2BA-45E9-A23C-5548AF8669E7} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
 		{806667CD-EC34-494F-8DBF-6B6E6B22D0E6} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
@@ -143,6 +143,7 @@ Global
 		{036F06C9-2091-4192-BE20-0FB9448DC67C} = {E6925893-4731-470E-9A4F-FB5FA15B7A20}
 		{82C7FFB2-8617-4BD4-9269-05AEE0A8B9F4} = {DE764999-B7F5-40F3-8092-BCF48DE59AE6}
 		{31533B17-5E41-4EF1-9D29-01DA0FC7B714} = {DE764999-B7F5-40F3-8092-BCF48DE59AE6}
+		{AFB067BC-D66E-48C8-AFEC-3AB5D931B3DC} = {698CBBBF-617F-46E0-B964-4C1BF0F00347}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB9530E0-8BF2-47A8-BB25-EFFB4FEA889F}

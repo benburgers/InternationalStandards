@@ -531,36 +531,36 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Plurinational State of Bolivia.
         /// </summary>
-        internal static string BoliviaLong {
+        internal static string Bolivia_PlurinationalStateOfLong {
             get {
-                return ResourceManager.GetString("BoliviaLong", resourceCulture);
+                return ResourceManager.GetString("Bolivia_PlurinationalStateOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Bolivia.
         /// </summary>
-        internal static string BoliviaShort {
+        internal static string Bolivia_PlurinationalStateOfShort {
             get {
-                return ResourceManager.GetString("BoliviaShort", resourceCulture);
+                return ResourceManager.GetString("Bolivia_PlurinationalStateOfShort", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Bonaire, Sint Eustatius and Saba.
         /// </summary>
-        internal static string BonaireSintEustatiusAndSabaLong {
+        internal static string Bonaire_SintEustatiusAndSabaLong {
             get {
-                return ResourceManager.GetString("BonaireSintEustatiusAndSabaLong", resourceCulture);
+                return ResourceManager.GetString("Bonaire_SintEustatiusAndSabaLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Bonaire, Sint Eustatius and Saba.
         /// </summary>
-        internal static string BonaireSintEustatiusAndSabaShort {
+        internal static string Bonaire_SintEustatiusAndSabaShort {
             get {
-                return ResourceManager.GetString("BonaireSintEustatiusAndSabaShort", resourceCulture);
+                return ResourceManager.GetString("Bonaire_SintEustatiusAndSabaShort", resourceCulture);
             }
         }
         
@@ -909,18 +909,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Territory of Cocos [Keeling] Islands.
         /// </summary>
-        internal static string CocosIslandsLong {
+        internal static string Cocos_Keeling_IslandsLong {
             get {
-                return ResourceManager.GetString("CocosIslandsLong", resourceCulture);
+                return ResourceManager.GetString("Cocos_Keeling_IslandsLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Cocos (Keeling) Islands.
         /// </summary>
-        internal static string CocosIslandsShort {
+        internal static string Cocos_Keeling_IslandsShort {
             get {
-                return ResourceManager.GetString("CocosIslandsShort", resourceCulture);
+                return ResourceManager.GetString("Cocos_Keeling_IslandsShort", resourceCulture);
             }
         }
         
@@ -963,18 +963,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Democratic Republic of the Congo.
         /// </summary>
-        internal static string CongoDemocraticRepublicLong {
+        internal static string Congo_theDemocraticRepublicOfTheLong {
             get {
-                return ResourceManager.GetString("CongoDemocraticRepublicLong", resourceCulture);
+                return ResourceManager.GetString("Congo_theDemocraticRepublicOfTheLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Congo-Kinshasa.
         /// </summary>
-        internal static string CongoDemocraticRepublicShort {
+        internal static string Congo_theDemocraticRepublicOfTheShort {
             get {
-                return ResourceManager.GetString("CongoDemocraticRepublicShort", resourceCulture);
+                return ResourceManager.GetString("Congo_theDemocraticRepublicOfTheShort", resourceCulture);
             }
         }
         
@@ -1035,18 +1035,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Republic of Côte d&apos;Ivoire.
         /// </summary>
-        internal static string CôteDIvoireLong {
+        internal static string CôteD_IvoireLong {
             get {
-                return ResourceManager.GetString("CôteDIvoireLong", resourceCulture);
+                return ResourceManager.GetString("CôteD_IvoireLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Ivory Coast.
         /// </summary>
-        internal static string CôteDIvoireShort {
+        internal static string CôteD_IvoireShort {
             get {
-                return ResourceManager.GetString("CôteDIvoireShort", resourceCulture);
+                return ResourceManager.GetString("CôteD_IvoireShort", resourceCulture);
             }
         }
         
@@ -1359,18 +1359,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Falkland Islands (Islas Malvinas).
         /// </summary>
-        internal static string FalklandIslandsMalvinasLong {
+        internal static string FalklandIslands_the__MalvinasLong {
             get {
-                return ResourceManager.GetString("FalklandIslandsMalvinasLong", resourceCulture);
+                return ResourceManager.GetString("FalklandIslands_the__MalvinasLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Falkland Islands (Islas Malvinas).
         /// </summary>
-        internal static string FalklandIslandsMalvinasShort {
+        internal static string FalklandIslands_the__MalvinasShort {
             get {
-                return ResourceManager.GetString("FalklandIslandsMalvinasShort", resourceCulture);
+                return ResourceManager.GetString("FalklandIslands_the__MalvinasShort", resourceCulture);
             }
         }
         
@@ -1737,18 +1737,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Republic of Guinea-Bissau.
         /// </summary>
-        internal static string GuineaBissauLong {
+        internal static string Guinea_BissauLong {
             get {
-                return ResourceManager.GetString("GuineaBissauLong", resourceCulture);
+                return ResourceManager.GetString("Guinea_BissauLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Guinea-Bissau.
         /// </summary>
-        internal static string GuineaBissauShort {
+        internal static string Guinea_BissauShort {
             get {
-                return ResourceManager.GetString("GuineaBissauShort", resourceCulture);
+                return ResourceManager.GetString("Guinea_BissauShort", resourceCulture);
             }
         }
         
@@ -1953,18 +1953,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Islamic Republic of Iran.
         /// </summary>
-        internal static string IranLong {
+        internal static string Iran_IslamicRepublicOfLong {
             get {
-                return ResourceManager.GetString("IranLong", resourceCulture);
+                return ResourceManager.GetString("Iran_IslamicRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Iran.
         /// </summary>
-        internal static string IranShort {
+        internal static string Iran_IslamicRepublicOfShort {
             get {
-                return ResourceManager.GetString("IranShort", resourceCulture);
+                return ResourceManager.GetString("Iran_IslamicRepublicOfShort", resourceCulture);
             }
         }
         
@@ -2187,36 +2187,36 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Democratic People&apos;s Republic of Korea.
         /// </summary>
-        internal static string KoreaDemocraticPeoplesRepublicLong {
+        internal static string Korea_theDemocraticPeople_sRepublicOfLong {
             get {
-                return ResourceManager.GetString("KoreaDemocraticPeoplesRepublicLong", resourceCulture);
+                return ResourceManager.GetString("Korea_theDemocraticPeople_sRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to North Korea.
         /// </summary>
-        internal static string KoreaDemocraticPeoplesRepublicShort {
+        internal static string Korea_theDemocraticPeople_sRepublicOfShort {
             get {
-                return ResourceManager.GetString("KoreaDemocraticPeoplesRepublicShort", resourceCulture);
+                return ResourceManager.GetString("Korea_theDemocraticPeople_sRepublicOfShort", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Republic of Korea.
         /// </summary>
-        internal static string KoreaRepublicLong {
+        internal static string Korea_theRepublicOfLong {
             get {
-                return ResourceManager.GetString("KoreaRepublicLong", resourceCulture);
+                return ResourceManager.GetString("Korea_theRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to South Korea.
         /// </summary>
-        internal static string KoreaRepublicShort {
+        internal static string Korea_theRepublicOfShort {
             get {
-                return ResourceManager.GetString("KoreaRepublicShort", resourceCulture);
+                return ResourceManager.GetString("Korea_theRepublicOfShort", resourceCulture);
             }
         }
         
@@ -2259,18 +2259,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Lao People&apos;s Democratic Republic.
         /// </summary>
-        internal static string LaoPeoplesDemocraticRepublicLong {
+        internal static string LaoPeople_sDemocraticRepublicLong {
             get {
-                return ResourceManager.GetString("LaoPeoplesDemocraticRepublicLong", resourceCulture);
+                return ResourceManager.GetString("LaoPeople_sDemocraticRepublicLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Laos.
         /// </summary>
-        internal static string LaoPeoplesDemocraticRepublicShort {
+        internal static string LaoPeople_sDemocraticRepublicShort {
             get {
-                return ResourceManager.GetString("LaoPeoplesDemocraticRepublicShort", resourceCulture);
+                return ResourceManager.GetString("LaoPeople_sDemocraticRepublicShort", resourceCulture);
             }
         }
         
@@ -2655,36 +2655,36 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Federated States of Micronesia.
         /// </summary>
-        internal static string MicronesiaLong {
+        internal static string Micronesia_FederatedStatesOfLong {
             get {
-                return ResourceManager.GetString("MicronesiaLong", resourceCulture);
+                return ResourceManager.GetString("Micronesia_FederatedStatesOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Micronesia.
         /// </summary>
-        internal static string MicronesiaShort {
+        internal static string Micronesia_FederatedStatesOfShort {
             get {
-                return ResourceManager.GetString("MicronesiaShort", resourceCulture);
+                return ResourceManager.GetString("Micronesia_FederatedStatesOfShort", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Republic of Moldova.
         /// </summary>
-        internal static string MoldovaLong {
+        internal static string Moldova_theRepublicOfLong {
             get {
-                return ResourceManager.GetString("MoldovaLong", resourceCulture);
+                return ResourceManager.GetString("Moldova_theRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Moldova.
         /// </summary>
-        internal static string MoldovaShort {
+        internal static string Moldova_theRepublicOfShort {
             get {
-                return ResourceManager.GetString("MoldovaShort", resourceCulture);
+                return ResourceManager.GetString("Moldova_theRepublicOfShort", resourceCulture);
             }
         }
         
@@ -3123,18 +3123,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to State of Palestine.
         /// </summary>
-        internal static string PalestineLong {
+        internal static string Palestine_StateOfLong {
             get {
-                return ResourceManager.GetString("PalestineLong", resourceCulture);
+                return ResourceManager.GetString("Palestine_StateOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Palestine.
         /// </summary>
-        internal static string PalestineShort {
+        internal static string Palestine_StateOfShort {
             get {
-                return ResourceManager.GetString("PalestineShort", resourceCulture);
+                return ResourceManager.GetString("Palestine_StateOfShort", resourceCulture);
             }
         }
         
@@ -3231,18 +3231,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Pitcairn, Henderson, Ducie and Oeno Islands.
         /// </summary>
-        internal static string PitcairnIslandsLong {
+        internal static string PitcairnLong {
             get {
-                return ResourceManager.GetString("PitcairnIslandsLong", resourceCulture);
+                return ResourceManager.GetString("PitcairnLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Pitcairn Islands.
         /// </summary>
-        internal static string PitcairnIslandsShort {
+        internal static string PitcairnShort {
             get {
-                return ResourceManager.GetString("PitcairnIslandsShort", resourceCulture);
+                return ResourceManager.GetString("PitcairnShort", resourceCulture);
             }
         }
         
@@ -3411,18 +3411,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Saint Helena, Ascension and Tristan da Cunha.
         /// </summary>
-        internal static string SaintHelenaAscensionAndTristanDaCunhaLong {
+        internal static string SaintHelena_AscensionAndTristanDaCunhaLong {
             get {
-                return ResourceManager.GetString("SaintHelenaAscensionAndTristanDaCunhaLong", resourceCulture);
+                return ResourceManager.GetString("SaintHelena_AscensionAndTristanDaCunhaLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Saint Helena, Ascension and Tristan da Cunha.
         /// </summary>
-        internal static string SaintHelenaAscensionAndTristanDaCunhaShort {
+        internal static string SaintHelena_AscensionAndTristanDaCunhaShort {
             get {
-                return ResourceManager.GetString("SaintHelenaAscensionAndTristanDaCunhaShort", resourceCulture);
+                return ResourceManager.GetString("SaintHelena_AscensionAndTristanDaCunhaShort", resourceCulture);
             }
         }
         
@@ -3465,18 +3465,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Collectivity of Saint Martin.
         /// </summary>
-        internal static string SaintMartinLong {
+        internal static string SaintMartin_FrenchPartLong {
             get {
-                return ResourceManager.GetString("SaintMartinLong", resourceCulture);
+                return ResourceManager.GetString("SaintMartin_FrenchPartLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Saint Martin.
         /// </summary>
-        internal static string SaintMartinShort {
+        internal static string SaintMartin_FrenchPartShort {
             get {
-                return ResourceManager.GetString("SaintMartinShort", resourceCulture);
+                return ResourceManager.GetString("SaintMartin_FrenchPartShort", resourceCulture);
             }
         }
         
@@ -3501,18 +3501,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Saint Vincent and the Grenadines.
         /// </summary>
-        internal static string SaintVincentAndGrenadinesLong {
+        internal static string SaintVincentAndTheGrenadinesLong {
             get {
-                return ResourceManager.GetString("SaintVincentAndGrenadinesLong", resourceCulture);
+                return ResourceManager.GetString("SaintVincentAndTheGrenadinesLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Saint Vincent and the Grenadines.
         /// </summary>
-        internal static string SaintVincentAndGrenadinesShort {
+        internal static string SaintVincentAndTheGrenadinesShort {
             get {
-                return ResourceManager.GetString("SaintVincentAndGrenadinesShort", resourceCulture);
+                return ResourceManager.GetString("SaintVincentAndTheGrenadinesShort", resourceCulture);
             }
         }
         
@@ -3681,18 +3681,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Sint Maarten.
         /// </summary>
-        internal static string SintMaartenLong {
+        internal static string SintMaarten_DutchPartLong {
             get {
-                return ResourceManager.GetString("SintMaartenLong", resourceCulture);
+                return ResourceManager.GetString("SintMaarten_DutchPartLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Sint Maarten.
         /// </summary>
-        internal static string SintMaartenShort {
+        internal static string SintMaarten_DutchPartShort {
             get {
-                return ResourceManager.GetString("SintMaartenShort", resourceCulture);
+                return ResourceManager.GetString("SintMaarten_DutchPartShort", resourceCulture);
             }
         }
         
@@ -3789,18 +3789,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to South Georgia and the South Sandwich Islands.
         /// </summary>
-        internal static string SouthGeorgiaAndSouthSandwichIslandsLong {
+        internal static string SouthGeorgiaAndTheSouthSandwichIslandsLong {
             get {
-                return ResourceManager.GetString("SouthGeorgiaAndSouthSandwichIslandsLong", resourceCulture);
+                return ResourceManager.GetString("SouthGeorgiaAndTheSouthSandwichIslandsLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to South Georgia and the South Sandwich Islands.
         /// </summary>
-        internal static string SouthGeorgiaAndSouthSandwichIslandsShort {
+        internal static string SouthGeorgiaAndTheSouthSandwichIslandsShort {
             get {
-                return ResourceManager.GetString("SouthGeorgiaAndSouthSandwichIslandsShort", resourceCulture);
+                return ResourceManager.GetString("SouthGeorgiaAndTheSouthSandwichIslandsShort", resourceCulture);
             }
         }
         
@@ -4005,18 +4005,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to United Republic of Tanzania.
         /// </summary>
-        internal static string TanzaniaLong {
+        internal static string Tanzania_TheUnitedRepublicOfLong {
             get {
-                return ResourceManager.GetString("TanzaniaLong", resourceCulture);
+                return ResourceManager.GetString("Tanzania_TheUnitedRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Tanzania.
         /// </summary>
-        internal static string TanzaniaShort {
+        internal static string Tanzania_TheUnitedRepublicOfShort {
             get {
-                return ResourceManager.GetString("TanzaniaShort", resourceCulture);
+                return ResourceManager.GetString("Tanzania_TheUnitedRepublicOfShort", resourceCulture);
             }
         }
         
@@ -4041,18 +4041,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Democratic Republic of Timor-Leste.
         /// </summary>
-        internal static string TimorLesteLong {
+        internal static string Timor_LesteLong {
             get {
-                return ResourceManager.GetString("TimorLesteLong", resourceCulture);
+                return ResourceManager.GetString("Timor_LesteLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to East Timor.
         /// </summary>
-        internal static string TimorLesteShort {
+        internal static string Timor_LesteShort {
             get {
-                return ResourceManager.GetString("TimorLesteShort", resourceCulture);
+                return ResourceManager.GetString("Timor_LesteShort", resourceCulture);
             }
         }
         
@@ -4275,18 +4275,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to United Kingdom of Great Britain and Northern Ireland.
         /// </summary>
-        internal static string UnitedKingdomLong {
+        internal static string UnitedKingdomOfGreatBritainAndNorthernIrelandLong {
             get {
-                return ResourceManager.GetString("UnitedKingdomLong", resourceCulture);
+                return ResourceManager.GetString("UnitedKingdomOfGreatBritainAndNorthernIrelandLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to United Kingdom.
         /// </summary>
-        internal static string UnitedKingdomShort {
+        internal static string UnitedKingdomOfGreatBritainAndNorthernIrelandShort {
             get {
-                return ResourceManager.GetString("UnitedKingdomShort", resourceCulture);
+                return ResourceManager.GetString("UnitedKingdomOfGreatBritainAndNorthernIrelandShort", resourceCulture);
             }
         }
         
@@ -4383,18 +4383,18 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to Bolivarian Republic of Venezuela.
         /// </summary>
-        internal static string VenezuelaLong {
+        internal static string Venezuela_BolivarianRepublicOfLong {
             get {
-                return ResourceManager.GetString("VenezuelaLong", resourceCulture);
+                return ResourceManager.GetString("Venezuela_BolivarianRepublicOfLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Venezuela.
         /// </summary>
-        internal static string VenezuelaShort {
+        internal static string Venezuela_BolivarianRepublicOfShort {
             get {
-                return ResourceManager.GetString("VenezuelaShort", resourceCulture);
+                return ResourceManager.GetString("Venezuela_BolivarianRepublicOfShort", resourceCulture);
             }
         }
         
@@ -4419,36 +4419,36 @@ namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
         /// <summary>
         ///   Looks up a localized string similar to British Virgin Islands.
         /// </summary>
-        internal static string VirginIslandsBritishLong {
+        internal static string VirginIslands_BritishLong {
             get {
-                return ResourceManager.GetString("VirginIslandsBritishLong", resourceCulture);
+                return ResourceManager.GetString("VirginIslands_BritishLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Virgin Islands.
         /// </summary>
-        internal static string VirginIslandsBritishShort {
+        internal static string VirginIslands_BritishShort {
             get {
-                return ResourceManager.GetString("VirginIslandsBritishShort", resourceCulture);
+                return ResourceManager.GetString("VirginIslands_BritishShort", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Virgin Islands of the United States.
         /// </summary>
-        internal static string VirginIslandsUnitedStatesLong {
+        internal static string VirginIslands_U_SLong {
             get {
-                return ResourceManager.GetString("VirginIslandsUnitedStatesLong", resourceCulture);
+                return ResourceManager.GetString("VirginIslands_U_SLong", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to United States Virgin Islands.
         /// </summary>
-        internal static string VirginIslandsUnitedStatesShort {
+        internal static string VirginIslands_U_SShort {
             get {
-                return ResourceManager.GetString("VirginIslandsUnitedStatesShort", resourceCulture);
+                return ResourceManager.GetString("VirginIslands_U_SShort", resourceCulture);
             }
         }
         

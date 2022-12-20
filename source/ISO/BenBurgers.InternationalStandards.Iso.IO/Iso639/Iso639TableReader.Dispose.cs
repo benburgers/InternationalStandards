@@ -12,7 +12,7 @@ public sealed partial class Iso639TableReader<TRecord>
         if (!disposedValue)
         {
             if (disposing)
-                this.streamReader.Dispose();
+                this.csvReader.Dispose();
             disposedValue = true;
         }
     }

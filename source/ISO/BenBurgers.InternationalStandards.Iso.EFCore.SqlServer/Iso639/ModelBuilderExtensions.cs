@@ -35,6 +35,6 @@ internal static class ModelBuilderExtensions
     {
         return
             modelBuilder
-                .ApplyConfiguration(new Iso639SqlServerModelConfiguration(schemaName, allowDeprecated));
+                .ApplyConfiguration(new Iso639ModelEntityTypeConfiguration(schemaName, allowDeprecated));
     }
 }

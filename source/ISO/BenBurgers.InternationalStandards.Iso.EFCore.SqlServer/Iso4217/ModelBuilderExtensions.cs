@@ -29,7 +29,7 @@ internal static class ModelBuilderExtensions
     {
         return
             modelBuilder
-                .ApplyConfiguration(new Iso4217SqlServerEntityConfiguration(schemaName))
+                .ApplyConfiguration(new Iso4217ModelEntityConfiguration(schemaName))
                 .ApplyConfiguration(new Iso4217SqlServerModelConfiguration(schemaName));
     }
 }

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidXmlAttribute" xml:space="preserve">
+    <value>Het XML attribuut '{1}' op element '{0}' is ongeldig of ontbreekt.</value>
+  </data>
+  <data name="InvalidXmlElement" xml:space="preserve">
+    <value>De XML voor element '{0}' is niet in het verwachte formaat, of het element is niet gevonden.</value>
+  </data>
   <data name="Iso639Part3CodeTableReaderFailed" xml:space="preserve">
     <value>ISO 639-3 Code Table lezen mislukt. Zie de ingesloten Exception voor meer details.</value>
   </data>

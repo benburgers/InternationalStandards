@@ -1,2610 +1,4900 @@
-﻿/*
- * © 2022 Ben Burgers and contributors.
- * This work is licensed by GNU General Public License version 3.
- */
-
-using BenBurgers.InternationalStandards.Iso.Iso3166.Attributes;
-
-namespace BenBurgers.InternationalStandards.Iso.Iso3166;
-
-/// <summary>
-/// An <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> Country Code.
-/// </summary>
-/// <remarks>
-/// <para>
-/// The <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166 Maintenance Agency</a> is the sole authority of ISO 3166 codes.
-/// Only they can designate ISO 3166 codes. This work is a derivation and enhancement and anything other than ISO 3166 is the responsibility of the respective copyright holders.
-/// </para>
-/// <para>
-/// If you notice any mistake in this work, please create a Pull Request or notify the repository owner or a contributor as soon as possible.
-/// </para>
-/// <para>
-/// Extension methods from <see cref="Iso3166CodeExtensions" /> enable conversion from and to <see cref="Iso3166Code" />.<br />
-/// To convert from an Alpha code in a <see cref="string" />, use the extension method <see cref="Iso3166CodeExtensions.ToIso3166(string)" />.
-/// </para>
-/// </remarks>
-public enum Iso3166Code
-{
-    /// <summary>
-    /// Afghanistan.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>004</description></item>
-    ///         <item><term>Alpha-2</term><description>AF</description></item>
-    ///         <item><term>Alpha-3</term><description>AFG</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AF", "AFG")]
-    Afghanistan = 004,
-
-    /// <summary>
-    /// Albania.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>008</description></item>
-    ///         <item><term>Alpha-2</term><description>AL</description></item>
-    ///         <item><term>Alpha-3</term><description>ALB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AL", "ALB")]
-    Albania = 008,
-
-    /// <summary>
-    /// Algeria.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>012</description></item>
-    ///         <item><term>Alpha-2</term><description>DZ</description></item>
-    ///         <item><term>Alpha-3</term><description>DZA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DZ", "DZA")]
-    Algeria = 012,
-
-    /// <summary>
-    /// American Samoa.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>016</description></item>
-    ///         <item><term>Alpha-2</term><description>AS</description></item>
-    ///         <item><term>Alpha-3</term><description>ASM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AS", "ASM")]
-    AmericanSamoa = 016,
-
-    /// <summary>
-    /// Andorra.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>020</description></item>
-    ///         <item><term>Alpha-2</term><description>AD</description></item>
-    ///         <item><term>Alpha-3</term><description>AND</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AD", "AND")]
-    Andorra = 020,
-
-    /// <summary>
-    /// Angola.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>024</description></item>
-    ///         <item><term>Alpha-2</term><description>AO</description></item>
-    ///         <item><term>Alpha-3</term><description>AGO</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AO", "AGO")]
-    Angola = 024,
-
-    /// <summary>
-    /// Anguilla.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>660</description></item>
-    ///         <item><term>Alpha-2</term><description>AI</description></item>
-    ///         <item><term>Alpha-3</term><description>AIA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AI", "AIA")]
-    Anguilla = 660,
-
-    /// <summary>
-    /// Antarctica.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>010</description></item>
-    ///         <item><term>Alpha-2</term><description>AQ</description></item>
-    ///         <item><term>Alpha-3</term><description>ATA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AQ", "ATA")]
-    Antarctica = 010,
-
-    /// <summary>
-    /// Antigua and Barbuda.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>028</description></item>
-    ///         <item><term>Alpha-2</term><description>AG</description></item>
-    ///         <item><term>Alpha-3</term><description>ATG</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AG", "ATG")]
-    AntiguaAndBarbuda = 028,
-
-    /// <summary>
-    /// Argentina.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>032</description></item>
-    ///         <item><term>Alpha-2</term><description>AR</description></item>
-    ///         <item><term>Alpha-3</term><description>ARG</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AR", "ARG")]
-    Argentina = 032,
-
-    /// <summary>
-    /// Armenia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>051</description></item>
-    ///         <item><term>Alpha-2</term><description>AM</description></item>
-    ///         <item><term>Alpha-3</term><description>ARM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AM", "ARM")]
-    Armenia = 051,
-
-    /// <summary>
-    /// Aruba.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>533</description></item>
-    ///         <item><term>Alpha-2</term><description>AW</description></item>
-    ///         <item><term>Alpha-3</term><description>ABW</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AW", "ABW")]
-    Aruba = 533,
-
-    /// <summary>
-    /// Australia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>036</description></item>
-    ///         <item><term>Alpha-2</term><description>AU</description></item>
-    ///         <item><term>Alpha-3</term><description>AUS</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AU", "AUS")]
-    Australia = 036,
-
-    /// <summary>
-    /// Austria.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>040</description></item>
-    ///         <item><term>Alpha-2</term><description>AT</description></item>
-    ///         <item><term>Alpha-3</term><description>AUT</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AT", "AUT")]
-    Austria = 040,
-
-    /// <summary>
-    /// Azerbaijan.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>031</description></item>
-    ///         <item><term>Alpha-2</term><description>AZ</description></item>
-    ///         <item><term>Alpha-3</term><description>AZE</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AZ", "AZE")]
-    Azerbaijan = 031,
-
-    /// <summary>
-    /// Bahamas (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>044</description></item>
-    ///         <item><term>Alpha-2</term><description>BS</description></item>
-    ///         <item><term>Alpha-3</term><description>BHS</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BS", "BHS")]
-    Bahamas = 044,
-
-    /// <summary>
-    /// Bahrain.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>048</description></item>
-    ///         <item><term>Alpha-2</term><description>BH</description></item>
-    ///         <item><term>Alpha-3</term><description>BHR</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BH", "BHR")]
-    Bahrain = 048,
-
-    /// <summary>
-    /// Bangladesh.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>050</description></item>
-    ///         <item><term>Alpha-2</term><description>BD</description></item>
-    ///         <item><term>Alpha-3</term><description>BGD</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BD", "BGD")]
-    Bangladesh = 050,
-
-    /// <summary>
-    /// Barbados.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>052</description></item>
-    ///         <item><term>Alpha-2</term><description>BB</description></item>
-    ///         <item><term>Alpha-3</term><description>BRB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BB", "BRB")]
-    Barbados = 052,
-
-    /// <summary>
-    /// Belarus.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>112</description></item>
-    ///         <item><term>Alpha-2</term><description>BY</description></item>
-    ///         <item><term>Alpha-3</term><description>BLR</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BY", "BLR")]
-    Belarus = 112,
-
-    /// <summary>
-    /// Belgium.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>056</description></item>
-    ///         <item><term>Alpha-2</term><description>BE</description></item>
-    ///         <item><term>Alpha-3</term><description>BEL</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BE", "BEL")]
-    Belgium = 056,
-
-    /// <summary>
-    /// Belize.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>084</description></item>
-    ///         <item><term>Alpha-2</term><description>BZ</description></item>
-    ///         <item><term>Alpha-3</term><description>BLZ</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BZ", "BLZ")]
-    Belize = 084,
-
-    /// <summary>
-    /// Benin.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>204</description></item>
-    ///         <item><term>Alpha-2</term><description>BJ</description></item>
-    ///         <item><term>Alpha-3</term><description>BEN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BJ", "BEN")]
-    Benin = 204,
-
-    /// <summary>
-    /// Bermuda.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>060</description></item>
-    ///         <item><term>Alpha-2</term><description>BM</description></item>
-    ///         <item><term>Alpha-3</term><description>BMU</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BM", "BMU")]
-    Bermuda = 060,
-
-    /// <summary>
-    /// Åland Islands.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>248</description></item>
-    ///         <item><term>Alpha-2</term><description>AX</description></item>
-    ///         <item><term>Alpha-3</term><description>ALA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("AX", "ALA")]
-    ÅlandIslands = 248,
-
-    /// <summary>
-    /// Bhutan.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>064</description></item>
-    ///         <item><term>Alpha-2</term><description>BT</description></item>
-    ///         <item><term>Alpha-3</term><description>BTN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BT", "BTN")]
-    Bhutan = 064,
-
-    /// <summary>
-    /// Bolivia (Plurinational State of).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>068</description></item>
-    ///         <item><term>Alpha-2</term><description>BO</description></item>
-    ///         <item><term>Alpha-3</term><description>BOL</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BO", "BOL")]
-    Bolivia = 068,
-
-    /// <summary>
-    /// Bonaire, Sint Eustatius and Saba.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>535</description></item>
-    ///         <item><term>Alpha-2</term><description>BQ</description></item>
-    ///         <item><term>Alpha-3</term><description>BES</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BQ", "BES")]
-    BonaireSintEustatiusAndSaba = 535,
-
-    /// <summary>
-    /// Bosnia and Herzegovina.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>070</description></item>
-    ///         <item><term>Alpha-2</term><description>BA</description></item>
-    ///         <item><term>Alpha-3</term><description>BIH</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BA", "BIH")]
-    BosniaAndHerzegovina = 070,
-
-    /// <summary>
-    /// Botswana.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>072</description></item>
-    ///         <item><term>Alpha-2</term><description>BW</description></item>
-    ///         <item><term>Alpha-3</term><description>BWA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BW", "BWA")]
-    Botswana = 072,
-
-    /// <summary>
-    /// Bouvet Island.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>074</description></item>
-    ///         <item><term>Alpha-2</term><description>BV</description></item>
-    ///         <item><term>Alpha-3</term><description>BVT</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BV", "BVT")]
-    BouvetIsland = 074,
-
-    /// <summary>
-    /// Brazil.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>076</description></item>
-    ///         <item><term>Alpha-2</term><description>BR</description></item>
-    ///         <item><term>Alpha-3</term><description>BRA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BR", "BRA")]
-    Brazil = 076,
-
-    /// <summary>
-    /// British Indian Ocean Territory (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>086</description></item>
-    ///         <item><term>Alpha-2</term><description>IO</description></item>
-    ///         <item><term>Alpha-3</term><description>IOT</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("IO", "IOT")]
-    BritishIndianOceanTerritory = 086,
-
-    /// <summary>
-    /// Brunei Darussalam.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>096</description></item>
-    ///         <item><term>Alpha-2</term><description>BN</description></item>
-    ///         <item><term>Alpha-3</term><description>BRN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BN", "BRN")]
-    BruneiDarussalam = 096,
-
-    /// <summary>
-    /// Bulgaria.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>100</description></item>
-    ///         <item><term>Alpha-2</term><description>BG</description></item>
-    ///         <item><term>Alpha-3</term><description>BGR</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BG", "BGR")]
-    Bulgaria = 100,
-
-    /// <summary>
-    /// Burkina Faso.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>854</description></item>
-    ///         <item><term>Alpha-2</term><description>BF</description></item>
-    ///         <item><term>Alpha-3</term><description>BFA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BF", "BFA")]
-    BurkinaFaso = 854,
-
-    /// <summary>
-    /// Burundi.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>108</description></item>
-    ///         <item><term>Alpha-2</term><description>BI</description></item>
-    ///         <item><term>Alpha-3</term><description>BDI</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("BI", "BDI")]
-    Burundi = 108,
-
-    /// <summary>
-    /// Cabo Verde.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>132</description></item>
-    ///         <item><term>Alpha-2</term><description>CV</description></item>
-    ///         <item><term>Alpha-3</term><description>CPV</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CV", "CPV")]
-    CaboVerde = 132,
-
-    /// <summary>
-    /// Cambodia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>116</description></item>
-    ///         <item><term>Alpha-2</term><description>KH</description></item>
-    ///         <item><term>Alpha-3</term><description>KHM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("KH", "KHM")]
-    Cambodia = 116,
-
-    /// <summary>
-    /// Cameroon.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>120</description></item>
-    ///         <item><term>Alpha-2</term><description>CM</description></item>
-    ///         <item><term>Alpha-3</term><description>CMR</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CM", "CMR")]
-    Cameroon = 120,
-
-    /// <summary>
-    /// Canada.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>124</description></item>
-    ///         <item><term>Alpha-2</term><description>CA</description></item>
-    ///         <item><term>Alpha-3</term><description>CAN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CA", "CAN")]
-    Canada = 124,
-
-    /// <summary>
-    /// Cayman Islands (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>136</description></item>
-    ///         <item><term>Alpha-2</term><description>KY</description></item>
-    ///         <item><term>Alpha-3</term><description>CYM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("KY", "CYM")]
-    CaymanIslands = 136,
-
-    /// <summary>
-    /// Central African Republic (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>140</description></item>
-    ///         <item><term>Alpha-2</term><description>CF</description></item>
-    ///         <item><term>Alpha-3</term><description>CAF</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CF", "CAF")]
-    CentralAfricanRepublic = 140,
-
-    /// <summary>
-    /// Chad.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>148</description></item>
-    ///         <item><term>Alpha-2</term><description>TD</description></item>
-    ///         <item><term>Alpha-3</term><description>TCD</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("TD", "TCD")]
-    Chad = 148,
-
-    /// <summary>
-    /// Chile.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>152</description></item>
-    ///         <item><term>Alpha-2</term><description>CL</description></item>
-    ///         <item><term>Alpha-3</term><description>CHL</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CL", "CHL")]
-    Chile = 152,
-
-    /// <summary>
-    /// China.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>156</description></item>
-    ///         <item><term>Alpha-2</term><description>CN</description></item>
-    ///         <item><term>Alpha-3</term><description>CHN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CN", "CHN")]
-    China = 156,
-
-    /// <summary>
-    /// Christmas Island.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>162</description></item>
-    ///         <item><term>Alpha-2</term><description>CX</description></item>
-    ///         <item><term>Alpha-3</term><description>CXR</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CX", "CXR")]
-    ChristmasIsland = 162,
-
-    /// <summary>
-    /// Cocos (Keeling) Islands (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>166</description></item>
-    ///         <item><term>Alpha-2</term><description>CC</description></item>
-    ///         <item><term>Alpha-3</term><description>CCK</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CC", "CCK")]
-    CocosIslands = 166,
-
-    /// <summary>
-    /// Colombia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>170</description></item>
-    ///         <item><term>Alpha-2</term><description>CO</description></item>
-    ///         <item><term>Alpha-3</term><description>COL</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CO", "COL")]
-    Colombia = 170,
-
-    /// <summary>
-    /// Comoros (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>174</description></item>
-    ///         <item><term>Alpha-2</term><description>KM</description></item>
-    ///         <item><term>Alpha-3</term><description>COM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("KM", "COM")]
-    Comoros = 174,
-
-    /// <summary>
-    /// Congo (the Democratic Republic of the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>180</description></item>
-    ///         <item><term>Alpha-2</term><description>CD</description></item>
-    ///         <item><term>Alpha-3</term><description>COD</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CD", "COD")]
-    CongoDemocraticRepublic = 180,
-
-    /// <summary>
-    /// Congo (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>178</description></item>
-    ///         <item><term>Alpha-2</term><description>CG</description></item>
-    ///         <item><term>Alpha-3</term><description>COG</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CG", "COG")]
-    Congo = 178,
-
-    /// <summary>
-    /// Cook Islands (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>184</description></item>
-    ///         <item><term>Alpha-2</term><description>CK</description></item>
-    ///         <item><term>Alpha-3</term><description>COK</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CK", "COK")]
-    CookIslands = 184,
-
-    /// <summary>
-    /// Costa Rica.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>188</description></item>
-    ///         <item><term>Alpha-2</term><description>CR</description></item>
-    ///         <item><term>Alpha-3</term><description>CRI</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CR", "CRI")]
-    CostaRica = 188,
-
-    /// <summary>
-    /// Croatia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>191</description></item>
-    ///         <item><term>Alpha-2</term><description>HR</description></item>
-    ///         <item><term>Alpha-3</term><description>HRV</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("HR", "HRV")]
-    Croatia = 191,
-
-    /// <summary>
-    /// Cuba.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>192</description></item>
-    ///         <item><term>Alpha-2</term><description>CU</description></item>
-    ///         <item><term>Alpha-3</term><description>CUB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CU", "CUB")]
-    Cuba = 192,
-
-    /// <summary>
-    /// Curaçao.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>531</description></item>
-    ///         <item><term>Alpha-2</term><description>CW</description></item>
-    ///         <item><term>Alpha-3</term><description>CUW</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CW", "CUW")]
-    Curaçao = 531,
-
-    /// <summary>
-    /// Cyprus.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>196</description></item>
-    ///         <item><term>Alpha-2</term><description>CY</description></item>
-    ///         <item><term>Alpha-3</term><description>CYP</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CY", "CYP")]
-    Cyprus = 196,
-
-    /// <summary>
-    /// Czechia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>203</description></item>
-    ///         <item><term>Alpha-2</term><description>CZ</description></item>
-    ///         <item><term>Alpha-3</term><description>CZE</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CZ", "CZE")]
-    Czechia = 203,
-
-    /// <summary>
-    /// Côte d'Ivoire.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>384</description></item>
-    ///         <item><term>Alpha-2</term><description>CI</description></item>
-    ///         <item><term>Alpha-3</term><description>CIV</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("CI", "CIV")]
-    CôteDIvoire = 384,
-
-    /// <summary>
-    /// Denmark.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>208</description></item>
-    ///         <item><term>Alpha-2</term><description>DK</description></item>
-    ///         <item><term>Alpha-3</term><description>DNK</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DK", "DNK")]
-    Denmark = 208,
-
-    /// <summary>
-    /// Djibouti.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>262</description></item>
-    ///         <item><term>Alpha-2</term><description>DJ</description></item>
-    ///         <item><term>Alpha-3</term><description>DJI</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DJ", "DJI")]
-    Djibouti = 262,
-
-    /// <summary>
-    /// Dominica.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>212</description></item>
-    ///         <item><term>Alpha-2</term><description>DM</description></item>
-    ///         <item><term>Alpha-3</term><description>DMA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DM", "DMA")]
-    Dominica = 212,
-
-    /// <summary>
-    /// Dominican Republic (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>214</description></item>
-    ///         <item><term>Alpha-2</term><description>DO</description></item>
-    ///         <item><term>Alpha-3</term><description>DOM</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DO", "DOM")]
-    DominicanRepublic = 214,
-
-    /// <summary>
-    /// Ecuador.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>218</description></item>
-    ///         <item><term>Alpha-2</term><description>EC</description></item>
-    ///         <item><term>Alpha-3</term><description>ECU</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("EC", "ECU")]
-    Ecuador = 218,
-
-    /// <summary>
-    /// Egypt.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>818</description></item>
-    ///         <item><term>Alpha-2</term><description>EG</description></item>
-    ///         <item><term>Alpha-3</term><description>EGY</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("EG", "EGY")]
-    Egypt = 818,
-
-    /// <summary>
-    /// El Salvador.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>222</description></item>
-    ///         <item><term>Alpha-2</term><description>SV</description></item>
-    ///         <item><term>Alpha-3</term><description>SLV</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("SV", "SLV")]
-    ElSalvador = 222,
-
-    /// <summary>
-    /// Equatorial Guinea.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>226</description></item>
-    ///         <item><term>Alpha-2</term><description>GQ</description></item>
-    ///         <item><term>Alpha-3</term><description>GNQ</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GQ", "GNQ")]
-    EquatorialGuinea = 226,
-
-    /// <summary>
-    /// Eritrea.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>232</description></item>
-    ///         <item><term>Alpha-2</term><description>ER</description></item>
-    ///         <item><term>Alpha-3</term><description>ERI</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("ER", "ERI")]
-    Eritrea = 232,
-
-    /// <summary>
-    /// Estonia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>233</description></item>
-    ///         <item><term>Alpha-2</term><description>EE</description></item>
-    ///         <item><term>Alpha-3</term><description>EST</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("EE", "EST")]
-    Estonia = 233,
-
-    /// <summary>
-    /// Eswatini.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>748</description></item>
-    ///         <item><term>Alpha-2</term><description>SZ</description></item>
-    ///         <item><term>Alpha-3</term><description>SWZ</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("SZ", "SWZ")]
-    Eswatini = 748,
-
-    /// <summary>
-    /// Ethiopia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>231</description></item>
-    ///         <item><term>Alpha-2</term><description>ET</description></item>
-    ///         <item><term>Alpha-3</term><description>ETH</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("ET", "ETH")]
-    Ethiopia = 231,
-
-    /// <summary>
-    /// Falkland Islands (the) [Malvinas].
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>238</description></item>
-    ///         <item><term>Alpha-2</term><description>FK</description></item>
-    ///         <item><term>Alpha-3</term><description>FLK</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("FK", "FLK")]
-    FalklandIslandsMalvinas = 238,
-
-    /// <summary>
-    /// Faroe Islands (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>234</description></item>
-    ///         <item><term>Alpha-2</term><description>FO</description></item>
-    ///         <item><term>Alpha-3</term><description>FRO</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("FO", "FRO")]
-    FaroeIslands = 234,
-
-    /// <summary>
-    /// Fiji.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>242</description></item>
-    ///         <item><term>Alpha-2</term><description>FJ</description></item>
-    ///         <item><term>Alpha-3</term><description>FJI</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("FJ", "FJI")]
-    Fiji = 242,
-
-    /// <summary>
-    /// Finland.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>246</description></item>
-    ///         <item><term>Alpha-2</term><description>FI</description></item>
-    ///         <item><term>Alpha-3</term><description>FIN</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("FI", "FIN")]
-    Finland = 246,
-
-    /// <summary>
-    /// France.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>250</description></item>
-    ///         <item><term>Alpha-2</term><description>FR</description></item>
-    ///         <item><term>Alpha-3</term><description>FRA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("FR", "FRA")]
-    France = 250,
-
-    /// <summary>
-    /// French Guiana.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>254</description></item>
-    ///         <item><term>Alpha-2</term><description>GF</description></item>
-    ///         <item><term>Alpha-3</term><description>GUF</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GF", "GUF")]
-    FrenchGuiana = 254,
-
-    /// <summary>
-    /// French Polynesia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>258</description></item>
-    ///         <item><term>Alpha-2</term><description>PF</description></item>
-    ///         <item><term>Alpha-3</term><description>PYF</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("PF", "PYF")]
-    FrenchPolynesia = 258,
-
-    /// <summary>
-    /// French Southern Territories (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>260</description></item>
-    ///         <item><term>Alpha-2</term><description>TF</description></item>
-    ///         <item><term>Alpha-3</term><description>ATF</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("TF", "ATF")]
-    FrenchSouthernTerritories = 260,
-
-    /// <summary>
-    /// Gabon.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>266</description></item>
-    ///         <item><term>Alpha-2</term><description>GA</description></item>
-    ///         <item><term>Alpha-3</term><description>GAB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GA", "GAB")]
-    Gabon = 266,
-
-    /// <summary>
-    /// Gambia (the).
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>270</description></item>
-    ///         <item><term>Alpha-2</term><description>GM</description></item>
-    ///         <item><term>Alpha-3</term><description>GMB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GM", "GMB")]
-    Gambia = 270,
-
-    /// <summary>
-    /// Georgia.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>268</description></item>
-    ///         <item><term>Alpha-2</term><description>GE</description></item>
-    ///         <item><term>Alpha-3</term><description>GEO</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GE", "GEO")]
-    Georgia = 268,
-
-    /// <summary>
-    /// Germany.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>276</description></item>
-    ///         <item><term>Alpha-2</term><description>DE</description></item>
-    ///         <item><term>Alpha-3</term><description>DEU</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("DE", "DEU")]
-    Germany = 276,
-
-    /// <summary>
-    /// Ghana.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>288</description></item>
-    ///         <item><term>Alpha-2</term><description>GH</description></item>
-    ///         <item><term>Alpha-3</term><description>GHA</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GH", "GHA")]
-    Ghana = 288,
-
-    /// <summary>
-    /// Gibraltar.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>292</description></item>
-    ///         <item><term>Alpha-2</term><description>GI</description></item>
-    ///         <item><term>Alpha-3</term><description>GIB</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GI", "GIB")]
-    Gibraltar = 292,
-
-    /// <summary>
-    /// Greece.
-    /// </summary>
-    /// <remarks>
-    ///     <list type="table">
-    ///         <item><term>Numeric</term><description>300</description></item>
-    ///         <item><term>Alpha-2</term><description>GR</description></item>
-    ///         <item><term>Alpha-3</term><description>GRC</description></item>
-    ///     </list>
-    /// </remarks>
-    [Iso3166("GR", "GRC")]
-    Greece = 300,
-
-    /// <summary>
-    /// Greenland.
-    /// </summary>
-    /// <remarks>
-    /// 304, GL, GRL
-    /// </remarks>
-    [Iso3166("GL", "GRL")]
-    Greenland = 304,
-
-    /// <summary>
-    /// Grenada.
-    /// </summary>
-    /// <remarks>
-    /// 308, GD, GRD
-    /// </remarks>
-    [Iso3166("GD", "GRD")]
-    Grenada = 308,
-
-    /// <summary>
-    /// Guadeloupe.
-    /// </summary>
-    /// <remarks>
-    /// 312, GP, GLP
-    /// </remarks>
-    [Iso3166("GP", "GLP")]
-    Guadeloupe = 312,
-
-    /// <summary>
-    /// Guam.
-    /// </summary>
-    /// <remarks>
-    /// 316, GU, GUM
-    /// </remarks>
-    [Iso3166("GU", "GUM")]
-    Guam = 316,
-
-    /// <summary>
-    /// Guatemala.
-    /// </summary>
-    /// <remarks>
-    /// 320, GT, GTM
-    /// </remarks>
-    [Iso3166("GT", "GTM")]
-    Guatemala = 320,
-
-    /// <summary>
-    /// Guernsey.
-    /// </summary>
-    /// <remarks>
-    /// 831, GG, GGY
-    /// </remarks>
-    [Iso3166("GG", "GGY")]
-    Guernsey = 831,
-
-    /// <summary>
-    /// Guinea.
-    /// </summary>
-    /// <remarks>
-    /// 324, GN, GIN
-    /// </remarks>
-    [Iso3166("GN", "GIN")]
-    Guinea = 324,
-
-    /// <summary>
-    /// Guinea-Bissau.
-    /// </summary>
-    /// <remarks>
-    /// 624, GW, GNB
-    /// </remarks>
-    [Iso3166("GW", "GNB")]
-    GuineaBissau = 624,
-
-    /// <summary>
-    /// Guyana.
-    /// </summary>
-    /// <remarks>
-    /// 328, GY, GUY
-    /// </remarks>
-    [Iso3166("GY", "GUY")]
-    Guyana = 328,
-
-    /// <summary>
-    /// Haiti.
-    /// </summary>
-    /// <remarks>
-    /// 332, HT, HTI
-    /// </remarks>
-    [Iso3166("HT", "HTI")]
-    Haiti = 332,
-
-    /// <summary>
-    /// Heard Island and McDonald Islands.
-    /// </summary>
-    /// <remarks>
-    /// 334, HM, HMD
-    /// </remarks>
-    [Iso3166("HM", "HMD")]
-    HeardIslandAndMcDonaldIslands = 334,
-
-    /// <summary>
-    /// Holy See (the).
-    /// </summary>
-    /// <remarks>
-    /// 336, VA, VAT
-    /// </remarks>
-    [Iso3166("VA", "VAT")]
-    HolySee = 336,
-
-    /// <summary>
-    /// Honduras.
-    /// </summary>
-    /// <remarks>
-    /// 340, HN, HND
-    /// </remarks>
-    [Iso3166("HN", "HND")]
-    Honduras = 340,
-
-    /// <summary>
-    /// Hong Kong.
-    /// </summary>
-    /// <remarks>
-    /// 344, HK, HKG
-    /// </remarks>
-    [Iso3166("HK", "HKG")]
-    HongKong = 344,
-
-    /// <summary>
-    /// Hungary.
-    /// </summary>
-    /// <remarks>
-    /// 348, HU, HUN
-    /// </remarks>
-    [Iso3166("HU", "HUN")]
-    Hungary = 348,
-
-    /// <summary>
-    /// Iceland.
-    /// </summary>
-    /// <remarks>
-    /// 352, IS, ISL
-    /// </remarks>
-    [Iso3166("IS", "ISL")]
-    Iceland = 352,
-
-    /// <summary>
-    /// India.
-    /// </summary>
-    /// <remarks>
-    /// 356, IN, IND
-    /// </remarks>
-    [Iso3166("IN", "IND")]
-    India = 356,
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+// © 2022 Ben Burgers and contributors.
+// This work is licensed by GNU General Public License version 3.
+namespace BenBurgers.InternationalStandards.Iso.Iso3166 {
+    using BenBurgers.InternationalStandards.Iso.Iso3166.Attributes;
+    using BenBurgers.InternationalStandards.Iso.Iso639;
+    
     
     /// <summary>
-    /// Indonesia.
-    /// </summary>
-    /// <remarks>
-    /// 360, ID, IDN
-    /// </remarks>
-    [Iso3166("ID", "IDN")]
-    Indonesia = 360,
-
-    /// <summary>
-    /// Iran (Islamic Republic of).
-    /// </summary>
-    /// <remarks>
-    /// 364, IR, IRN
-    /// </remarks>
-    [Iso3166("IR", "IRN")]
-    Iran = 364,
-
-    /// <summary>
-    /// Iraq.
-    /// </summary>
-    /// <remarks>
-    /// 368, IQ, IRQ
-    /// </remarks>
-    [Iso3166("IQ", "IRQ")]
-    Iraq = 368,
-
-    /// <summary>
-    /// Ireland.
-    /// </summary>
-    /// <remarks>
-    /// 372, IE, IRL
-    /// </remarks>
-    [Iso3166("IE", "IRL")]
-    Ireland = 372,
-
-    /// <summary>
-    /// Isle of Man.
-    /// </summary>
-    /// <remarks>
-    /// 833, IM, IMN
-    /// </remarks>
-    [Iso3166("IM", "IMN")]
-    IsleOfMan = 833,
-
-    /// <summary>
-    /// Israel.
-    /// </summary>
-    /// <remarks>
-    /// 376, IL, ISR
-    /// </remarks>
-    [Iso3166("IL", "ISR")]
-    Israel = 376,
-
-    /// <summary>
-    /// Italy.
-    /// </summary>
-    /// <remarks>
-    /// 380, IT, ITA
-    /// </remarks>
-    [Iso3166("IT", "ITA")]
-    Italy = 380,
-
-    /// <summary>
-    /// Jamaica.
-    /// </summary>
-    /// <remarks>
-    /// 388, JM, JAM
-    /// </remarks>
-    [Iso3166("JM", "JAM")]
-    Jamaica = 388,
-
-    /// <summary>
-    /// Japan.
-    /// </summary>
-    /// <remarks>
-    /// 392, JP, JPN
-    /// </remarks>
-    [Iso3166("JP", "JPN")]
-    Japan = 392,
-
-    /// <summary>
-    /// Jersey.
-    /// </summary>
-    /// <remarks>
-    /// 832, JE, JEY
-    /// </remarks>
-    [Iso3166("JE", "JEY")]
-    Jersey = 832,
-
-    /// <summary>
-    /// Jordan.
-    /// </summary>
-    /// <remarks>
-    /// 400, JO, JOR
-    /// </remarks>
-    [Iso3166("JO", "JOR")]
-    Jordan = 400,
-
-    /// <summary>
-    /// Kazakhstan.
-    /// </summary>
-    /// <remarks>
-    /// 398, KZ, KAZ
-    /// </remarks>
-    [Iso3166("KZ", "KAZ")]
-    Kazakhstan = 398,
-
-    /// <summary>
-    /// Kenya.
-    /// </summary>
-    /// <remarks>
-    /// 404, KE, KEN
-    /// </remarks>
-    [Iso3166("KE", "KEN")]
-    Kenya = 404,
-
-    /// <summary>
-    /// Kiribati.
-    /// </summary>
-    /// <remarks>
-    /// 296, KI, KIR
-    /// </remarks>
-    [Iso3166("KI", "KIR")]
-    Kiribati = 296,
-
-    /// <summary>
-    /// Korea (the Democratic People's Republic of).
-    /// </summary>
-    /// <remarks>
-    /// 408, KP, PRK
-    /// </remarks>
-    [Iso3166("KP", "PRK")]
-    KoreaDemocraticPeoplesRepublic = 408,
-
-    /// <summary>
-    /// Korea (the Republic of).
-    /// </summary>
-    /// <remarks>
-    /// 410, KR, KOR
-    /// </remarks>
-    [Iso3166("KR", "KOR")]
-    KoreaRepublic = 410,
-
-    /// <summary>
-    /// Kuwait.
-    /// </summary>
-    /// <remarks>
-    /// 414, KW, KWT
-    /// </remarks>
-    [Iso3166("KW", "KWT")]
-    Kuwait = 414,
-
-    /// <summary>
-    /// Kyrgyzstan.
-    /// </summary>
-    /// <remarks>
-    /// 417, KG, KGZ
-    /// </remarks>
-    [Iso3166("KG", "KGZ")]
-    Kyrgyzstan = 417,
-
-    /// <summary>
-    /// Lao People's Democratic Republic (the).
-    /// </summary>
-    /// <remarks>
-    /// 418, LA, LAO
-    /// </remarks>
-    [Iso3166("LA", "LAO")]
-    LaoPeoplesDemocraticRepublic = 418,
-
-    /// <summary>
-    /// Latvia.
-    /// </summary>
-    /// <remarks>
-    /// 428, LV, LVA
-    /// </remarks>
-    [Iso3166("LV", "LVA")]
-    Latvia = 428,
-
-    /// <summary>
-    /// Lebanon.
-    /// </summary>
-    /// <remarks>
-    /// 422, LB, LBN
-    /// </remarks>
-    [Iso3166("LB", "LBN")]
-    Lebanon = 422,
-
-    /// <summary>
-    /// Lesotho.
-    /// </summary>
-    /// <remarks>
-    /// 426, LS, LSO
-    /// </remarks>
-    [Iso3166("LS", "LSO")]
-    Lesotho = 426,
-
-    /// <summary>
-    /// Liberia.
-    /// </summary>
-    /// <remarks>
-    /// 430, LR, LBR
-    /// </remarks>
-    [Iso3166("LR", "LBR")]
-    Liberia = 430,
-
-    /// <summary>
-    /// Libya.
-    /// </summary>
-    /// <remarks>
-    /// 434, LY, LBY
-    /// </remarks>
-    [Iso3166("LY", "LBY")]
-    Libya = 434,
-
-    /// <summary>
-    /// Liechtenstein.
-    /// </summary>
-    /// <remarks>
-    /// 438, LI, LIE
-    /// </remarks>
-    [Iso3166("LI", "LIE")]
-    Liechtenstein = 438,
-
-    /// <summary>
-    /// Lithuania.
-    /// </summary>
-    /// <remarks>
-    /// 440, LT, LTU
-    /// </remarks>
-    [Iso3166("LT", "LTU")]
-    Lithuania = 440,
-
-    /// <summary>
-    /// Luxembourg.
-    /// </summary>
-    /// <remarks>
-    /// 442, LU, LUX
-    /// </remarks>
-    [Iso3166("LU", "LUX")]
-    Luxembourg = 442,
-
-    /// <summary>
-    /// Macao.
-    /// </summary>
-    /// <remarks>
-    /// 446, MO, MAC
-    /// </remarks>
-    [Iso3166("MO", "MAC")]
-    Macao = 446,
-
-    /// <summary>
-    /// Madagascar.
-    /// </summary>
-    /// <remarks>
-    /// 450, MG, MDG
-    /// </remarks>
-    [Iso3166("MG", "MDG")]
-    Madagascar = 450,
-
-    /// <summary>
-    /// Malawi.
-    /// </summary>
-    /// <remarks>
-    /// 454, MW, MWI
-    /// </remarks>
-    [Iso3166("MW", "MWI")]
-    Malawi = 454,
-
-    /// <summary>
-    /// Malaysia.
-    /// </summary>
-    /// <remarks>
-    /// 458, MY, MYS
-    /// </remarks>
-    [Iso3166("MY", "MYS")]
-    Malaysia = 458,
-
-    /// <summary>
-    /// Maldives.
-    /// </summary>
-    /// <remarks>
-    /// 462, MV, MDV
-    /// </remarks>
-    [Iso3166("MV", "MDV")]
-    Maldives = 462,
-
-    /// <summary>
-    /// Mali.
-    /// </summary>
-    /// <remarks>
-    /// 466, ML, MLI
-    /// </remarks>
-    [Iso3166("ML", "MLI")]
-    Mali = 466,
-
-    /// <summary>
-    /// Malta.
-    /// </summary>
-    /// <remarks>
-    /// 470, MT, MLT
-    /// </remarks>
-    [Iso3166("MT", "MLT")]
-    Malta = 470,
-
-    /// <summary>
-    /// Marshall Islands (the).
-    /// </summary>
-    /// <remarks>
-    /// 584, MH, MHL
-    /// </remarks>
-    [Iso3166("MH", "MHL")]
-    MarshallIslands = 584,
-
-    /// <summary>
-    /// Martinique.
-    /// </summary>
-    /// <remarks>
-    /// 474, MQ, MTQ
-    /// </remarks>
-    [Iso3166("MQ", "MTQ")]
-    Martinique = 474,
-
-    /// <summary>
-    /// Mauritania.
-    /// </summary>
-    /// <remarks>
-    /// 478, MR, MRT
-    /// </remarks>
-    [Iso3166("MR", "MRT")]
-    Mauritania = 478,
-
-    /// <summary>
-    /// Mauritius.
-    /// </summary>
-    /// <remarks>
-    /// 480, MU, MUS
-    /// </remarks>
-    [Iso3166("MU", "MUS")]
-    Mauritius = 480,
-
-    /// <summary>
-    /// Mayotte.
-    /// </summary>
-    /// <remarks>
-    /// 175, YT, MYT
-    /// </remarks>
-    [Iso3166("YT", "MYT")]
-    Mayotte = 175,
-
-    /// <summary>
-    /// Mexico.
-    /// </summary>
-    /// <remarks>
-    /// 484, MX, MEX
-    /// </remarks>
-    [Iso3166("MX", "MEX")]
-    Mexico = 484,
-
-    /// <summary>
-    /// Micronesia (Federated States of).
-    /// </summary>
-    /// <remarks>
-    /// 583, FM, FSM
-    /// </remarks>
-    [Iso3166("FM", "FSM")]
-    Micronesia = 583,
-
-    /// <summary>
-    /// Moldova (the Republic of).
-    /// </summary>
-    /// <remarks>
-    /// 498, MD, MDA
-    /// </remarks>
-    [Iso3166("MD", "MDA")]
-    Moldova = 498,
-
-    /// <summary>
-    /// Monaco.
-    /// </summary>
-    /// <remarks>
-    /// 492, MC, MCO
-    /// </remarks>
-    [Iso3166("MC", "MCO")]
-    Monaco = 492,
-
-    /// <summary>
-    /// Mongolia.
-    /// </summary>
-    /// <remarks>
-    /// 496, MN, MNG
-    /// </remarks>
-    [Iso3166("MN", "MNG")]
-    Mongolia = 496,
-
-    /// <summary>
-    /// Montenegro.
-    /// </summary>
-    /// <remarks>
-    /// 499, ME, MNE
-    /// </remarks>
-    [Iso3166("ME", "MNE")]
-    Montenegro = 499,
-
-    /// <summary>
-    /// Montserrat.
-    /// </summary>
-    /// <remarks>
-    /// 500, MS, MSR
-    /// </remarks>
-    [Iso3166("MS", "MSR")]
-    Montserrat = 500,
-
-    /// <summary>
-    /// Morocco.
-    /// </summary>
-    /// <remarks>
-    /// 504, MA, MAR
-    /// </remarks>
-    [Iso3166("MA", "MAR")]
-    Morocco = 504,
-
-    /// <summary>
-    /// Mozambique.
-    /// </summary>
-    /// <remarks>
-    /// 508, MZ, MOZ
-    /// </remarks>
-    [Iso3166("MZ", "MOZ")]
-    Mozambique = 508,
-
-    /// <summary>
-    /// Myanmar.
-    /// </summary>
-    /// <remarks>
-    /// 104, MM, MMR
-    /// </remarks>
-    [Iso3166("MM", "MMR")]
-    Myanmar = 104,
-
-    /// <summary>
-    /// Namibia.
-    /// </summary>
-    /// <remarks>
-    /// 516, NA, NAM
-    /// </remarks>
-    [Iso3166("NA", "NAM")]
-    Namibia = 516,
-
-    /// <summary>
-    /// Nauru.
-    /// </summary>
-    /// <remarks>
-    /// 520, NR, NRU
-    /// </remarks>
-    [Iso3166("NR", "NRU")]
-    Nauru = 520,
-
-    /// <summary>
-    /// Nepal.
-    /// </summary>
-    /// <remarks>
-    /// 524, NP, NPL
-    /// </remarks>
-    [Iso3166("NP", "NPL")]
-    Nepal = 524,
-
-    /// <summary>
-    /// Netherlands (the).
-    /// </summary>
-    /// <remarks>
-    /// 528, NL, NLD
-    /// </remarks>
-    [Iso3166("NL", "NLD")]
-    Netherlands = 528,
-
-    /// <summary>
-    /// New Caledonia.
-    /// </summary>
-    /// <remarks>
-    /// 540, NC, NCL
-    /// </remarks>
-    [Iso3166("NC", "NCL")]
-    NewCaledonia = 540,
-
-    /// <summary>
-    /// New Zealand.
-    /// </summary>
-    /// <remarks>
-    /// 554, NZ, NZL
-    /// </remarks>
-    [Iso3166("NZ", "NZL")]
-    NewZealand = 554,
-
-    /// <summary>
-    /// Nicaragua.
-    /// </summary>
-    /// <remarks>
-    /// 558, NI, NIC
-    /// </remarks>
-    [Iso3166("NI", "NIC")]
-    Nicaragua = 558,
-
-    /// <summary>
-    /// Niger (the).
-    /// </summary>
-    /// <remarks>
-    /// 562, NE, NER
-    /// </remarks>
-    [Iso3166("NE", "NER")]
-    Niger = 562,
-
-    /// <summary>
-    /// Nigeria.
-    /// </summary>
-    /// <remarks>
-    /// 566, NG, NGA
-    /// </remarks>
-    [Iso3166("NG", "NGA")]
-    Nigeria = 566,
-
-    /// <summary>
-    /// Niue.
-    /// </summary>
-    /// <remarks>
-    /// 570, NU, NIU
-    /// </remarks>
-    [Iso3166("NU", "NIU")]
-    Niue = 570,
-
-    /// <summary>
-    /// Norfolk Island.
-    /// </summary>
-    /// <remarks>
-    /// 574, NF, NFK
-    /// </remarks>
-    [Iso3166("NF", "NFK")]
-    NorfolkIsland = 574,
-
-    /// <summary>
-    /// North Macedonia.
-    /// </summary>
-    /// <remarks>
-    /// 807, MK, MKD
-    /// </remarks>
-    [Iso3166("MK", "MKD")]
-    NorthMacedonia = 807,
-
-    /// <summary>
-    /// Northern Mariana Islands (the).
-    /// </summary>
-    /// <remarks>
-    /// 580, MP, MNP
-    /// </remarks>
-    [Iso3166("MP", "MNP")]
-    NorthernMarianaIslands = 580,
-
-    /// <summary>
-    /// Norway.
-    /// </summary>
-    /// <remarks>
-    /// 578, NO, NOR
-    /// </remarks>
-    [Iso3166("NO", "NOR")]
-    Norway = 578,
-
-    /// <summary>
-    /// Oman.
-    /// </summary>
-    /// <remarks>
-    /// 512, OM, OMN
-    /// </remarks>
-    [Iso3166("OM", "OMN")]
-    Oman = 512,
-
-    /// <summary>
-    /// Pakistan.
-    /// </summary>
-    /// <remarks>
-    /// 586, PK, PAK
-    /// </remarks>
-    [Iso3166("PK", "PAK")]
-    Pakistan = 586,
-
-    /// <summary>
-    /// Palau.
-    /// </summary>
-    /// <remarks>
-    /// 585, PW, PLW
-    /// </remarks>
-    [Iso3166("PW", "PLW")]
-    Palau = 585,
-
-    /// <summary>
-    /// Palestine, State of.
-    /// </summary>
-    /// <remarks>
-    /// 275, PS, PSE
-    /// </remarks>
-    [Iso3166("PS", "PSE")]
-    Palestine = 275,
-
-    /// <summary>
-    /// Panama.
-    /// </summary>
-    /// <remarks>
-    /// 591, PA, PAN
-    /// </remarks>
-    [Iso3166("PA", "PAN")]
-    Panama = 591,
-
-    /// <summary>
-    /// Papua New Guinea.
-    /// </summary>
-    /// <remarks>
-    /// 598, PG, PNG
-    /// </remarks>
-    [Iso3166("PG", "PNG")]
-    PapuaNewGuinea = 598,
-
-    /// <summary>
-    /// Paraguay.
-    /// </summary>
-    /// <remarks>
-    /// 600, PY, PRY
-    /// </remarks>
-    [Iso3166("PY", "PRY")]
-    Paraguay = 600,
-
-    /// <summary>
-    /// Peru.
-    /// </summary>
-    /// <remarks>
-    /// 604, PE, PER
-    /// </remarks>
-    [Iso3166("PE", "PER")]
-    Peru = 604,
-
-    /// <summary>
-    /// Philippines (the).
-    /// </summary>
-    /// <remarks>
-    /// 608, PH, PHL
-    /// </remarks>
-    [Iso3166("PH", "PHL")]
-    Philippines = 608,
-
-    /// <summary>
-    /// Pitcairn Islands (the).
-    /// </summary>
-    /// <remarks>
-    /// 612, PN, PCN
-    /// </remarks>
-    [Iso3166("PN", "PCN")]
-    PitcairnIslands = 612,
-
-    /// <summary>
-    /// Poland.
-    /// </summary>
-    /// <remarks>
-    /// 616, PL, POL
-    /// </remarks>
-    [Iso3166("PL", "POL")]
-    Poland = 616,
-
-    /// <summary>
-    /// Portugal.
-    /// </summary>
-    /// <remarks>
-    /// 620, PT, PRT
-    /// </remarks>
-    [Iso3166("PT", "PRT")]
-    Portugal = 620,
-
-    /// <summary>
-    /// Puerto Rico.
-    /// </summary>
-    /// <remarks>
-    /// 630, PR, PRI
-    /// </remarks>
-    [Iso3166("PR", "PRI")]
-    PuertoRico = 630,
-
-    /// <summary>
-    /// Qatar.
-    /// </summary>
-    /// <remarks>
-    /// 634, QA, QAT
-    /// </remarks>
-    [Iso3166("QA", "QAT")]
-    Qatar = 634,
-
-    /// <summary>
-    /// Romania.
-    /// </summary>
-    /// <remarks>
-    /// 642, RO, ROU
-    /// </remarks>
-    [Iso3166("RO", "ROU")]
-    Romania = 642,
-
-    /// <summary>
-    /// Russian Federation (the).
-    /// </summary>
-    /// <remarks>
-    /// 643, RU, RUS
-    /// </remarks>
-    [Iso3166("RU", "RUS")]
-    RussianFederation = 643,
-
-    /// <summary>
-    /// Rwanda.
-    /// </summary>
-    /// <remarks>
-    /// 646, RW, RWA
-    /// </remarks>
-    [Iso3166("RW", "RWA")]
-    Rwanda = 646,
-
-    /// <summary>
-    /// Réunion.
-    /// </summary>
-    /// <remarks>
-    /// 638, RE, REU
-    /// </remarks>
-    [Iso3166("RE", "REU")]
-    Réunion = 638,
-
-    /// <summary>
-    /// Saint Barthélemy.
-    /// </summary>
-    /// <remarks>
-    /// 652, BL, BLM
-    /// </remarks>
-    [Iso3166("BL", "BLM")]
-    SaintBarthélemy = 652,
-
-    /// <summary>
-    /// Saint Helena, Ascension and Tristan da Cunha.
-    /// </summary>
-    /// <remarks>
-    /// 654, SH, SHN
-    /// </remarks>
-    [Iso3166("SH", "SHN")]
-    SaintHelenaAscensionAndTristanDaCunha = 654,
-
-    /// <summary>
-    /// Saint Kitts and Nevis.
-    /// </summary>
-    /// <remarks>
-    /// 659, KN, KNA
-    /// </remarks>
-    [Iso3166("KN", "KNA")]
-    SaintKittsAndNevis = 659,
-
-    /// <summary>
-    /// Saint Lucia.
-    /// </summary>
-    /// <remarks>
-    /// 662, LC, LCA
-    /// </remarks>
-    [Iso3166("LC", "LCA")]
-    SaintLucia = 662,
-
-    /// <summary>
-    /// Saint Martin (French part).
-    /// </summary>
-    /// <remarks>
-    /// 663, MF, MAF
-    /// </remarks>
-    [Iso3166("MF", "MAF")]
-    SaintMartin = 663,
-
-    /// <summary>
-    /// Saint Pierre and Miquelon.
-    /// </summary>
-    /// <remarks>
-    /// 666, PM, SPM
-    /// </remarks>
-    [Iso3166("PM", "SPM")]
-    SaintPierreAndMiquelon = 666,
-
-    /// <summary>
-    /// Saint Vincent and the Grenadines.
-    /// </summary>
-    /// <remarks>
-    /// 670, VC, VCT
-    /// </remarks>
-    [Iso3166("VC", "VCT")]
-    SaintVincentAndGrenadines = 670,
-
-    /// <summary>
-    /// Samoa.
-    /// </summary>
-    /// <remarks>
-    /// 882, WS, WSM
-    /// </remarks>
-    [Iso3166("WS", "WSM")]
-    Samoa = 882,
-
-    /// <summary>
-    /// San Marino.
-    /// </summary>
-    /// <remarks>
-    /// 674, SM, SMR
-    /// </remarks>
-    [Iso3166("SM", "SMR")]
-    SanMarino = 674,
-
-    /// <summary>
-    /// Sao Tome and Principe.
-    /// </summary>
-    /// <remarks>
-    /// 678, ST, STP
-    /// </remarks>
-    [Iso3166("ST", "STP")]
-    SaoTomeAndPrincipe = 678,
-
-    /// <summary>
-    /// Saudi Arabia.
-    /// </summary>
-    /// <remarks>
-    /// 682, SA, SAU
-    /// </remarks>
-    [Iso3166("SA", "SAU")]
-    SaudiArabia = 682,
-
-    /// <summary>
-    /// Senegal.
-    /// </summary>
-    /// <remarks>
-    /// 686, SN, SEN
-    /// </remarks>
-    [Iso3166("SN", "SEN")]
-    Senegal = 686,
-
-    /// <summary>
-    /// Serbia.
-    /// </summary>
-    /// <remarks>
-    /// 688, RS, SRB
-    /// </remarks>
-    [Iso3166("RS", "SRB")]
-    Serbia = 688,
-
-    /// <summary>
-    /// Seychelles.
-    /// </summary>
-    /// <remarks>
-    /// 690, SC, SYC
-    /// </remarks>
-    [Iso3166("SC", "SYC")]
-    Seychelles = 690,
-
-    /// <summary>
-    /// Sierra Leone.
-    /// </summary>
-    /// <remarks>
-    /// 694, SL, SLE
-    /// </remarks>
-    [Iso3166("SL", "SLE")]
-    SierraLeone = 694,
-
-    /// <summary>
-    /// Singapore.
-    /// </summary>
-    /// <remarks>
-    /// 702, SG, SGP
-    /// </remarks>
-    [Iso3166("SG", "SGP")]
-    Singapore = 702,
-
-    /// <summary>
-    /// Sint Maarten (Dutch part).
-    /// </summary>
-    /// <remarks>
-    /// 534, SX, SXM
-    /// </remarks>
-    [Iso3166("SX", "SXM")]
-    SintMaarten = 534,
-
-    /// <summary>
-    /// Slovakia.
-    /// </summary>
-    /// <remarks>
-    /// 703, SK, SVK
-    /// </remarks>
-    [Iso3166("SK", "SVK")]
-    Slovakia = 703,
-
-    /// <summary>
-    /// Slovenia.
-    /// </summary>
-    /// <remarks>
-    /// 705, SI, SVN
-    /// </remarks>
-    [Iso3166("SI", "SVN")]
-    Slovenia = 705,
-
-    /// <summary>
-    /// Solomon Islands.
-    /// </summary>
-    /// <remarks>
-    /// 090, SB, SLB
-    /// </remarks>
-    [Iso3166("SB", "SLB")]
-    SolomonIslands = 090,
-
-    /// <summary>
-    /// Somalia.
-    /// </summary>
-    /// <remarks>
-    /// 706, SO, SOM
-    /// </remarks>
-    [Iso3166("SO", "SOM")]
-    Somalia = 706,
-
-    /// <summary>
-    /// South Africa.
-    /// </summary>
-    /// <remarks>
-    /// 710, ZA, ZAF
-    /// </remarks>
-    [Iso3166("ZA", "ZAF")]
-    SouthAfrica = 710,
-
-    /// <summary>
-    /// South Georgia and the South Sandwich Islands.
-    /// </summary>
-    /// <remarks>
-    /// 239, GS, SGS
-    /// </remarks>
-    [Iso3166("GS", "SGS")]
-    SouthGeorgiaAndSouthSandwichIslands = 239,
-
-    /// <summary>
-    /// South Sudan.
-    /// </summary>
-    /// <remarks>
-    /// 728, SS, SSD
-    /// </remarks>
-    [Iso3166("SS", "SSD")]
-    SouthSudan = 728,
-
-    /// <summary>
-    /// Spain.
-    /// </summary>
-    /// <remarks>
-    /// 724, ES, ESP
-    /// </remarks>
-    [Iso3166("ES", "ESP")]
-    Spain = 724,
-
-    /// <summary>
-    /// Sri Lanka.
-    /// </summary>
-    /// <remarks>
-    /// 144, LK, LKA
-    /// </remarks>
-    [Iso3166("LK", "LKA")]
-    SriLanka = 144,
-
-    /// <summary>
-    /// Sudan (the).
-    /// </summary>
-    /// <remarks>
-    /// 729, SD, SDN
-    /// </remarks>
-    [Iso3166("SD", "SDN")]
-    Sudan = 729,
-
-    /// <summary>
-    /// Suriname.
-    /// </summary>
-    /// <remarks>
-    /// 740, SR, SUR
-    /// </remarks>
-    [Iso3166("SR", "SUR")]
-    Suriname = 740,
-
-    /// <summary>
-    /// Svalbard and Jan Mayen.
-    /// </summary>
-    /// <remarks>
-    /// 744, SJ, SJM
-    /// </remarks>
-    [Iso3166("SJ", "SJM")]
-    SvalbardAndJanMayen = 744,
-
-    /// <summary>
-    /// Sweden.
-    /// </summary>
-    /// <remarks>
-    /// 752, SE, SWE
-    /// </remarks>
-    [Iso3166("SE", "SWE")]
-    Sweden = 752,
-
-    /// <summary>
-    /// Switzerland.
-    /// </summary>
-    /// <remarks>
-    /// 756, CH, CHE
-    /// </remarks>
-    [Iso3166("CH", "CHE")]
-    Switzerland = 756,
-
-    /// <summary>
-    /// Syrian Arab Republic (the).
-    /// </summary>
-    /// <remarks>
-    /// 760, SY, SYR
-    /// </remarks>
-    [Iso3166("SY", "SYR")]
-    SyrianArabRepublic = 760,
-
-    /// <summary>
-    /// Taiwan.
-    /// </summary>
-    /// <remarks>
-    /// 158, TW, TWN
-    /// </remarks>
-    [Iso3166("TW", "TWN")]
-    Taiwan = 158,
-
-    /// <summary>
-    /// Tajikistan.
-    /// </summary>
-    /// <remarks>
-    /// 762, TJ, TJK
-    /// </remarks>
-    [Iso3166("TJ", "TJK")]
-    Tajikistan = 762,
-
-    /// <summary>
-    /// Tanzania, the United Republic of.
-    /// </summary>
-    /// <remarks>
-    /// 834, TZ, TZA
-    /// </remarks>
-    [Iso3166("TZ", "TZA")]
-    Tanzania = 834,
-
-    /// <summary>
-    /// Thailand.
-    /// </summary>
-    /// <remarks>
-    /// 764, TH, THA
-    /// </remarks>
-    [Iso3166("TH", "THA")]
-    Thailand = 764,
-
-    /// <summary>
-    /// Timor-Leste.
-    /// </summary>
-    /// <remarks>
-    /// 626, TL, TLS
-    /// </remarks>
-    [Iso3166("TL", "TLS")]
-    TimorLeste = 626,
-
-    /// <summary>
-    /// Togo.
-    /// </summary>
-    /// <remarks>
-    /// 768, TG, TGO
-    /// </remarks>
-    [Iso3166("TG", "TGO")]
-    Togo = 768,
-
-    /// <summary>
-    /// Tokelau.
-    /// </summary>
-    /// <remarks>
-    /// 772, TK, TKL
-    /// </remarks>
-    [Iso3166("TK", "TKL")]
-    Tokelau = 772,
-
-    /// <summary>
-    /// Tonga.
-    /// </summary>
-    /// <remarks>
-    /// 776, TO, TON
-    /// </remarks>
-    [Iso3166("TO", "TON")]
-    Tonga = 776,
-
-    /// <summary>
-    /// Trinidad and Tobago.
-    /// </summary>
-    /// <remarks>
-    /// 780, TT, TTO
-    /// </remarks>
-    [Iso3166("TT", "TTO")]
-    TrinidadAndTobago = 780,
-
-    /// <summary>
-    /// Tunisia.
-    /// </summary>
-    /// <remarks>
-    /// 788, TN, TUN
-    /// </remarks>
-    [Iso3166("TN", "TUN")]
-    Tunisia = 788,
-
-    /// <summary>
-    /// Turkmenistan.
-    /// </summary>
-    /// <remarks>
-    /// 795, TM, TKM
-    /// </remarks>
-    [Iso3166("TM", "TKM")]
-    Turkmenistan = 795,
-
-    /// <summary>
-    /// Turks and Caicos Islands (the).
-    /// </summary>
-    /// <remarks>
-    /// 796, TC, TCA
-    /// </remarks>
-    [Iso3166("TC", "TCA")]
-    TurksAndCaicosIslands = 796,
-
-    /// <summary>
-    /// Tuvalu.
-    /// </summary>
-    /// <remarks>
-    /// 798, TV, TUV
-    /// </remarks>
-    [Iso3166("TV", "TUV")]
-    Tuvalu = 798,
-
-    /// <summary>
-    /// Türkiye.
-    /// </summary>
-    /// <remarks>
-    /// 792, TR, TUR
-    /// </remarks>
-    [Iso3166("TR", "TUR")]
-    Türkiye = 792,
-
-    /// <summary>
-    /// Uganda.
-    /// </summary>
-    /// <remarks>
-    /// 800, UG, UGA
-    /// </remarks>
-    [Iso3166("UG", "UGA")]
-    Uganda = 800,
-
-    /// <summary>
-    /// Ukraine.
-    /// </summary>
-    /// <remarks>
-    /// 804, UA, UKR
-    /// </remarks>
-    [Iso3166("UA", "UKR")]
-    Ukraine = 804,
-
-    /// <summary>
-    /// United Arab Emirates (the).
-    /// </summary>
-    /// <remarks>
-    /// 784, AE, ARE
-    /// </remarks>
-    [Iso3166("AE", "ARE")]
-    UnitedArabEmirates = 784,
-
-    /// <summary>
-    /// United Kingdom of Great Britain and Northern Ireland (the).
-    /// </summary>
-    /// <remarks>
-    /// 826, GB, GBR
-    /// </remarks>
-    [Iso3166("GB", "GBR")]
-    UnitedKingdom = 826,
-
-    /// <summary>
-    /// United States Minor Outlying Islands (the).
-    /// </summary>
-    /// <remarks>
-    /// 581, UM, UMI
-    /// </remarks>
-    [Iso3166("UM", "UMI")]
-    UnitedStatesMinorOutlyingIslands = 581,
-
-    /// <summary>
-    /// United States of America (the).
-    /// </summary>
-    /// <remarks>
-    /// 840, US, USA
-    /// </remarks>
-    [Iso3166("US", "USA")]
-    UnitedStatesOfAmerica = 840,
-
-    /// <summary>
-    /// Uruguay.
-    /// </summary>
-    /// <remarks>
-    /// 858, UY, URY
-    /// </remarks>
-    [Iso3166("UY", "URY")]
-    Uruguay = 858,
-
-    /// <summary>
-    /// Uzbekistan.
-    /// </summary>
-    /// <remarks>
-    /// 860, UZ, UZB
-    /// </remarks>
-    [Iso3166("UZ", "UZB")]
-    Uzbekistan = 860,
-
-    /// <summary>
-    /// Vanuatu.
-    /// </summary>
-    /// <remarks>
-    /// 548, VU, VUT
-    /// </remarks>
-    [Iso3166("VU", "VUT")]
-    Vanuatu = 548,
-
-    /// <summary>
-    /// Venezuela (Bolivarian Republic of).
-    /// </summary>
-    /// <remarks>
-    /// 862, VE, VEN
-    /// </remarks>
-    [Iso3166("VE", "VEN")]
-    Venezuela = 862,
-
-    /// <summary>
-    /// Viet Nam.
-    /// </summary>
-    /// <remarks>
-    /// 704, VN, VNM
-    /// </remarks>
-    [Iso3166("VN", "VNM")]
-    VietNam = 704,
-
-    /// <summary>
-    /// Virgin Islands (British).
-    /// </summary>
-    [Iso3166("VG", "VGB")]
-    VirginIslandsBritish = 092,
-
-    /// <summary>
-    /// Virgin Islands (United States).
-    /// </summary>
-    [Iso3166("VI", "VIR")]
-    VirginIslandsUnitedStates = 850,
-
-    /// <summary>
-    /// Wallis and Futuna.
-    /// </summary>
-    /// <remarks>
-    /// 876, WF, WLF
-    /// </remarks>
-    [Iso3166("WF", "WLF")]
-    WallisAndFutuna = 876,
-
-    /// <summary>
-    /// Western Sahara.
-    /// </summary>
-    /// <remarks>
-    /// 732, EH, ESH
-    /// </remarks>
-    [Iso3166("EH", "ESH")]
-    WesternSahara = 732,
-
-    /// <summary>
-    /// Yemen.
-    /// </summary>
-    /// <remarks>
-    /// 887, YE, YEM
-    /// </remarks>
-    [Iso3166("YE", "YEM")]
-    Yemen = 887,
-
-    /// <summary>
-    /// Zambia.
-    /// </summary>
-    /// <remarks>
-    /// 894, ZM, ZMB
-    /// </remarks>
-    [Iso3166("ZM", "ZMB")]
-    Zambia = 894,
-
-    /// <summary>
-    /// Zimbabwe.
-    /// </summary>
-    /// <remarks>
-    /// 716, ZW, ZWE
-    /// </remarks>
-    [Iso3166("ZW", "ZWE")]
-    Zimbabwe = 716
+    ///    An <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> Country Code.
+    /// </summary>
+    /// <remarks>
+    ///    <para>
+    ///        The <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166 Maintenance Agency</a> is the sole authority of ISO 3166 codes.
+    ///        Only they can designate ISO 3166 codes. This work is a derivation and enhancement and anything other than ISO 3166 is the responsibility of the respective copyright holders.
+    ///    </para>
+    ///    <para>
+    ///        If you notice any mistake in this work, please create a Pull Request or notify the repository owner or a contributor as soon as possible.
+    ///    </para>
+    ///    <para>
+    ///        Extension methods from <see cref="Iso3166CodeExtensions" /> enable conversion from and to <see cref="Iso3166Code" />.<br />
+    ///        To convert from an Alpha code in a <see cref="string" />, use the extension method <see cref="Iso3166CodeExtensions.ToIso3166(string)" />.
+    ///    </para>
+    ///    <para>
+    ///        The codes were generated at 29 November 2022 16:24:21.
+    ///    </para>
+    ///  </remarks>
+    public enum Iso3166Code {
+        
+        /// <summary>the Principality of Andorra</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AD</description></item>
+        /// 		<item><term>Alpha-3</term><description>AND</description></item>
+        /// 		<item><term>Numeric</term><description>020</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AD", "AND")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Principality of Andorra")]
+        [Iso3166ShortNameAttribute(Iso639Code.Catalan_Valencian, "Andorra")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Andorra")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Andorre (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ANDORRA")]
+        Andorra = 20,
+        
+        /// <summary>the United Arab Emirates</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AE</description></item>
+        /// 		<item><term>Alpha-3</term><description>ARE</description></item>
+        /// 		<item><term>Numeric</term><description>784</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AE", "ARE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the United Arab Emirates")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Imārāt")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "United Arab Emirates (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Émirats arabas unis (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UNITED ARAB EMIRATES")]
+        UnitedArabEmirates = 784,
+        
+        /// <summary>the Islamic Republic of Afghanistan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AF</description></item>
+        /// 		<item><term>Alpha-3</term><description>AFG</description></item>
+        /// 		<item><term>Numeric</term><description>004</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AF", "AFG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Islamic Republic of Afghanistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Afghanistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Persian, "Afghānistān")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Afghanistan (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Pashto_Pushto, "Afghānistān")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "AFGHANISTAN")]
+        Afghanistan = 4,
+        
+        /// <summary>Antigua and Barbuda</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AG</description></item>
+        /// 		<item><term>Alpha-3</term><description>ATG</description></item>
+        /// 		<item><term>Numeric</term><description>028</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AG", "ATG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Antigua and Barbuda")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Antigua-et-Barbuda")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ANTIGUA AND BARBUDA")]
+        AntiguaAndBarbuda = 28,
+        
+        /// <summary>Anguilla</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AI</description></item>
+        /// 		<item><term>Alpha-3</term><description>AIA</description></item>
+        /// 		<item><term>Numeric</term><description>660</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AI", "AIA")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Anguilla")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Anguilla")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ANGUILLA")]
+        Anguilla = 660,
+        
+        /// <summary>the Republic of Albania</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AL</description></item>
+        /// 		<item><term>Alpha-3</term><description>ALB</description></item>
+        /// 		<item><term>Numeric</term><description>008</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AL", "ALB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Albania")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Albania")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Albanie (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Albanian, "Shqipëria; Shqipëri")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ALBANIA")]
+        Albania = 8,
+        
+        /// <summary>the Republic of Armenia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AM</description></item>
+        /// 		<item><term>Alpha-3</term><description>ARM</description></item>
+        /// 		<item><term>Numeric</term><description>051</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AM", "ARM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Armenia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Armenia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Arménie (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Armenian, "Hayastan")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ARMENIA")]
+        Armenia = 51,
+        
+        /// <summary>the Republic of Angola</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AO</description></item>
+        /// 		<item><term>Alpha-3</term><description>AGO</description></item>
+        /// 		<item><term>Numeric</term><description>024</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AO", "AGO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Angola")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Angola")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Angola (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Angola")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ANGOLA")]
+        Angola = 24,
+        
+        /// <summary>Antarctica</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AQ</description></item>
+        /// 		<item><term>Alpha-3</term><description>ATA</description></item>
+        /// 		<item><term>Numeric</term><description>010</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AQ", "ATA")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Antarctica")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Antarctique (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ANTARCTICA")]
+        Antarctica = 10,
+        
+        /// <summary>the Argentine Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AR</description></item>
+        /// 		<item><term>Alpha-3</term><description>ARG</description></item>
+        /// 		<item><term>Numeric</term><description>032</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AR", "ARG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Argentine Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Argentina")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Argentine (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Argentina (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ARGENTINA")]
+        Argentina = 32,
+        
+        /// <summary>American Samoa</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AS</description></item>
+        /// 		<item><term>Alpha-3</term><description>ASM</description></item>
+        /// 		<item><term>Numeric</term><description>016</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AS", "ASM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "American Samoa")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Samoa américaines (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "AMERICAN SAMOA")]
+        AmericanSamoa = 16,
+        
+        /// <summary>the Republic of Austria</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AT</description></item>
+        /// 		<item><term>Alpha-3</term><description>AUT</description></item>
+        /// 		<item><term>Numeric</term><description>040</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AT", "AUT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Austria")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Österreich")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Austria")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Autriche (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "AUSTRIA")]
+        Austria = 40,
+        
+        /// <summary>Australia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AU</description></item>
+        /// 		<item><term>Alpha-3</term><description>AUS</description></item>
+        /// 		<item><term>Numeric</term><description>036</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AU", "AUS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Australia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Australie (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "AUSTRALIA")]
+        Australia = 36,
+        
+        /// <summary>Aruba</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AW</description></item>
+        /// 		<item><term>Alpha-3</term><description>ABW</description></item>
+        /// 		<item><term>Numeric</term><description>533</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AW", "ABW")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Aruba")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Aruba")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Aruba")]
+        [Iso3166ShortNameAttribute(Iso639Code.Papiamento, "Aruba")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ARUBA")]
+        Aruba = 533,
+        
+        /// <summary>Åland Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AX</description></item>
+        /// 		<item><term>Alpha-3</term><description>ALA</description></item>
+        /// 		<item><term>Numeric</term><description>248</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AX", "ALA")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Åland Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Åland (les Îles)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swedish, "Åland")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ÅLAND ISLANDS")]
+        ÅlandIslands = 248,
+        
+        /// <summary>the Republic of Azerbaijan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>AZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>AZE</description></item>
+        /// 		<item><term>Numeric</term><description>031</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("AZ", "AZE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Azerbaijan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Azerbaijani, "Azərbaycan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Azerbaijan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Azerbaïdjan (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "AZERBAIJAN")]
+        Azerbaijan = 31,
+        
+        /// <summary>Bosnia and Herzegovina</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BA</description></item>
+        /// 		<item><term>Alpha-3</term><description>BIH</description></item>
+        /// 		<item><term>Numeric</term><description>070</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BA", "BIH")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Bosnian, "Bosna i Hercegovina")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bosnia and Herzegovina")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bosnie-Herzégovine (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BOSNIA AND HERZEGOVINA")]
+        BosniaAndHerzegovina = 70,
+        
+        /// <summary>Barbados</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BB</description></item>
+        /// 		<item><term>Alpha-3</term><description>BRB</description></item>
+        /// 		<item><term>Numeric</term><description>052</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BB", "BRB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Barbados")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Barbade (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BARBADOS")]
+        Barbados = 52,
+        
+        /// <summary>the People's Republic of Bangladesh</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BD</description></item>
+        /// 		<item><term>Alpha-3</term><description>BGD</description></item>
+        /// 		<item><term>Numeric</term><description>050</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BD", "BGD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the People\'s Republic of Bangladesh")]
+        [Iso3166ShortNameAttribute(Iso639Code.Bengali, "Bāṁlādesh")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bangladesh")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bangladesh (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BANGLADESH")]
+        Bangladesh = 50,
+        
+        /// <summary>the Kingdom of Belgium</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BE</description></item>
+        /// 		<item><term>Alpha-3</term><description>BEL</description></item>
+        /// 		<item><term>Numeric</term><description>056</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BE", "BEL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Belgium")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Belgien")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Belgium")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Belgique (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "België")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BELGIUM")]
+        Belgium = 56,
+        
+        /// <summary>Burkina Faso</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BF</description></item>
+        /// 		<item><term>Alpha-3</term><description>BFA</description></item>
+        /// 		<item><term>Numeric</term><description>854</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BF", "BFA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Burkina Faso")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Burkina Faso (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BURKINA FASO")]
+        BurkinaFaso = 854,
+        
+        /// <summary>the Republic of Bulgaria</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BG</description></item>
+        /// 		<item><term>Alpha-3</term><description>BGR</description></item>
+        /// 		<item><term>Numeric</term><description>100</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BG", "BGR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Bulgaria")]
+        [Iso3166ShortNameAttribute(Iso639Code.Bulgarian, "Bulgaria")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bulgaria")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bulgarie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BULGARIA")]
+        Bulgaria = 100,
+        
+        /// <summary>the Kingdom of Bahrain</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BH</description></item>
+        /// 		<item><term>Alpha-3</term><description>BHR</description></item>
+        /// 		<item><term>Numeric</term><description>048</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BH", "BHR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Bahrain")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Baḩrayn")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bahrain")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bahreïn")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BAHRAIN")]
+        Bahrain = 48,
+        
+        /// <summary>the Republic of Burundi</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BI</description></item>
+        /// 		<item><term>Alpha-3</term><description>BDI</description></item>
+        /// 		<item><term>Numeric</term><description>108</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BI", "BDI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Burundi")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Burundi")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Burundi (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Rundi, "Burundi")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BURUNDI")]
+        Burundi = 108,
+        
+        /// <summary>the Republic of Benin</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BJ</description></item>
+        /// 		<item><term>Alpha-3</term><description>BEN</description></item>
+        /// 		<item><term>Numeric</term><description>204</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BJ", "BEN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Benin")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Benin")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bénin (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BENIN")]
+        Benin = 204,
+        
+        /// <summary>Saint Barthélemy</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BL</description></item>
+        /// 		<item><term>Alpha-3</term><description>BLM</description></item>
+        /// 		<item><term>Numeric</term><description>652</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BL", "BLM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Barthélemy")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Barthélemy")]
+        SaintBarthélemy = 652,
+        
+        /// <summary>Bermuda</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BM</description></item>
+        /// 		<item><term>Alpha-3</term><description>BMU</description></item>
+        /// 		<item><term>Numeric</term><description>060</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BM", "BMU")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bermuda")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bermudes (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BERMUDA")]
+        Bermuda = 60,
+        
+        /// <summary>Brunei Darussalam</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BN</description></item>
+        /// 		<item><term>Alpha-3</term><description>BRN</description></item>
+        /// 		<item><term>Numeric</term><description>096</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BN", "BRN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Brunei Darussalam")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Brunéi Darussalam (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Malay_macrolanguage_, "Negara Brunei Darussalam")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BRUNEI DARUSSALAM")]
+        BruneiDarussalam = 96,
+        
+        /// <summary>the Plurinational State of Bolivia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BO</description></item>
+        /// 		<item><term>Alpha-3</term><description>BOL</description></item>
+        /// 		<item><term>Numeric</term><description>068</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BO", "BOL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Plurinational State of Bolivia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bolivia (Plurinational State of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bolivie (État plurinational de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Bolivia, Estado Plurinacional de")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BOLIVIA (PLURINATIONAL STATE OF)")]
+        Bolivia_PlurinationalStateOf = 68,
+        
+        /// <summary>Bonaire, Sint Eustatius and Saba</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BQ</description></item>
+        /// 		<item><term>Alpha-3</term><description>BES</description></item>
+        /// 		<item><term>Numeric</term><description>535</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BQ", "BES")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bonaire, Sint Eustatius and Saba")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bonaire, Saint-Eustache et Saba")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Bonaire, Sint Eustatius en Saba")]
+        [Iso3166ShortNameAttribute(Iso639Code.Papiamento, "Boneiru, Sint Eustatius y Saba")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BONAIRE, SINT EUSTATIUS AND SABA")]
+        Bonaire_SintEustatiusAndSaba = 535,
+        
+        /// <summary>the Federative Republic of Brazil</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BR</description></item>
+        /// 		<item><term>Alpha-3</term><description>BRA</description></item>
+        /// 		<item><term>Numeric</term><description>076</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BR", "BRA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federative Republic of Brazil")]
+        [Iso3166FullNameAttribute(Iso639Code.French, "la République fédérative du Brésil")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Brazil")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Brésil (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Brasil (o)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BRAZIL")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.French, "BRÉSIL")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.Portuguese, "Brasil (o)")]
+        Brazil = 76,
+        
+        /// <summary>the Commonwealth of the Bahamas</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BS</description></item>
+        /// 		<item><term>Alpha-3</term><description>BHS</description></item>
+        /// 		<item><term>Numeric</term><description>044</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BS", "BHS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Commonwealth of the Bahamas")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bahamas (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bahamas (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BAHAMAS")]
+        Bahamas = 44,
+        
+        /// <summary>the Kingdom of Bhutan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BT</description></item>
+        /// 		<item><term>Alpha-3</term><description>BTN</description></item>
+        /// 		<item><term>Numeric</term><description>064</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BT", "BTN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Bhutan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dzongkha, "Druk-Yul")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bhutan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bhoutan (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BHUTAN")]
+        Bhutan = 64,
+        
+        /// <summary>Bouvet Island</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BV</description></item>
+        /// 		<item><term>Alpha-3</term><description>BVT</description></item>
+        /// 		<item><term>Numeric</term><description>074</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BV", "BVT")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Bouvet Island")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bouvet (l\'Île)")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianNynorsk, "Bouvetøya")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianBokmål, "Bouvetøya")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BOUVET ISLAND")]
+        BouvetIsland = 74,
+        
+        /// <summary>the Republic of Botswana</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BW</description></item>
+        /// 		<item><term>Alpha-3</term><description>BWA</description></item>
+        /// 		<item><term>Numeric</term><description>072</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BW", "BWA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Botswana")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Botswana")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Botswana (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BOTSWANA")]
+        Botswana = 72,
+        
+        /// <summary>the Republic of Belarus</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BY</description></item>
+        /// 		<item><term>Alpha-3</term><description>BLR</description></item>
+        /// 		<item><term>Numeric</term><description>112</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BY", "BLR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Belarus")]
+        [Iso3166ShortNameAttribute(Iso639Code.Belarusian, "Bielaruś")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Belarus")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Bélarus (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Russian, "Belarus\'")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BELARUS")]
+        Belarus = 112,
+        
+        /// <summary>Belize</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>BZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>BLZ</description></item>
+        /// 		<item><term>Numeric</term><description>084</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("BZ", "BLZ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Belize")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Belize (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BELIZE")]
+        Belize = 84,
+        
+        /// <summary>Canada</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CA</description></item>
+        /// 		<item><term>Alpha-3</term><description>CAN</description></item>
+        /// 		<item><term>Numeric</term><description>124</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CA", "CAN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Canada")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Canada (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CANADA")]
+        Canada = 124,
+        
+        /// <summary>Cocos (Keeling) Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CC</description></item>
+        /// 		<item><term>Alpha-3</term><description>CCK</description></item>
+        /// 		<item><term>Numeric</term><description>166</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CC", "CCK")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cocos (Keeling) Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cocos (les Îles)/ Keeling (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "COCOS (KEELING) ISLANDS")]
+        Cocos_Keeling_Islands = 166,
+        
+        /// <summary>the Democratic Republic of the Congo</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CD</description></item>
+        /// 		<item><term>Alpha-3</term><description>COD</description></item>
+        /// 		<item><term>Numeric</term><description>180</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CD", "COD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Democratic Republic of the Congo")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Congo (the Democratic Republic of the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Congo (la République démocratique du)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CONGO, DEMOCRATIC REPUBLIC OF THE")]
+        Congo_theDemocraticRepublicOfThe = 180,
+        
+        /// <summary>the Central African Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CF</description></item>
+        /// 		<item><term>Alpha-3</term><description>CAF</description></item>
+        /// 		<item><term>Numeric</term><description>140</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CF", "CAF")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Central African Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Central African Republic (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "République centrafricaine (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Sango, "Ködörösêse tî Bêafrîka")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CENTRAL AFRICAN REPUBLIC")]
+        CentralAfricanRepublic = 140,
+        
+        /// <summary>the Republic of the Congo</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CG</description></item>
+        /// 		<item><term>Alpha-3</term><description>COG</description></item>
+        /// 		<item><term>Numeric</term><description>178</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CG", "COG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Congo")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Congo (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Congo (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CONGO")]
+        Congo = 178,
+        
+        /// <summary>the Swiss Confederation</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CH</description></item>
+        /// 		<item><term>Alpha-3</term><description>CHE</description></item>
+        /// 		<item><term>Numeric</term><description>756</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CH", "CHE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Swiss Confederation")]
+        [Iso3166FullNameAttribute(Iso639Code.French, "la Confédération suisse")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Schweiz (die)")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Switzerland")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Suisse (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Italian, "Svizzera (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Romansh, "Svizra (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.German, "Schweiz (die)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SWITZERLAND")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.French, "SUISSE")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.Italian, "Svizzera (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.Romansh, "Svizra (la)")]
+        Switzerland = 756,
+        
+        /// <summary>the Republic of Côte d'Ivoire</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CI</description></item>
+        /// 		<item><term>Alpha-3</term><description>CIV</description></item>
+        /// 		<item><term>Numeric</term><description>384</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CI", "CIV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Côte d\'Ivoire")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Côte d\'Ivoire")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Côte d\'Ivoire (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CÔTE D\'IVOIRE")]
+        CôteD_Ivoire = 384,
+        
+        /// <summary>Cook Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CK</description></item>
+        /// 		<item><term>Alpha-3</term><description>COK</description></item>
+        /// 		<item><term>Numeric</term><description>184</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CK", "COK")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cook Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cook (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "COOK ISLANDS")]
+        CookIslands = 184,
+        
+        /// <summary>the Republic of Chile</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CL</description></item>
+        /// 		<item><term>Alpha-3</term><description>CHL</description></item>
+        /// 		<item><term>Numeric</term><description>152</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CL", "CHL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Chile")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Chile")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Chili (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Chile")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CHILE")]
+        Chile = 152,
+        
+        /// <summary>the Republic of Cameroon</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CM</description></item>
+        /// 		<item><term>Alpha-3</term><description>CMR</description></item>
+        /// 		<item><term>Numeric</term><description>120</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CM", "CMR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Cameroon")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cameroon")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cameroun (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CAMEROON")]
+        Cameroon = 120,
+        
+        /// <summary>the People's Republic of China</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CN</description></item>
+        /// 		<item><term>Alpha-3</term><description>CHN</description></item>
+        /// 		<item><term>Numeric</term><description>156</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CN", "CHN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the People\'s Republic of China")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "China")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Chine (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chinese, "Zhongguo")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CHINA")]
+        China = 156,
+        
+        /// <summary>the Republic of Colombia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CO</description></item>
+        /// 		<item><term>Alpha-3</term><description>COL</description></item>
+        /// 		<item><term>Numeric</term><description>170</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CO", "COL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Colombia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Colombia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Colombie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Colombia")]
+        Colombia = 170,
+        
+        /// <summary>the Republic of Costa Rica</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CR</description></item>
+        /// 		<item><term>Alpha-3</term><description>CRI</description></item>
+        /// 		<item><term>Numeric</term><description>188</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CR", "CRI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Costa Rica")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Costa Rica")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Costa Rica (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Costa Rica")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "the Republic of Costa Rica")]
+        CostaRica = 188,
+        
+        /// <summary>the Republic of Cuba</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CU</description></item>
+        /// 		<item><term>Alpha-3</term><description>CUB</description></item>
+        /// 		<item><term>Numeric</term><description>192</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CU", "CUB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Cuba")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cuba")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cuba")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Cuba")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CUBA")]
+        Cuba = 192,
+        
+        /// <summary>the Republic of Cabo Verde</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CV</description></item>
+        /// 		<item><term>Alpha-3</term><description>CPV</description></item>
+        /// 		<item><term>Numeric</term><description>132</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CV", "CPV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Cabo Verde")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cabo Verde")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cabo Verde")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Cabo Verde")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CABO VERDE")]
+        CaboVerde = 132,
+        
+        /// <summary>Curaçao</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CW</description></item>
+        /// 		<item><term>Alpha-3</term><description>CUW</description></item>
+        /// 		<item><term>Numeric</term><description>531</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CW", "CUW")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Curaçao")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Curaçao")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Curaçao")]
+        [Iso3166ShortNameAttribute(Iso639Code.Papiamento, "Kòrsou")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CURAÇAO")]
+        Curaçao = 531,
+        
+        /// <summary>Christmas Island</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CX</description></item>
+        /// 		<item><term>Alpha-3</term><description>CXR</description></item>
+        /// 		<item><term>Numeric</term><description>162</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CX", "CXR")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Christmas Island")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Christmas (l\'Île)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CHRISTMAS ISLAND")]
+        ChristmasIsland = 162,
+        
+        /// <summary>the Republic of Cyprus</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CY</description></item>
+        /// 		<item><term>Alpha-3</term><description>CYP</description></item>
+        /// 		<item><term>Numeric</term><description>196</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CY", "CYP")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Cyprus")]
+        [Iso3166ShortNameAttribute(Iso639Code.Greek_Modern_1453__, "Kýpros")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cyprus")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Chypre")]
+        [Iso3166ShortNameAttribute(Iso639Code.Turkish, "Kıbrıs")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CYPRUS")]
+        Cyprus = 196,
+        
+        /// <summary>the Czech Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>CZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>CZE</description></item>
+        /// 		<item><term>Numeric</term><description>203</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("CZ", "CZE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Czech Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.Czech, "Česko")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Czechia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tchéquie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CZECHIA")]
+        Czechia = 203,
+        
+        /// <summary>the Federal Republic of Germany</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DE</description></item>
+        /// 		<item><term>Alpha-3</term><description>DEU</description></item>
+        /// 		<item><term>Numeric</term><description>276</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DE", "DEU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federal Republic of Germany")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Deutschland")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Germany")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Allemagne (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GERMANY")]
+        Germany = 276,
+        
+        /// <summary>the Republic of Djibouti</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DJ</description></item>
+        /// 		<item><term>Alpha-3</term><description>DJI</description></item>
+        /// 		<item><term>Numeric</term><description>262</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DJ", "DJI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Djibouti")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Jībūtī")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Djibouti")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Djibouti")]
+        Djibouti = 262,
+        
+        /// <summary>the Kingdom of Denmark</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DK</description></item>
+        /// 		<item><term>Alpha-3</term><description>DNK</description></item>
+        /// 		<item><term>Numeric</term><description>208</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DK", "DNK")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Denmark")]
+        [Iso3166ShortNameAttribute(Iso639Code.Danish, "Danmark")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Denmark")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Danemark (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "DENMARK")]
+        Denmark = 208,
+        
+        /// <summary>the Commonwealth of Dominica</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DM</description></item>
+        /// 		<item><term>Alpha-3</term><description>DMA</description></item>
+        /// 		<item><term>Numeric</term><description>212</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DM", "DMA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Commonwealth of Dominica")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Dominica")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Dominique (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "DOMINICA")]
+        Dominica = 212,
+        
+        /// <summary>Dominican Republic (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DO</description></item>
+        /// 		<item><term>Alpha-3</term><description>DOM</description></item>
+        /// 		<item><term>Numeric</term><description>214</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DO", "DOM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Dominican Republic (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "dominicaine (la République)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "República Dominicana (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "DOMINICAN REPUBLIC")]
+        DominicanRepublic = 214,
+        
+        /// <summary>the People's Democratic Republic of Algeria</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>DZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>DZA</description></item>
+        /// 		<item><term>Numeric</term><description>012</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("DZ", "DZA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the People\'s Democratic Republic of Algeria")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Jazā\'ir")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Algeria")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ALGERIA")]
+        Algeria = 12,
+        
+        /// <summary>the Republic of Ecuador</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>EC</description></item>
+        /// 		<item><term>Alpha-3</term><description>ECU</description></item>
+        /// 		<item><term>Numeric</term><description>218</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("EC", "ECU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Ecuador")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Ecuador")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Équateur (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Ecuador (el)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ECUADOR")]
+        Ecuador = 218,
+        
+        /// <summary>the Republic of Estonia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>EE</description></item>
+        /// 		<item><term>Alpha-3</term><description>EST</description></item>
+        /// 		<item><term>Numeric</term><description>233</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("EE", "EST")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Estonia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Estonia")]
+        [Iso3166ShortNameAttribute(Iso639Code.Estonian, "Eesti")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Estonie (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ESTONIA")]
+        Estonia = 233,
+        
+        /// <summary>the Arab Republic of Egypt</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>EG</description></item>
+        /// 		<item><term>Alpha-3</term><description>EGY</description></item>
+        /// 		<item><term>Numeric</term><description>818</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("EG", "EGY")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Arab Republic of Egypt")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Mişr")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Egypt")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Égypte (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "EGYPT")]
+        Egypt = 818,
+        
+        /// <summary>Western Sahara</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>EH</description></item>
+        /// 		<item><term>Alpha-3</term><description>ESH</description></item>
+        /// 		<item><term>Numeric</term><description>732</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("EH", "ESH")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Aş Şaḩrā\' al Gharbīyah")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Western Sahara")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sahara occidental (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "WESTERN SAHARA")]
+        WesternSahara = 732,
+        
+        /// <summary>Eritrea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ER</description></item>
+        /// 		<item><term>Alpha-3</term><description>ERI</description></item>
+        /// 		<item><term>Numeric</term><description>232</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ER", "ERI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Irītrīyā")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Eritrea")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Érythrée (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tigrinya, "Iertra")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ERITREA")]
+        Eritrea = 232,
+        
+        /// <summary>the Kingdom of Spain</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ES</description></item>
+        /// 		<item><term>Alpha-3</term><description>ESP</description></item>
+        /// 		<item><term>Numeric</term><description>724</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ES", "ESP")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Spain")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Spain")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Espagne (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "España")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SPAIN")]
+        Spain = 724,
+        
+        /// <summary>the Federal Democratic Republic of Ethiopia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ET</description></item>
+        /// 		<item><term>Alpha-3</term><description>ETH</description></item>
+        /// 		<item><term>Numeric</term><description>231</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ET", "ETH")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federal Democratic Republic of Ethiopia")]
+        [Iso3166ShortNameAttribute(Iso639Code.Amharic, "Ītyop\'iya")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Ethiopia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Éthiopie (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ETHIOPIA")]
+        Ethiopia = 231,
+        
+        /// <summary>the Republic of Finland</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FI</description></item>
+        /// 		<item><term>Alpha-3</term><description>FIN</description></item>
+        /// 		<item><term>Numeric</term><description>246</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FI", "FIN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Finland")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Finland")]
+        [Iso3166ShortNameAttribute(Iso639Code.Finnish, "Suomi")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Finlande (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swedish, "Finland")]
+        Finland = 246,
+        
+        /// <summary>the Republic of Fiji</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FJ</description></item>
+        /// 		<item><term>Alpha-3</term><description>FJI</description></item>
+        /// 		<item><term>Numeric</term><description>242</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FJ", "FJI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Fiji")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Fiji")]
+        [Iso3166ShortNameAttribute(Iso639Code.Fijian, "Viti")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Fidji (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FIJI")]
+        Fiji = 242,
+        
+        /// <summary>Falkland Islands (the) [Malvinas]</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FK</description></item>
+        /// 		<item><term>Alpha-3</term><description>FLK</description></item>
+        /// 		<item><term>Numeric</term><description>238</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FK", "FLK")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Falkland Islands (the) [Malvinas]")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Falkland (les îles)/Malouines (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FALKLAND ISLANDS (MALVINAS)")]
+        FalklandIslands_the__Malvinas = 238,
+        
+        /// <summary>the Federated States of Micronesia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FM</description></item>
+        /// 		<item><term>Alpha-3</term><description>FSM</description></item>
+        /// 		<item><term>Numeric</term><description>583</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FM", "FSM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federated States of Micronesia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Micronesia (Federated States of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Micronésie (États fédérés de)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MICRONESIA (FEDERATED STATES OF)")]
+        Micronesia_FederatedStatesOf = 583,
+        
+        /// <summary>Faroe Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FO</description></item>
+        /// 		<item><term>Alpha-3</term><description>FRO</description></item>
+        /// 		<item><term>Numeric</term><description>234</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FO", "FRO")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Danish, "Færøerne")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Faroe Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Faroese, "Føroyar")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Féroé (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FAROE ISLANDS")]
+        FaroeIslands = 234,
+        
+        /// <summary>the French Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>FR</description></item>
+        /// 		<item><term>Alpha-3</term><description>FRA</description></item>
+        /// 		<item><term>Numeric</term><description>250</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("FR", "FRA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the French Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "France")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "France (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FRANCE")]
+        France = 250,
+        
+        /// <summary>the Gabonese Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GA</description></item>
+        /// 		<item><term>Alpha-3</term><description>GAB</description></item>
+        /// 		<item><term>Numeric</term><description>266</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GA", "GAB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Gabonese Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Gabon")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Gabon (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GABON")]
+        Gabon = 266,
+        
+        /// <summary>United Kingdom of Great Britain and Northern Ireland (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GB</description></item>
+        /// 		<item><term>Alpha-3</term><description>GBR</description></item>
+        /// 		<item><term>Numeric</term><description>826</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GB", "GBR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "United Kingdom of Great Britain and Northern Ireland (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Royaume-Uni de Grande-Bretagne et de l\'Irlande du Nord")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND")]
+        UnitedKingdomOfGreatBritainAndNorthernIreland = 826,
+        
+        /// <summary>Grenada</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GD</description></item>
+        /// 		<item><term>Alpha-3</term><description>GRD</description></item>
+        /// 		<item><term>Numeric</term><description>308</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GD", "GRD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Grenada")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Grenade (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GRENADA")]
+        Grenada = 308,
+        
+        /// <summary>Georgia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GE</description></item>
+        /// 		<item><term>Alpha-3</term><description>GEO</description></item>
+        /// 		<item><term>Numeric</term><description>268</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GE", "GEO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Georgia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Géorgie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Georgian, "Sakartvelo")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GEORGIA")]
+        Georgia = 268,
+        
+        /// <summary>French Guiana</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GF</description></item>
+        /// 		<item><term>Alpha-3</term><description>GUF</description></item>
+        /// 		<item><term>Numeric</term><description>254</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GF", "GUF")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "French Guiana")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guyane française (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FRENCH GUIANA")]
+        FrenchGuiana = 254,
+        
+        /// <summary>Guernsey</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GG</description></item>
+        /// 		<item><term>Alpha-3</term><description>GGY</description></item>
+        /// 		<item><term>Numeric</term><description>831</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GG", "GGY")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guernsey")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guernesey")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUERNSEY")]
+        Guernsey = 831,
+        
+        /// <summary>the Republic of Ghana</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GH</description></item>
+        /// 		<item><term>Alpha-3</term><description>GHA</description></item>
+        /// 		<item><term>Numeric</term><description>288</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GH", "GHA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Ghana")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Ghana")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Ghana (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GHANA")]
+        Ghana = 288,
+        
+        /// <summary>Gibraltar</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GI</description></item>
+        /// 		<item><term>Alpha-3</term><description>GIB</description></item>
+        /// 		<item><term>Numeric</term><description>292</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GI", "GIB")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Gibraltar")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Gibraltar")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GIBRALTAR")]
+        Gibraltar = 292,
+        
+        /// <summary>Greenland</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GL</description></item>
+        /// 		<item><term>Alpha-3</term><description>GRL</description></item>
+        /// 		<item><term>Numeric</term><description>304</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GL", "GRL")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Danish, "Grønland")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Greenland")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Groenland (Le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Greenlandic_Kalaallisut, "Kalaallit Nunaat")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GREENLAND")]
+        Greenland = 304,
+        
+        /// <summary>the Republic of the Gambia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GM</description></item>
+        /// 		<item><term>Alpha-3</term><description>GMB</description></item>
+        /// 		<item><term>Numeric</term><description>270</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GM", "GMB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Gambia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Gambia (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Gambie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GAMBIA")]
+        Gambia = 270,
+        
+        /// <summary>the Republic of Guinea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GN</description></item>
+        /// 		<item><term>Alpha-3</term><description>GIN</description></item>
+        /// 		<item><term>Numeric</term><description>324</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GN", "GIN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guinée (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUINEA")]
+        Guinea = 324,
+        
+        /// <summary>Guadeloupe</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GP</description></item>
+        /// 		<item><term>Alpha-3</term><description>GLP</description></item>
+        /// 		<item><term>Numeric</term><description>312</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GP", "GLP")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guadeloupe")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guadeloupe (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUADELOUPE")]
+        Guadeloupe = 312,
+        
+        /// <summary>the Republic of Equatorial Guinea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GQ</description></item>
+        /// 		<item><term>Alpha-3</term><description>GNQ</description></item>
+        /// 		<item><term>Numeric</term><description>226</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GQ", "GNQ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Equatorial Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Equatorial Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guinée équatoriale (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Guiné Equatorial (a)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Guinea Ecuatorial")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "EQUATORIAL GUINEA")]
+        EquatorialGuinea = 226,
+        
+        /// <summary>the Hellenic Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GR</description></item>
+        /// 		<item><term>Alpha-3</term><description>GRC</description></item>
+        /// 		<item><term>Numeric</term><description>300</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GR", "GRC")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Hellenic Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.Greek_Modern_1453__, "Elláda")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Greece")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Grèce (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GREECE")]
+        Greece = 300,
+        
+        /// <summary>South Georgia and the South Sandwich Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GS</description></item>
+        /// 		<item><term>Alpha-3</term><description>SGS</description></item>
+        /// 		<item><term>Numeric</term><description>239</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GS", "SGS")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "South Georgia and the South Sandwich Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Géorgie du Sud-et-les îles Sandwich du Sud (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS")]
+        SouthGeorgiaAndTheSouthSandwichIslands = 239,
+        
+        /// <summary>the Republic of Guatemala</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GT</description></item>
+        /// 		<item><term>Alpha-3</term><description>GTM</description></item>
+        /// 		<item><term>Numeric</term><description>320</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GT", "GTM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Guatemala")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guatemala")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guatemala (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Guatemala")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUATEMALA")]
+        Guatemala = 320,
+        
+        /// <summary>Guam</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GU</description></item>
+        /// 		<item><term>Alpha-3</term><description>GUM</description></item>
+        /// 		<item><term>Numeric</term><description>316</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GU", "GUM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guam")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guam")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUAM")]
+        Guam = 316,
+        
+        /// <summary>the Republic of Guinea-Bissau</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GW</description></item>
+        /// 		<item><term>Alpha-3</term><description>GNB</description></item>
+        /// 		<item><term>Numeric</term><description>624</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GW", "GNB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Guinea-Bissau")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guinea-Bissau")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guinée-Bissau (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Guiné-Bissau (a)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUINEA-BISSAU")]
+        Guinea_Bissau = 624,
+        
+        /// <summary>the Co-operative Republic of Guyana</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>GY</description></item>
+        /// 		<item><term>Alpha-3</term><description>GUY</description></item>
+        /// 		<item><term>Numeric</term><description>328</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("GY", "GUY")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Co-operative Republic of Guyana")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Guyana")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Guyana (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "GUYANA")]
+        Guyana = 328,
+        
+        /// <summary>the Hong Kong Special Administrative Region of China</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HK</description></item>
+        /// 		<item><term>Alpha-3</term><description>HKG</description></item>
+        /// 		<item><term>Numeric</term><description>344</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HK", "HKG")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Hong Kong Special Administrative Region of China")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Hong Kong")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Hong Kong")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chinese, "Xianggang")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HONG KONG")]
+        HongKong = 344,
+        
+        /// <summary>Heard Island and McDonald Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HM</description></item>
+        /// 		<item><term>Alpha-3</term><description>HMD</description></item>
+        /// 		<item><term>Numeric</term><description>334</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HM", "HMD")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Heard Island and McDonald Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Heard-et-Îles MacDonald (l\'Île)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HEARD ISLAND AND MCDONALD ISLANDS")]
+        HeardIslandAndMcDonaldIslands = 334,
+        
+        /// <summary>the Republic of Honduras</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HN</description></item>
+        /// 		<item><term>Alpha-3</term><description>HND</description></item>
+        /// 		<item><term>Numeric</term><description>340</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HN", "HND")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Honduras")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Honduras")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Honduras (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Honduras")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HONDURAS")]
+        Honduras = 340,
+        
+        /// <summary>the Republic of Croatia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HR</description></item>
+        /// 		<item><term>Alpha-3</term><description>HRV</description></item>
+        /// 		<item><term>Numeric</term><description>191</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HR", "HRV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Croatia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Croatia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Croatie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Croatian, "Hrvatska")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CROATIA")]
+        Croatia = 191,
+        
+        /// <summary>the Republic of Haiti</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HT</description></item>
+        /// 		<item><term>Alpha-3</term><description>HTI</description></item>
+        /// 		<item><term>Numeric</term><description>332</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HT", "HTI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Haiti")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Haiti")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Haïti")]
+        [Iso3166ShortNameAttribute(Iso639Code.Haitian_Creole_Haitian, "Ayiti")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HAITI")]
+        Haiti = 332,
+        
+        /// <summary>Hungary</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>HU</description></item>
+        /// 		<item><term>Alpha-3</term><description>HUN</description></item>
+        /// 		<item><term>Numeric</term><description>348</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("HU", "HUN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Hungary")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Hongrie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Hungarian, "Magyarország")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HUNGARY")]
+        Hungary = 348,
+        
+        /// <summary>the Republic of Indonesia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ID</description></item>
+        /// 		<item><term>Alpha-3</term><description>IDN</description></item>
+        /// 		<item><term>Numeric</term><description>360</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ID", "IDN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Indonesia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Indonesia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Indonésie (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Indonesian, "Indonesia")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "INDONESIA")]
+        Indonesia = 360,
+        
+        /// <summary>Ireland</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IE</description></item>
+        /// 		<item><term>Alpha-3</term><description>IRL</description></item>
+        /// 		<item><term>Numeric</term><description>372</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IE", "IRL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Ireland")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Irlande (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Irish, "Éire")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "IRELAND")]
+        Ireland = 372,
+        
+        /// <summary>the State of Israel</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IL</description></item>
+        /// 		<item><term>Alpha-3</term><description>ISR</description></item>
+        /// 		<item><term>Numeric</term><description>376</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IL", "ISR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the State of Israel")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Isrā\'īl")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Israel")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Israël")]
+        [Iso3166ShortNameAttribute(Iso639Code.Hebrew, "Yisra\'el")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ISRAEL")]
+        Israel = 376,
+        
+        /// <summary>Isle of Man</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IM</description></item>
+        /// 		<item><term>Alpha-3</term><description>IMN</description></item>
+        /// 		<item><term>Numeric</term><description>833</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IM", "IMN")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Isle of Man")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Île de Man")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ISLE OF MAN")]
+        IsleOfMan = 833,
+        
+        /// <summary>the Republic of India</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IN</description></item>
+        /// 		<item><term>Alpha-3</term><description>IND</description></item>
+        /// 		<item><term>Numeric</term><description>356</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IN", "IND")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of India")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "India")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Inde (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Hindi, "Bhārat")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "INDIA")]
+        India = 356,
+        
+        /// <summary>British Indian Ocean Territory (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IO</description></item>
+        /// 		<item><term>Alpha-3</term><description>IOT</description></item>
+        /// 		<item><term>Numeric</term><description>086</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IO", "IOT")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "British Indian Ocean Territory (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Indien (le Territoire britannique de l\'océan)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "BRITISH INDIAN OCEAN TERRITORY")]
+        BritishIndianOceanTerritory = 86,
+        
+        /// <summary>the Republic of Iraq</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IQ</description></item>
+        /// 		<item><term>Alpha-3</term><description>IRQ</description></item>
+        /// 		<item><term>Numeric</term><description>368</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IQ", "IRQ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Iraq")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al ‘Irāq")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Iraq")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Iraq (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Kurdish, "‘Êraq")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "IRAQ")]
+        Iraq = 368,
+        
+        /// <summary>the Islamic Republic of Iran</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IR</description></item>
+        /// 		<item><term>Alpha-3</term><description>IRN</description></item>
+        /// 		<item><term>Numeric</term><description>364</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IR", "IRN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Islamic Republic of Iran")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Iran (Islamic Republic of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Persian, "Jomhūrī-ye Eslāmī-ye Īrān")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Iran (République Islamique d\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "IRAN (ISLAMIC REPUBLIC OF)")]
+        Iran_IslamicRepublicOf = 364,
+        
+        /// <summary>Iceland</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IS</description></item>
+        /// 		<item><term>Alpha-3</term><description>ISL</description></item>
+        /// 		<item><term>Numeric</term><description>352</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IS", "ISL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Iceland")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Islande (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Icelandic, "Ísland")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ICELAND")]
+        Iceland = 352,
+        
+        /// <summary>the Republic of Italy</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>IT</description></item>
+        /// 		<item><term>Alpha-3</term><description>ITA</description></item>
+        /// 		<item><term>Numeric</term><description>380</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("IT", "ITA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Italy")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Italy")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Italie (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Italian, "Italia (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ITALY")]
+        Italy = 380,
+        
+        /// <summary>Jersey</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>JE</description></item>
+        /// 		<item><term>Alpha-3</term><description>JEY</description></item>
+        /// 		<item><term>Numeric</term><description>832</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("JE", "JEY")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Jersey")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Jersey")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "JERSEY")]
+        Jersey = 832,
+        
+        /// <summary>Jamaica</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>JM</description></item>
+        /// 		<item><term>Alpha-3</term><description>JAM</description></item>
+        /// 		<item><term>Numeric</term><description>388</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("JM", "JAM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Jamaica")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Jamaïque (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "JAMAICA")]
+        Jamaica = 388,
+        
+        /// <summary>the Hashemite Kingdom of Jordan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>JO</description></item>
+        /// 		<item><term>Alpha-3</term><description>JOR</description></item>
+        /// 		<item><term>Numeric</term><description>400</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("JO", "JOR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Hashemite Kingdom of Jordan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Urdun")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Jordan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Jordanie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "JORDAN")]
+        Jordan = 400,
+        
+        /// <summary>Japan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>JP</description></item>
+        /// 		<item><term>Alpha-3</term><description>JPN</description></item>
+        /// 		<item><term>Numeric</term><description>392</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("JP", "JPN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Japan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Japon (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Japanese, "Nihon/Nippon")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "JAPAN")]
+        Japan = 392,
+        
+        /// <summary>the Republic of Kenya</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KE</description></item>
+        /// 		<item><term>Alpha-3</term><description>KEN</description></item>
+        /// 		<item><term>Numeric</term><description>404</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KE", "KEN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Kenya")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Kenya")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Kenya (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swahili_macrolanguage_, "Kenya")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KENYA")]
+        Kenya = 404,
+        
+        /// <summary>the Kyrgyz Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KG</description></item>
+        /// 		<item><term>Alpha-3</term><description>KGZ</description></item>
+        /// 		<item><term>Numeric</term><description>417</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KG", "KGZ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kyrgyz Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Kyrgyzstan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Kirghizstan (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Kirghiz_Kyrgyz, "Kyrgyzstan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Russian, "Kyrgyzstan")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KYRGYZSTAN")]
+        Kyrgyzstan = 417,
+        
+        /// <summary>the Kingdom of Cambodia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KH</description></item>
+        /// 		<item><term>Alpha-3</term><description>KHM</description></item>
+        /// 		<item><term>Numeric</term><description>116</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KH", "KHM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Cambodia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cambodia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Cambodge (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Khmer_Central_Khmer, "Kâmpŭchéa")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CAMBODIA")]
+        Cambodia = 116,
+        
+        /// <summary>the Republic of Kiribati</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KI</description></item>
+        /// 		<item><term>Alpha-3</term><description>KIR</description></item>
+        /// 		<item><term>Numeric</term><description>296</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KI", "KIR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Kiribati")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Kiribati")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Kiribati")]
+        [Iso3166ShortNameAttribute(Iso639Code.Gilbertese, "Kiribati")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KIRIBATI")]
+        Kiribati = 296,
+        
+        /// <summary>the Union of the Comoros</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KM</description></item>
+        /// 		<item><term>Alpha-3</term><description>COM</description></item>
+        /// 		<item><term>Numeric</term><description>174</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KM", "COM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Union of the Comoros")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Qamar")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Comoros (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Comores (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "COMOROS")]
+        Comoros = 174,
+        
+        /// <summary>Saint Kitts and Nevis</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KN</description></item>
+        /// 		<item><term>Alpha-3</term><description>KNA</description></item>
+        /// 		<item><term>Numeric</term><description>659</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KN", "KNA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Kitts and Nevis")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Kitts-et-Nevis")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT KITTS AND NEVIS")]
+        SaintKittsAndNevis = 659,
+        
+        /// <summary>the Democratic People's Republic of Korea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KP</description></item>
+        /// 		<item><term>Alpha-3</term><description>PRK</description></item>
+        /// 		<item><term>Numeric</term><description>408</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KP", "PRK")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Democratic People\'s Republic of Korea")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Korea (the Democratic People\'s Republic of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Corée (la République populaire démocratique de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Korean, "Chosŏn")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KOREA (DEMOCRATIC PEOPLE\'S REPUBLIC OF)")]
+        Korea_theDemocraticPeople_sRepublicOf = 408,
+        
+        /// <summary>the Republic of Korea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KR</description></item>
+        /// 		<item><term>Alpha-3</term><description>KOR</description></item>
+        /// 		<item><term>Numeric</term><description>410</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KR", "KOR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Korea")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Korea (the Republic of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Corée (la République de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Korean, "Hanguk")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KOREA, REPUBLIC OF")]
+        Korea_theRepublicOf = 410,
+        
+        /// <summary>the State of Kuwait</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KW</description></item>
+        /// 		<item><term>Alpha-3</term><description>KWT</description></item>
+        /// 		<item><term>Numeric</term><description>414</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KW", "KWT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the State of Kuwait")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Kuwayt")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Kuwait")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Koweït (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KUWAIT")]
+        Kuwait = 414,
+        
+        /// <summary>Cayman Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KY</description></item>
+        /// 		<item><term>Alpha-3</term><description>CYM</description></item>
+        /// 		<item><term>Numeric</term><description>136</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KY", "CYM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Cayman Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Caïmans (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CAYMAN ISLANDS")]
+        CaymanIslands = 136,
+        
+        /// <summary>the Republic of Kazakhstan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>KZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>KAZ</description></item>
+        /// 		<item><term>Numeric</term><description>398</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("KZ", "KAZ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Kazakhstan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Kazakhstan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Kazakhstan (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Kazakh, "Qazaqstan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Russian, "Kazahstan")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "KAZAKHSTAN")]
+        Kazakhstan = 398,
+        
+        /// <summary>the Lao People's Democratic Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LA</description></item>
+        /// 		<item><term>Alpha-3</term><description>LAO</description></item>
+        /// 		<item><term>Numeric</term><description>418</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LA", "LAO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Lao People\'s Democratic Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Lao People\'s Democratic Republic (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Lao (la République démocratique populaire de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Lao, "Sathalanalat Paxathipatai Paxaxôn Lao")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LAO PEOPLE\'S DEMOCRATIC REPUBLIC")]
+        LaoPeople_sDemocraticRepublic = 418,
+        
+        /// <summary>the Lebanese Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LB</description></item>
+        /// 		<item><term>Alpha-3</term><description>LBN</description></item>
+        /// 		<item><term>Numeric</term><description>422</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LB", "LBN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Lebanese Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Lubnān")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Lebanon")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Liban (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LEBANON")]
+        Lebanon = 422,
+        
+        /// <summary>Saint Lucia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LC</description></item>
+        /// 		<item><term>Alpha-3</term><description>LCA</description></item>
+        /// 		<item><term>Numeric</term><description>662</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LC", "LCA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Lucia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sainte-Lucie")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT LUCIA")]
+        SaintLucia = 662,
+        
+        /// <summary>the Principality of Liechtenstein</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LI</description></item>
+        /// 		<item><term>Alpha-3</term><description>LIE</description></item>
+        /// 		<item><term>Numeric</term><description>438</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LI", "LIE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Principality of Liechtenstein")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Liechtenstein")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Liechtenstein")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Liechtenstein (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LIECHTENSTEIN")]
+        Liechtenstein = 438,
+        
+        /// <summary>the Democratic Socialist Republic of Sri Lanka</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LK</description></item>
+        /// 		<item><term>Alpha-3</term><description>LKA</description></item>
+        /// 		<item><term>Numeric</term><description>144</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LK", "LKA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Democratic Socialist Republic of Sri Lanka")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sri Lanka")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sri Lanka")]
+        [Iso3166ShortNameAttribute(Iso639Code.Sinhala_Sinhalese, "Shrī Laṁkā")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tamil, "Ilaṅkai")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SRI LANKA")]
+        SriLanka = 144,
+        
+        /// <summary>the Republic of Liberia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LR</description></item>
+        /// 		<item><term>Alpha-3</term><description>LBR</description></item>
+        /// 		<item><term>Numeric</term><description>430</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LR", "LBR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Liberia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Liberia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Libéria (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LIBERIA")]
+        Liberia = 430,
+        
+        /// <summary>the Kingdom of Lesotho</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LS</description></item>
+        /// 		<item><term>Alpha-3</term><description>LSO</description></item>
+        /// 		<item><term>Numeric</term><description>426</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LS", "LSO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Lesotho")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Lesotho")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Lesotho (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Sotho_Southern, "Lesotho")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LESOTHO")]
+        Lesotho = 426,
+        
+        /// <summary>the Republic of Lithuania</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LT</description></item>
+        /// 		<item><term>Alpha-3</term><description>LTU</description></item>
+        /// 		<item><term>Numeric</term><description>440</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LT", "LTU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Lithuania")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Lithuania")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Lituanie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Lithuanian, "Lietuva")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LITHUANIA")]
+        Lithuania = 440,
+        
+        /// <summary>the Grand Duchy of Luxembourg</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LU</description></item>
+        /// 		<item><term>Alpha-3</term><description>LUX</description></item>
+        /// 		<item><term>Numeric</term><description>442</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LU", "LUX")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Grand Duchy of Luxembourg")]
+        [Iso3166ShortNameAttribute(Iso639Code.German, "Luxemburg")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Luxembourg")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Luxembourg (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Letzeburgesch_Luxembourgish, "Lëtzebuerg")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LUXEMBOURG")]
+        Luxembourg = 442,
+        
+        /// <summary>the Republic of Latvia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LV</description></item>
+        /// 		<item><term>Alpha-3</term><description>LVA</description></item>
+        /// 		<item><term>Numeric</term><description>428</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LV", "LVA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Latvia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Latvia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Lettonie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Latvian, "Latvija")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LATVIA")]
+        Latvia = 428,
+        
+        /// <summary>the State of Libya</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>LY</description></item>
+        /// 		<item><term>Alpha-3</term><description>LBY</description></item>
+        /// 		<item><term>Numeric</term><description>434</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("LY", "LBY")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the State of Libya")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Lībiyā")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Libya")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Libye (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "LIBYA")]
+        Libya = 434,
+        
+        /// <summary>the Kingdom of Morocco</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MA</description></item>
+        /// 		<item><term>Alpha-3</term><description>MAR</description></item>
+        /// 		<item><term>Numeric</term><description>504</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MA", "MAR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Morocco")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Maghrib")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Morocco")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Maroc (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MOROCCO")]
+        Morocco = 504,
+        
+        /// <summary>the Principality of Monaco</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MC</description></item>
+        /// 		<item><term>Alpha-3</term><description>MCO</description></item>
+        /// 		<item><term>Numeric</term><description>492</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MC", "MCO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Principality of Monaco")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Monaco")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Monaco")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MONACO")]
+        Monaco = 492,
+        
+        /// <summary>the Republic of Moldova</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MD</description></item>
+        /// 		<item><term>Alpha-3</term><description>MDA</description></item>
+        /// 		<item><term>Numeric</term><description>498</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MD", "MDA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Moldova")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Moldova (the Republic of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Moldova (la République de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Moldavian_Moldovan_Romanian, "Republica Moldova")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MOLDOVA, REPUBLIC OF")]
+        Moldova_theRepublicOf = 498,
+        
+        /// <summary>Montenegro</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ME</description></item>
+        /// 		<item><term>Alpha-3</term><description>MNE</description></item>
+        /// 		<item><term>Numeric</term><description>499</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ME", "MNE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.Montenegrin, "Crna Gora")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Montenegro")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Monténégro (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MONTENEGRO")]
+        Montenegro = 499,
+        
+        /// <summary>Saint Martin (French part)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MF</description></item>
+        /// 		<item><term>Alpha-3</term><description>MAF</description></item>
+        /// 		<item><term>Numeric</term><description>663</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MF", "MAF")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Martin (French part)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Martin (partie française)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT MARTIN (FRENCH PART)")]
+        SaintMartin_FrenchPart = 663,
+        
+        /// <summary>the Republic of Madagascar</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MG</description></item>
+        /// 		<item><term>Alpha-3</term><description>MDG</description></item>
+        /// 		<item><term>Numeric</term><description>450</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MG", "MDG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Madagascar")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Madagascar")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Madagascar")]
+        [Iso3166ShortNameAttribute(Iso639Code.Malagasy, "Madagasikara")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MADAGASCAR")]
+        Madagascar = 450,
+        
+        /// <summary>the Republic of the Marshall Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MH</description></item>
+        /// 		<item><term>Alpha-3</term><description>MHL</description></item>
+        /// 		<item><term>Numeric</term><description>584</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MH", "MHL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Marshall Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Marshall Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Marshall (les Îles)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Marshallese, "Aelōn̄ in M̧ajeļ")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MARSHALL ISLANDS")]
+        MarshallIslands = 584,
+        
+        /// <summary>the Republic of North Macedonia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MK</description></item>
+        /// 		<item><term>Alpha-3</term><description>MKD</description></item>
+        /// 		<item><term>Numeric</term><description>807</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MK", "MKD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of North Macedonia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "North Macedonia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Macédoine du Nord (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Macedonian, "Severna Makedonija")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NORTH MACEDONIA")]
+        NorthMacedonia = 807,
+        
+        /// <summary>the Republic of Mali</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ML</description></item>
+        /// 		<item><term>Alpha-3</term><description>MLI</description></item>
+        /// 		<item><term>Numeric</term><description>466</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ML", "MLI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Mali")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mali")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mali (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MALI")]
+        Mali = 466,
+        
+        /// <summary>the Republic of the Union of Myanmar</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MM</description></item>
+        /// 		<item><term>Alpha-3</term><description>MMR</description></item>
+        /// 		<item><term>Numeric</term><description>104</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MM", "MMR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Union of Myanmar")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Myanmar")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Myanmar (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Burmese, "Myanma")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MYANMAR")]
+        Myanmar = 104,
+        
+        /// <summary>Mongolia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MN</description></item>
+        /// 		<item><term>Alpha-3</term><description>MNG</description></item>
+        /// 		<item><term>Numeric</term><description>496</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MN", "MNG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mongolia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mongolie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Mongolian, "Mongol")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MONGOLIA")]
+        Mongolia = 496,
+        
+        /// <summary>Macao Special Administrative Region of China</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MO</description></item>
+        /// 		<item><term>Alpha-3</term><description>MAC</description></item>
+        /// 		<item><term>Numeric</term><description>446</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MO", "MAC")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "Macao Special Administrative Region of China")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Macao")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Macao")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Macau")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chinese, "Aomen")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MACAO")]
+        Macao = 446,
+        
+        /// <summary>the Commonwealth of the Northern Mariana Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MP</description></item>
+        /// 		<item><term>Alpha-3</term><description>MNP</description></item>
+        /// 		<item><term>Numeric</term><description>580</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MP", "MNP")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Commonwealth of the Northern Mariana Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Northern Mariana Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mariannes du Nord (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NORTHERN MARIANA ISLANDS")]
+        NorthernMarianaIslands = 580,
+        
+        /// <summary>Martinique</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MQ</description></item>
+        /// 		<item><term>Alpha-3</term><description>MTQ</description></item>
+        /// 		<item><term>Numeric</term><description>474</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MQ", "MTQ")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Martinique")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Martinique (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MARTINIQUE")]
+        Martinique = 474,
+        
+        /// <summary>the Islamic Republic of Mauritania</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MR</description></item>
+        /// 		<item><term>Alpha-3</term><description>MRT</description></item>
+        /// 		<item><term>Numeric</term><description>478</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MR", "MRT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Islamic Republic of Mauritania")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Mūrītāniyā")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mauritania")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mauritanie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MAURITANIA")]
+        Mauritania = 478,
+        
+        /// <summary>Montserrat</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MS</description></item>
+        /// 		<item><term>Alpha-3</term><description>MSR</description></item>
+        /// 		<item><term>Numeric</term><description>500</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MS", "MSR")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Montserrat")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Montserrat")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MONTSERRAT")]
+        Montserrat = 500,
+        
+        /// <summary>the Republic of Malta</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MT</description></item>
+        /// 		<item><term>Alpha-3</term><description>MLT</description></item>
+        /// 		<item><term>Numeric</term><description>470</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MT", "MLT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Malta")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Malta")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Malte")]
+        [Iso3166ShortNameAttribute(Iso639Code.Maltese, "Malta")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MALTA")]
+        Malta = 470,
+        
+        /// <summary>the Republic of Mauritius</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MU</description></item>
+        /// 		<item><term>Alpha-3</term><description>MUS</description></item>
+        /// 		<item><term>Numeric</term><description>480</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MU", "MUS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Mauritius")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mauritius")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Maurice")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MAURITIUS")]
+        Mauritius = 480,
+        
+        /// <summary>the Republic of Maldives</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MV</description></item>
+        /// 		<item><term>Alpha-3</term><description>MDV</description></item>
+        /// 		<item><term>Numeric</term><description>462</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MV", "MDV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Maldives")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dhivehi_Divehi_Maldivian, "Dhivehi Raajje")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Maldives")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Maldives (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MALDIVES")]
+        Maldives = 462,
+        
+        /// <summary>the Republic of Malawi</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MW</description></item>
+        /// 		<item><term>Alpha-3</term><description>MWI</description></item>
+        /// 		<item><term>Numeric</term><description>454</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MW", "MWI")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Malawi")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Malawi")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Malawi (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chewa_Chichewa_Nyanja, "Malaŵi")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MALAWI")]
+        Malawi = 454,
+        
+        /// <summary>the United Mexican States</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MX</description></item>
+        /// 		<item><term>Alpha-3</term><description>MEX</description></item>
+        /// 		<item><term>Numeric</term><description>484</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MX", "MEX")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the United Mexican States")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mexico")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mexique (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "México")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MEXICO")]
+        Mexico = 484,
+        
+        /// <summary>Malaysia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MY</description></item>
+        /// 		<item><term>Alpha-3</term><description>MYS</description></item>
+        /// 		<item><term>Numeric</term><description>458</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MY", "MYS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Malaysia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Malaisie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Malay_macrolanguage_, "Malaysia")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MALAYSIA")]
+        Malaysia = 458,
+        
+        /// <summary>the Republic of Mozambique</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>MZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>MOZ</description></item>
+        /// 		<item><term>Numeric</term><description>508</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("MZ", "MOZ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Mozambique")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mozambique")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mozambique (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Moçambique")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MOZAMBIQUE")]
+        Mozambique = 508,
+        
+        /// <summary>the Republic of Namibia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NA</description></item>
+        /// 		<item><term>Alpha-3</term><description>NAM</description></item>
+        /// 		<item><term>Numeric</term><description>516</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NA", "NAM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Namibia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Namibia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Namibie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NAMIBIA")]
+        Namibia = 516,
+        
+        /// <summary>New Caledonia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NC</description></item>
+        /// 		<item><term>Alpha-3</term><description>NCL</description></item>
+        /// 		<item><term>Numeric</term><description>540</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NC", "NCL")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "New Caledonia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Nouvelle-Calédonie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NEW CALEDONIA")]
+        NewCaledonia = 540,
+        
+        /// <summary>the Republic of the Niger</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NE</description></item>
+        /// 		<item><term>Alpha-3</term><description>NER</description></item>
+        /// 		<item><term>Numeric</term><description>562</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NE", "NER")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Niger")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Niger (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Niger (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NIGER")]
+        Niger = 562,
+        
+        /// <summary>Norfolk Island</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NF</description></item>
+        /// 		<item><term>Alpha-3</term><description>NFK</description></item>
+        /// 		<item><term>Numeric</term><description>574</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NF", "NFK")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Norfolk Island")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Norfolk (l\'Île)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NORFOLK ISLAND")]
+        NorfolkIsland = 574,
+        
+        /// <summary>the Federal Republic of Nigeria</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NG</description></item>
+        /// 		<item><term>Alpha-3</term><description>NGA</description></item>
+        /// 		<item><term>Numeric</term><description>566</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NG", "NGA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federal Republic of Nigeria")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Nigeria")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Nigéria (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NIGERIA")]
+        Nigeria = 566,
+        
+        /// <summary>the Republic of Nicaragua</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NI</description></item>
+        /// 		<item><term>Alpha-3</term><description>NIC</description></item>
+        /// 		<item><term>Numeric</term><description>558</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NI", "NIC")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Nicaragua")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Nicaragua")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Nicaragua (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Nicaragua")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NICARAGUA")]
+        Nicaragua = 558,
+        
+        /// <summary>the Kingdom of the Netherlands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NL</description></item>
+        /// 		<item><term>Alpha-3</term><description>NLD</description></item>
+        /// 		<item><term>Numeric</term><description>528</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NL", "NLD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of the Netherlands")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Netherlands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Pays-Bas (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Nederland")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NETHERLANDS")]
+        Netherlands = 528,
+        
+        /// <summary>the Kingdom of Norway</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NO</description></item>
+        /// 		<item><term>Alpha-3</term><description>NOR</description></item>
+        /// 		<item><term>Numeric</term><description>578</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NO", "NOR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Norway")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Norway")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Norvège (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianNynorsk, "Noreg")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianBokmål, "Norge")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NORWAY")]
+        Norway = 578,
+        
+        /// <summary>Nepal</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NP</description></item>
+        /// 		<item><term>Alpha-3</term><description>NPL</description></item>
+        /// 		<item><term>Numeric</term><description>524</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NP", "NPL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Nepal")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Népal (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Nepali_macrolanguage_, "Nepāl")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NEPAL")]
+        Nepal = 524,
+        
+        /// <summary>the Republic of Nauru</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NR</description></item>
+        /// 		<item><term>Alpha-3</term><description>NRU</description></item>
+        /// 		<item><term>Numeric</term><description>520</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NR", "NRU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Nauru")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Nauru")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Nauru")]
+        [Iso3166ShortNameAttribute(Iso639Code.Nauru, "Naoero")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NAURU")]
+        Nauru = 520,
+        
+        /// <summary>Niue</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NU</description></item>
+        /// 		<item><term>Alpha-3</term><description>NIU</description></item>
+        /// 		<item><term>Numeric</term><description>570</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NU", "NIU")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Niue")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Niue")]
+        [Iso3166ShortNameAttribute(Iso639Code.Niuean, "Niue")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NIUE")]
+        Niue = 570,
+        
+        /// <summary>New Zealand</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>NZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>NZL</description></item>
+        /// 		<item><term>Numeric</term><description>554</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("NZ", "NZL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "New Zealand")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Nouvelle-Zélande (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Maori, "Aotearoa")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "NEW ZEALAND")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.French, "NOUVELLE-ZÉLANDE")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.Maori, "Aotearoa")]
+        NewZealand = 554,
+        
+        /// <summary>the Sultanate of Oman</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>OM</description></item>
+        /// 		<item><term>Alpha-3</term><description>OMN</description></item>
+        /// 		<item><term>Numeric</term><description>512</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("OM", "OMN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Sultanate of Oman")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "‘Umān")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Oman")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Oman")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "OMAN")]
+        Oman = 512,
+        
+        /// <summary>the Republic of Panama</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PA</description></item>
+        /// 		<item><term>Alpha-3</term><description>PAN</description></item>
+        /// 		<item><term>Numeric</term><description>591</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PA", "PAN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Panama")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Panama")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Panama (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Panamá")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PANAMA")]
+        Panama = 591,
+        
+        /// <summary>the Republic of Peru</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PE</description></item>
+        /// 		<item><term>Alpha-3</term><description>PER</description></item>
+        /// 		<item><term>Numeric</term><description>604</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PE", "PER")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Peru")]
+        [Iso3166ShortNameAttribute(Iso639Code.Aymara, "Perú")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Peru")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Pérou (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Quechua, "Perú")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Perú (el)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PERU")]
+        Peru = 604,
+        
+        /// <summary>French Polynesia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PF</description></item>
+        /// 		<item><term>Alpha-3</term><description>PYF</description></item>
+        /// 		<item><term>Numeric</term><description>258</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PF", "PYF")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "French Polynesia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Polynésie française (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FRENCH POLYNESIA")]
+        FrenchPolynesia = 258,
+        
+        /// <summary>the Independent State of Papua New Guinea</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PG</description></item>
+        /// 		<item><term>Alpha-3</term><description>PNG</description></item>
+        /// 		<item><term>Numeric</term><description>598</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PG", "PNG")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Independent State of Papua New Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Papua New Guinea")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Papouaise-Nouvelle-Guinée (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.HiriMotu, "Papuaniugini")]
+        [Iso3166ShortNameAttribute(Iso639Code.TokPisin, "Papuaniugini")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PAPUA NEW GUINEA")]
+        PapuaNewGuinea = 598,
+        
+        /// <summary>the Republic of the Philippines</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PH</description></item>
+        /// 		<item><term>Alpha-3</term><description>PHL</description></item>
+        /// 		<item><term>Numeric</term><description>608</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PH", "PHL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Philippines")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Philippines (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Philippines (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tagalog, "Pilipinas")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PHILIPPINES")]
+        Philippines = 608,
+        
+        /// <summary>the Islamic Republic of Pakistan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PK</description></item>
+        /// 		<item><term>Alpha-3</term><description>PAK</description></item>
+        /// 		<item><term>Numeric</term><description>586</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PK", "PAK")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Islamic Republic of Pakistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Pakistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Pakistan (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Urdu, "Pākistān")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PAKISTAN")]
+        Pakistan = 586,
+        
+        /// <summary>Poland</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PL</description></item>
+        /// 		<item><term>Alpha-3</term><description>POL</description></item>
+        /// 		<item><term>Numeric</term><description>616</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PL", "POL")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Poland")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Pologne (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Polish, "Polska")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "POLAND")]
+        Poland = 616,
+        
+        /// <summary>Saint Pierre and Miquelon</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PM</description></item>
+        /// 		<item><term>Alpha-3</term><description>SPM</description></item>
+        /// 		<item><term>Numeric</term><description>666</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PM", "SPM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Pierre and Miquelon")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Pierre-et-Miquelon")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT PIERRE AND MIQUELON")]
+        SaintPierreAndMiquelon = 666,
+        
+        /// <summary>Pitcairn</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PN</description></item>
+        /// 		<item><term>Alpha-3</term><description>PCN</description></item>
+        /// 		<item><term>Numeric</term><description>612</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PN", "PCN")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Pitcairn")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Pitcairn")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PITCAIRN")]
+        Pitcairn = 612,
+        
+        /// <summary>Puerto Rico</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PR</description></item>
+        /// 		<item><term>Alpha-3</term><description>PRI</description></item>
+        /// 		<item><term>Numeric</term><description>630</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PR", "PRI")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Puerto Rico")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Porto Rico")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Puerto Rico")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PUERTO RICO")]
+        PuertoRico = 630,
+        
+        /// <summary>the State of Palestine</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PS</description></item>
+        /// 		<item><term>Alpha-3</term><description>PSE</description></item>
+        /// 		<item><term>Numeric</term><description>275</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PS", "PSE")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the State of Palestine")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Dawlat Filasţīn")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Palestine, State of")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Palestine, État de")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PALESTINE, STATE OF")]
+        Palestine_StateOf = 275,
+        
+        /// <summary>the Portuguese Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PT</description></item>
+        /// 		<item><term>Alpha-3</term><description>PRT</description></item>
+        /// 		<item><term>Numeric</term><description>620</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PT", "PRT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Portuguese Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Portugal")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Portugal (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Portugal")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PORTUGAL")]
+        Portugal = 620,
+        
+        /// <summary>the Republic of Palau</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PW</description></item>
+        /// 		<item><term>Alpha-3</term><description>PLW</description></item>
+        /// 		<item><term>Numeric</term><description>585</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PW", "PLW")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Palau")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Palau")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Palaos (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Palauan, "Belau")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PALAU")]
+        Palau = 585,
+        
+        /// <summary>the Republic of Paraguay</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>PY</description></item>
+        /// 		<item><term>Alpha-3</term><description>PRY</description></item>
+        /// 		<item><term>Numeric</term><description>600</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("PY", "PRY")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Paraguay")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Paraguay")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Paraguay (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Guarani, "Paraguay")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Paraguay (el)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "PARAGUAY")]
+        Paraguay = 600,
+        
+        /// <summary>the State of Qatar</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>QA</description></item>
+        /// 		<item><term>Alpha-3</term><description>QAT</description></item>
+        /// 		<item><term>Numeric</term><description>634</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("QA", "QAT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the State of Qatar")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Qaţar")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Qatar")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Qatar (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "QATAR")]
+        Qatar = 634,
+        
+        /// <summary>Réunion</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>RE</description></item>
+        /// 		<item><term>Alpha-3</term><description>REU</description></item>
+        /// 		<item><term>Numeric</term><description>638</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("RE", "REU")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Réunion")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Réunion (La)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "RÉUNION")]
+        Réunion = 638,
+        
+        /// <summary>Romania</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>RO</description></item>
+        /// 		<item><term>Alpha-3</term><description>ROU</description></item>
+        /// 		<item><term>Numeric</term><description>642</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("RO", "ROU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Romania")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Roumanie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Moldavian_Moldovan_Romanian, "România")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ROMANIA")]
+        Romania = 642,
+        
+        /// <summary>the Republic of Serbia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>RS</description></item>
+        /// 		<item><term>Alpha-3</term><description>SRB</description></item>
+        /// 		<item><term>Numeric</term><description>688</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("RS", "SRB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Serbia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Serbia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Serbie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Serbian, "Srbija")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SERBIA")]
+        Serbia = 688,
+        
+        /// <summary>the Russian Federation</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>RU</description></item>
+        /// 		<item><term>Alpha-3</term><description>RUS</description></item>
+        /// 		<item><term>Numeric</term><description>643</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("RU", "RUS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Russian Federation")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Russian Federation (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Russie (la Fédération de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Russian, "Rossijskaja Federacija")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "RUSSIAN FEDERATION")]
+        RussianFederation = 643,
+        
+        /// <summary>the Republic of Rwanda</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>RW</description></item>
+        /// 		<item><term>Alpha-3</term><description>RWA</description></item>
+        /// 		<item><term>Numeric</term><description>646</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("RW", "RWA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Rwanda")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Rwanda")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Rwanda (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Kinyarwanda, "Rwanda")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "RWANDA")]
+        Rwanda = 646,
+        
+        /// <summary>the Kingdom of Saudi Arabia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SA</description></item>
+        /// 		<item><term>Alpha-3</term><description>SAU</description></item>
+        /// 		<item><term>Numeric</term><description>682</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SA", "SAU")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Saudi Arabia")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "As Su‘ūdīyah")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saudi Arabia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Arabie saoudite (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAUDI ARABIA")]
+        SaudiArabia = 682,
+        
+        /// <summary>Solomon Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SB</description></item>
+        /// 		<item><term>Alpha-3</term><description>SLB</description></item>
+        /// 		<item><term>Numeric</term><description>090</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SB", "SLB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Solomon Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Salomon (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SOLOMON ISLANDS")]
+        SolomonIslands = 90,
+        
+        /// <summary>the Republic of Seychelles</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SC</description></item>
+        /// 		<item><term>Alpha-3</term><description>SYC</description></item>
+        /// 		<item><term>Numeric</term><description>690</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SC", "SYC")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Seychelles")]
+        [Iso3166ShortNameAttribute(Iso639Code.CreoleFrench_Seselwa, "Sesel")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Seychelles")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Seychelles (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SEYCHELLES")]
+        Seychelles = 690,
+        
+        /// <summary>the Republic of the Sudan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SD</description></item>
+        /// 		<item><term>Alpha-3</term><description>SDN</description></item>
+        /// 		<item><term>Numeric</term><description>729</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SD", "SDN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of the Sudan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "As Sūdān")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sudan (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Soudan (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SUDAN")]
+        Sudan = 729,
+        
+        /// <summary>the Kingdom of Sweden</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SE</description></item>
+        /// 		<item><term>Alpha-3</term><description>SWE</description></item>
+        /// 		<item><term>Numeric</term><description>752</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SE", "SWE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Sweden")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sweden")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Suède (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swedish, "Sverige")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SWEDEN")]
+        Sweden = 752,
+        
+        /// <summary>the Republic of Singapore</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SG</description></item>
+        /// 		<item><term>Alpha-3</term><description>SGP</description></item>
+        /// 		<item><term>Numeric</term><description>702</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SG", "SGP")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Singapore")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Singapore")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Singapour")]
+        [Iso3166ShortNameAttribute(Iso639Code.Malay_macrolanguage_, "Singapura")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tamil, "Chiṅkappūr")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chinese, "Xinjiapo")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SINGAPORE")]
+        Singapore = 702,
+        
+        /// <summary>Saint Helena, Ascension and Tristan da Cunha</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SH</description></item>
+        /// 		<item><term>Alpha-3</term><description>SHN</description></item>
+        /// 		<item><term>Numeric</term><description>654</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SH", "SHN")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Helena, Ascension and Tristan da Cunha")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sainte-Hélène, Ascension et Tristan da Cunha")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA")]
+        SaintHelena_AscensionAndTristanDaCunha = 654,
+        
+        /// <summary>the Republic of Slovenia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SI</description></item>
+        /// 		<item><term>Alpha-3</term><description>SVN</description></item>
+        /// 		<item><term>Numeric</term><description>705</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SI", "SVN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Slovenia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Slovenia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Slovénie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Slovenian, "Slovenija")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SLOVENIA")]
+        Slovenia = 705,
+        
+        /// <summary>Svalbard and Jan Mayen</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SJ</description></item>
+        /// 		<item><term>Alpha-3</term><description>SJM</description></item>
+        /// 		<item><term>Numeric</term><description>744</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SJ", "SJM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Svalbard and Jan Mayen")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Svalbard et l\'Île Jan Mayen (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianNynorsk, "Svalbard og Jan Mayen")]
+        [Iso3166ShortNameAttribute(Iso639Code.NorwegianBokmål, "Svalbard og Jan Mayen")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SVALBARD AND JAN MAYEN")]
+        SvalbardAndJanMayen = 744,
+        
+        /// <summary>the Slovak Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SK</description></item>
+        /// 		<item><term>Alpha-3</term><description>SVK</description></item>
+        /// 		<item><term>Numeric</term><description>703</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SK", "SVK")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Slovak Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Slovakia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Slovaquie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Slovak, "Slovensko")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SLOVAKIA")]
+        Slovakia = 703,
+        
+        /// <summary>the Republic of Sierra Leone</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SL</description></item>
+        /// 		<item><term>Alpha-3</term><description>SLE</description></item>
+        /// 		<item><term>Numeric</term><description>694</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SL", "SLE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Sierra Leone")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sierra Leone")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sierra Leone (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SIERRA LEONE")]
+        SierraLeone = 694,
+        
+        /// <summary>the Republic of San Marino</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SM</description></item>
+        /// 		<item><term>Alpha-3</term><description>SMR</description></item>
+        /// 		<item><term>Numeric</term><description>674</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SM", "SMR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of San Marino")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "San Marino")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Marin")]
+        [Iso3166ShortNameAttribute(Iso639Code.Italian, "San Marino")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAN MARINO")]
+        SanMarino = 674,
+        
+        /// <summary>the Republic of Senegal</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SN</description></item>
+        /// 		<item><term>Alpha-3</term><description>SEN</description></item>
+        /// 		<item><term>Numeric</term><description>686</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SN", "SEN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Senegal")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Senegal")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sénégal (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SENEGAL")]
+        Senegal = 686,
+        
+        /// <summary>the Federal Republic of Somalia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SO</description></item>
+        /// 		<item><term>Alpha-3</term><description>SOM</description></item>
+        /// 		<item><term>Numeric</term><description>706</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SO", "SOM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Federal Republic of Somalia")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Aş Şūmāl")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Somalia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Somalie (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Somali, "Soomaaliya")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SOMALIA")]
+        Somalia = 706,
+        
+        /// <summary>the Republic of Suriname</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SR</description></item>
+        /// 		<item><term>Alpha-3</term><description>SUR</description></item>
+        /// 		<item><term>Numeric</term><description>740</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SR", "SUR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Suriname")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Suriname")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Suriname (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Suriname")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SURINAME")]
+        Suriname = 740,
+        
+        /// <summary>the Republic of South Sudan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SS</description></item>
+        /// 		<item><term>Alpha-3</term><description>SSD</description></item>
+        /// 		<item><term>Numeric</term><description>728</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SS", "SSD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of South Sudan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "South Sudan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Soudan du Sud (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SOUTH SUDAN")]
+        SouthSudan = 728,
+        
+        /// <summary>the Democratic Republic of Sao Tome and Principe</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ST</description></item>
+        /// 		<item><term>Alpha-3</term><description>STP</description></item>
+        /// 		<item><term>Numeric</term><description>678</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ST", "STP")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Democratic Republic of Sao Tome and Principe")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sao Tome and Principe")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Sao Tomé-et-Principe")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "São Tomé e Príncipe")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAO TOME AND PRINCIPE")]
+        SaoTomeAndPrincipe = 678,
+        
+        /// <summary>the Republic of El Salvador</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SV</description></item>
+        /// 		<item><term>Alpha-3</term><description>SLV</description></item>
+        /// 		<item><term>Numeric</term><description>222</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SV", "SLV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of El Salvador")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "El Salvador")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "El Salvador")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "El Salvador")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "EL SALVADOR")]
+        ElSalvador = 222,
+        
+        /// <summary>Sint Maarten (Dutch part)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SX</description></item>
+        /// 		<item><term>Alpha-3</term><description>SXM</description></item>
+        /// 		<item><term>Numeric</term><description>534</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SX", "SXM")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Sint Maarten (Dutch part)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Martin (partie néerlandaise)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Dutch_Flemish, "Sint Maarten")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SINT MAARTEN (DUTCH PART)")]
+        SintMaarten_DutchPart = 534,
+        
+        /// <summary>the Syrian Arab Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SY</description></item>
+        /// 		<item><term>Alpha-3</term><description>SYR</description></item>
+        /// 		<item><term>Numeric</term><description>760</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SY", "SYR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Syrian Arab Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Jumhūrīyah al ‘Arabīyah as Sūrīyah")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Syrian Arab Republic (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "République arabe syrienne (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SYRIAN ARAB REPUBLIC")]
+        SyrianArabRepublic = 760,
+        
+        /// <summary>the Kingdom of Eswatini</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>SZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>SWZ</description></item>
+        /// 		<item><term>Numeric</term><description>748</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("SZ", "SWZ")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Eswatini")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Eswatini")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Eswatini (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swati, "eSwatini")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ESWATINI")]
+        Eswatini = 748,
+        
+        /// <summary>Turks and Caicos Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TC</description></item>
+        /// 		<item><term>Alpha-3</term><description>TCA</description></item>
+        /// 		<item><term>Numeric</term><description>796</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TC", "TCA")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Turks and Caicos Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Turks-et-Caïcos (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TURKS AND CAICOS ISLANDS")]
+        TurksAndCaicosIslands = 796,
+        
+        /// <summary>the Republic of Chad</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TD</description></item>
+        /// 		<item><term>Alpha-3</term><description>TCD</description></item>
+        /// 		<item><term>Numeric</term><description>148</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TD", "TCD")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Chad")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Tshād")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Chad")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tchad (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "CHAD")]
+        Chad = 148,
+        
+        /// <summary>French Southern Territories (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TF</description></item>
+        /// 		<item><term>Alpha-3</term><description>ATF</description></item>
+        /// 		<item><term>Numeric</term><description>260</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TF", "ATF")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "French Southern Territories (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Terres australes françaises (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "FRENCH SOUTHERN TERRITORIES")]
+        FrenchSouthernTerritories = 260,
+        
+        /// <summary>the Togolese Republic</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TG</description></item>
+        /// 		<item><term>Alpha-3</term><description>TGO</description></item>
+        /// 		<item><term>Numeric</term><description>768</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TG", "TGO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Togolese Republic")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Togo")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Togo (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TOGO")]
+        Togo = 768,
+        
+        /// <summary>the Kingdom of Thailand</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TH</description></item>
+        /// 		<item><term>Alpha-3</term><description>THA</description></item>
+        /// 		<item><term>Numeric</term><description>764</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TH", "THA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Thailand")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Thailand")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Thaïlande (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Thai, "Prathet Thai")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "THAILAND")]
+        Thailand = 764,
+        
+        /// <summary>the Republic of Tajikistan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TJ</description></item>
+        /// 		<item><term>Alpha-3</term><description>TJK</description></item>
+        /// 		<item><term>Numeric</term><description>762</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TJ", "TJK")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Tajikistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tajikistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tadjikistan (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tajik, "Tojikiston")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TAJIKISTAN")]
+        Tajikistan = 762,
+        
+        /// <summary>Tokelau</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TK</description></item>
+        /// 		<item><term>Alpha-3</term><description>TKL</description></item>
+        /// 		<item><term>Numeric</term><description>772</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TK", "TKL")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tokelau")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tokelau (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tokelau, "Tokelau")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TOKELAU")]
+        Tokelau = 772,
+        
+        /// <summary>the Democratic Republic of Timor-Leste</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TL</description></item>
+        /// 		<item><term>Alpha-3</term><description>TLS</description></item>
+        /// 		<item><term>Numeric</term><description>626</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TL", "TLS")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Democratic Republic of Timor-Leste")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Timor-Leste")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Timor-Leste (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Portuguese, "Timor-Leste")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tetum, "Timor Lorosa\'e")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TIMOR-LESTE")]
+        Timor_Leste = 626,
+        
+        /// <summary>Turkmenistan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TM</description></item>
+        /// 		<item><term>Alpha-3</term><description>TKM</description></item>
+        /// 		<item><term>Numeric</term><description>795</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TM", "TKM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Turkmenistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Turkménistan (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Turkmen, "Türkmenistan")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TURKMENISTAN")]
+        Turkmenistan = 795,
+        
+        /// <summary>the Republic of Tunisia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TN</description></item>
+        /// 		<item><term>Alpha-3</term><description>TUN</description></item>
+        /// 		<item><term>Numeric</term><description>788</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TN", "TUN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Tunisia")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Tūnis")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tunisia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tunisie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TUNISIA")]
+        Tunisia = 788,
+        
+        /// <summary>the Kingdom of Tonga</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TO</description></item>
+        /// 		<item><term>Alpha-3</term><description>TON</description></item>
+        /// 		<item><term>Numeric</term><description>776</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TO", "TON")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Kingdom of Tonga")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tonga")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tonga (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tonga_TongaIslands_, "Tonga")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TONGA")]
+        Tonga = 776,
+        
+        /// <summary>the Republic of Türkiye</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TR</description></item>
+        /// 		<item><term>Alpha-3</term><description>TUR</description></item>
+        /// 		<item><term>Numeric</term><description>792</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TR", "TUR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Türkiye")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Türkiye")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Türkiye (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Turkish, "Türkiye")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TÜRKIYE")]
+        Türkiye = 792,
+        
+        /// <summary>the Republic of Trinidad and Tobago</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TT</description></item>
+        /// 		<item><term>Alpha-3</term><description>TTO</description></item>
+        /// 		<item><term>Numeric</term><description>780</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TT", "TTO")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Trinidad and Tobago")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Trinidad and Tobago")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Trinité-et-Tobago (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TRINIDAD AND TOBAGO")]
+        TrinidadAndTobago = 780,
+        
+        /// <summary>Tuvalu</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TV</description></item>
+        /// 		<item><term>Alpha-3</term><description>TUV</description></item>
+        /// 		<item><term>Numeric</term><description>798</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TV", "TUV")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tuvalu")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tuvalu (les)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tuvalu, "Tuvalu")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TUVALU")]
+        Tuvalu = 798,
+        
+        /// <summary>Taiwan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TW</description></item>
+        /// 		<item><term>Alpha-3</term><description>TWN</description></item>
+        /// 		<item><term>Numeric</term><description>158</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TW", "TWN")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Taiwan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Taïwan")]
+        [Iso3166ShortNameAttribute(Iso639Code.Chinese, "Taiwan")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TAIWAN")]
+        Taiwan = 158,
+        
+        /// <summary>the United Republic of Tanzania</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>TZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>TZA</description></item>
+        /// 		<item><term>Numeric</term><description>834</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("TZ", "TZA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the United Republic of Tanzania")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Tanzania, the United Republic of")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Tanzanie (la République-Unie de)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swahili_macrolanguage_, "Jamhuri ya Muungano wa Tanzania")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "TANZANIA, UNITED REPUBLIC OF")]
+        Tanzania_TheUnitedRepublicOf = 834,
+        
+        /// <summary>Ukraine</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>UA</description></item>
+        /// 		<item><term>Alpha-3</term><description>UKR</description></item>
+        /// 		<item><term>Numeric</term><description>804</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("UA", "UKR")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Ukraine")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Ukraine (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Ukrainian, "Ukraina")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UKRAINE")]
+        Ukraine = 804,
+        
+        /// <summary>the Republic of Uganda</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>UG</description></item>
+        /// 		<item><term>Alpha-3</term><description>UGA</description></item>
+        /// 		<item><term>Numeric</term><description>800</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("UG", "UGA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Uganda")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Uganda")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Ouganda (l\')")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UGANDA")]
+        Uganda = 800,
+        
+        /// <summary>United States Minor Outlying Islands (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>UM</description></item>
+        /// 		<item><term>Alpha-3</term><description>UMI</description></item>
+        /// 		<item><term>Numeric</term><description>581</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("UM", "UMI")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "United States Minor Outlying Islands (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Îles mineures étoignées des États-Unis (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UNITED STATES MINOR OUTLYING ISLANDS")]
+        UnitedStatesMinorOutlyingIslands = 581,
+        
+        /// <summary>the United States of America</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>US</description></item>
+        /// 		<item><term>Alpha-3</term><description>USA</description></item>
+        /// 		<item><term>Numeric</term><description>840</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("US", "USA")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the United States of America")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "United States of America (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "États-Unis d\'Amérique (les)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UNITED STATES OF AMERICA")]
+        UnitedStatesOfAmerica = 840,
+        
+        /// <summary>the Eastern Republic of Uruguay</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>UY</description></item>
+        /// 		<item><term>Alpha-3</term><description>URY</description></item>
+        /// 		<item><term>Numeric</term><description>858</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("UY", "URY")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Eastern Republic of Uruguay")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Uruguay")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Uruguay (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Uruguay (el)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "URUGUAY")]
+        Uruguay = 858,
+        
+        /// <summary>the Republic of Uzbekistan</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>UZ</description></item>
+        /// 		<item><term>Alpha-3</term><description>UZB</description></item>
+        /// 		<item><term>Numeric</term><description>860</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("UZ", "UZB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Uzbekistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Uzbekistan")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Ouzbékistan (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Uzbek, "O‘zbekiston")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "UZBEKISTAN")]
+        Uzbekistan = 860,
+        
+        /// <summary>Holy See (the)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VA</description></item>
+        /// 		<item><term>Alpha-3</term><description>VAT</description></item>
+        /// 		<item><term>Numeric</term><description>336</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VA", "VAT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Holy See (the)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Siège (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Italian, "Santa Sede (la)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Latin, "Sancta Sedes")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "HOLY SEE")]
+        HolySee = 336,
+        
+        /// <summary>Saint Vincent and the Grenadines</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VC</description></item>
+        /// 		<item><term>Alpha-3</term><description>VCT</description></item>
+        /// 		<item><term>Numeric</term><description>670</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VC", "VCT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Saint Vincent and the Grenadines")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Saint-Vincent-et-les Grenadines")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAINT VINCENT AND THE GRENADINES")]
+        SaintVincentAndTheGrenadines = 670,
+        
+        /// <summary>the Bolivarian Republic of Venezuela</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VE</description></item>
+        /// 		<item><term>Alpha-3</term><description>VEN</description></item>
+        /// 		<item><term>Numeric</term><description>862</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VE", "VEN")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Bolivarian Republic of Venezuela")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Venezuela (Bolivarian Republic of)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Venezuela (République bolivarienne du)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Castilian_Spanish, "Venezuela, República Bolivariana de")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "VENEZUELA (BOLIVARIAN REPUBLIC OF)")]
+        Venezuela_BolivarianRepublicOf = 862,
+        
+        /// <summary>Virgin Islands (British)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VG</description></item>
+        /// 		<item><term>Alpha-3</term><description>VGB</description></item>
+        /// 		<item><term>Numeric</term><description>092</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VG", "VGB")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Virgin Islands (British)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Vierges britanniques (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "VIRGIN ISLANDS (BRITISH)")]
+        VirginIslands_British = 92,
+        
+        /// <summary>Virgin Islands (U.S.)</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VI</description></item>
+        /// 		<item><term>Alpha-3</term><description>VIR</description></item>
+        /// 		<item><term>Numeric</term><description>850</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VI", "VIR")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Virgin Islands (U.S.)")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Vierges des États-Unis (les Îles)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "VIRGIN ISLANDS (U.S.)")]
+        VirginIslands_U_S = 850,
+        
+        /// <summary>the Socialist Republic of Viet Nam</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VN</description></item>
+        /// 		<item><term>Alpha-3</term><description>VNM</description></item>
+        /// 		<item><term>Numeric</term><description>704</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VN", "VNM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Socialist Republic of Viet Nam")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Viet Nam")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Viet Nam (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Vietnamese, "Việt Nam")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "VIET NAM")]
+        VietNam = 704,
+        
+        /// <summary>the Republic of Vanuatu</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>VU</description></item>
+        /// 		<item><term>Alpha-3</term><description>VUT</description></item>
+        /// 		<item><term>Numeric</term><description>548</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("VU", "VUT")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Vanuatu")]
+        [Iso3166ShortNameAttribute(Iso639Code.Bislama, "Vanuatu")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Vanuatu")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Vanuatu (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "VANUATU")]
+        Vanuatu = 548,
+        
+        /// <summary>Wallis and Futuna Islands</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>WF</description></item>
+        /// 		<item><term>Alpha-3</term><description>WLF</description></item>
+        /// 		<item><term>Numeric</term><description>876</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("WF", "WLF")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "Wallis and Futuna Islands")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Wallis and Futuna")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Wallis-et-Futuna")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "WALLIS AND FUTUNA")]
+        WallisAndFutuna = 876,
+        
+        /// <summary>the Independent State of Samoa</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>WS</description></item>
+        /// 		<item><term>Alpha-3</term><description>WSM</description></item>
+        /// 		<item><term>Numeric</term><description>882</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("WS", "WSM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Independent State of Samoa")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Samoa")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Samoa (le)")]
+        [Iso3166ShortNameAttribute(Iso639Code.Samoan, "Samoa")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SAMOA")]
+        Samoa = 882,
+        
+        /// <summary>the Republic of Yemen</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>YE</description></item>
+        /// 		<item><term>Alpha-3</term><description>YEM</description></item>
+        /// 		<item><term>Numeric</term><description>887</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("YE", "YEM")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Yemen")]
+        [Iso3166ShortNameAttribute(Iso639Code.Arabic, "Al Yaman")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Yemen")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Yémen (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "YEMEN")]
+        Yemen = 887,
+        
+        /// <summary>Mayotte</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>YT</description></item>
+        /// 		<item><term>Alpha-3</term><description>MYT</description></item>
+        /// 		<item><term>Numeric</term><description>175</description></item>
+        /// 		<item><term>Independent</term><description>No</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("YT", "MYT")]
+        [Iso3166IndependentAttribute(false)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Mayotte")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Mayotte")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "MAYOTTE")]
+        Mayotte = 175,
+        
+        /// <summary>the Republic of South Africa</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ZA</description></item>
+        /// 		<item><term>Alpha-3</term><description>ZAF</description></item>
+        /// 		<item><term>Numeric</term><description>710</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ZA", "ZAF")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of South Africa")]
+        [Iso3166ShortNameAttribute(Iso639Code.Afrikaans, "Suid-Afrika")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "South Africa")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Afrique du Sud (l\')")]
+        [Iso3166ShortNameAttribute(Iso639Code.Ndebele_South, "Sewula Afrika")]
+        [Iso3166ShortNameAttribute(Iso639Code.Sotho_Northern_Pedi_Sepedi, "Afrika-Borwa")]
+        [Iso3166ShortNameAttribute(Iso639Code.Sotho_Southern, "Afrika-Borwa")]
+        [Iso3166ShortNameAttribute(Iso639Code.Swati, "Ningizimu Afrika")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tswana, "Afrika-Borwa")]
+        [Iso3166ShortNameAttribute(Iso639Code.Tsonga, "Afrika-Dzonga")]
+        [Iso3166ShortNameAttribute(Iso639Code.Venda, "Afrika Tshipembe")]
+        [Iso3166ShortNameAttribute(Iso639Code.Xhosa, "Mzantsi Afrika")]
+        [Iso3166ShortNameAttribute(Iso639Code.Zulu, "Ningizimu Afrika")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "SOUTH AFRICA")]
+        SouthAfrica = 710,
+        
+        /// <summary>the Republic of Zambia</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ZM</description></item>
+        /// 		<item><term>Alpha-3</term><description>ZMB</description></item>
+        /// 		<item><term>Numeric</term><description>894</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ZM", "ZMB")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Zambia")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Zambia")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Zambie (la)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ZAMBIA")]
+        Zambia = 894,
+        
+        /// <summary>the Republic of Zimbabwe</summary>
+        /// <remarks>
+        /// 	<list type="table">
+        /// 		<item><term>Alpha-2</term><description>ZW</description></item>
+        /// 		<item><term>Alpha-3</term><description>ZWE</description></item>
+        /// 		<item><term>Numeric</term><description>716</description></item>
+        /// 		<item><term>Independent</term><description>Yes</description></item>
+        /// 		<item><term>Status</term><description>Officially assigned</description></item>
+        /// 	</list>
+        /// </remarks>
+        [Iso3166AlphaAttribute("ZW", "ZWE")]
+        [Iso3166IndependentAttribute(true)]
+        [Iso3166StatusAttribute(Iso3166Status.OfficiallyAssigned)]
+        [Iso3166FullNameAttribute(Iso639Code.English, "the Republic of Zimbabwe")]
+        [Iso3166ShortNameAttribute(Iso639Code.English, "Zimbabwe")]
+        [Iso3166ShortNameAttribute(Iso639Code.French, "Zimbabwe (le)")]
+        [Iso3166ShortNameUpperCaseAttribute(Iso639Code.English, "ZIMBABWE")]
+        Zimbabwe = 716,
+    }
 }

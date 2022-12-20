@@ -19,14 +19,14 @@ namespace BenBurgers.InternationalStandards.Iso.CodeGenerator.Workflow.Iso4217;
 /// <summary>
 /// Generates code for the ISO 4217 standard.
 /// </summary>
-internal static class Iso4217Generator
+internal static class Iso4217CodeGenerator
 {
     private static readonly CodeTypeReference Iso4217EntityAttribute = new(typeof(Iso4217EntityAttribute));
 
-    private record ModelIndex(
+    private sealed record ModelIndex(
         Iso4217Model Model,
         int Index);
-    private record Iso4217Models(
+    private sealed record Iso4217Models(
         DateOnly Published,
         IReadOnlyCollection<Iso4217Model> Models);
 
