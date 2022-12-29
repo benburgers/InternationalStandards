@@ -64,7 +64,10 @@ The reader and record types may be found in the namespace:
 
 ## ISO 3166 country codes
 
-The ISO 3166 country codes are not imported yet. The current codes have been collected from the [ISO Online Browsing Platform (OBP)](https://www.iso.org/obp/ui), although a CSV format exists and may be bought from the ISO store.
+The ISO 3166 country codes are read from an XML file, a sample of which may be downloaded from the ISO 3166 Maintenance Agency website.
+The current codes have been collected from the [ISO Online Browsing Platform (OBP)](https://www.iso.org/obp/ui), although XML and CSV formats exist and may be bought from the ISO store.
+
+- `BenBurgers.InternationalStandards.Iso.IO.Iso3166`
 
 ## ISO 4217 currency codes
 

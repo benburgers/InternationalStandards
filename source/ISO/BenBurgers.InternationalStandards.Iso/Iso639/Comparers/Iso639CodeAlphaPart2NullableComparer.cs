@@ -34,8 +34,8 @@ public sealed class Iso639CodeAlphaPart2NullableComparer : IComparer<Iso639Code?
             : null) switch
         {
             (null, null) => 0,
-            (null, _) => 1,
-            (_, null) => -1,
+            (null, _) => int.MinValue,
+            (_, null) => int.MaxValue,
             ({ } x2, { } y2) => x2.CompareTo(y2)
         };
 }
