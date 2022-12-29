@@ -25,9 +25,10 @@ public static class Iso3166CodeExtensions
     /// Gets the full name of the ISO 3166 country.
     /// </summary>
     /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <param name="languageDefault">The default language.</param>
     /// <returns>The full name of the ISO 3166 country.</returns>
-    public static GlobalizedString GetFullName(this Iso3166Code iso3166Code) =>
-        Iso3166Codes.Attributes[iso3166Code].FullNameAttributes.ToGlobalizedString();
+    public static GlobalizedString GetFullName(this Iso3166Code iso3166Code, Iso639Code? languageDefault = null) =>
+        Iso3166Codes.Attributes[iso3166Code].FullNameAttributes.ToGlobalizedString(languageDefault);
 
     /// <summary>
     /// Gets the name for the <paramref name="iso3166Code" />.
@@ -64,17 +65,19 @@ public static class Iso3166CodeExtensions
     /// Gets the short name of the <paramref name="iso3166Code" /> country.
     /// </summary>
     /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <param name="languageDefault">The default language.</param>
     /// <returns>The short name of the <paramref name="iso3166Code" /> country.</returns>
-    public static GlobalizedString GetShortName(this Iso3166Code iso3166Code) =>
-        Iso3166Codes.Attributes[iso3166Code].ShortNameAttributes.ToGlobalizedString();
+    public static GlobalizedString GetShortName(this Iso3166Code iso3166Code, Iso639Code? languageDefault = null) =>
+        Iso3166Codes.Attributes[iso3166Code].ShortNameAttributes.ToGlobalizedString(languageDefault);
 
     /// <summary>
     /// Gets the short name in upper case of the <paramref name="iso3166Code" /> country.
     /// </summary>
     /// <param name="iso3166Code">The ISO 3166 code.</param>
+    /// <param name="languageDefault">The default language.</param>
     /// <returns>The short name in upper case of the <paramref name="iso3166Code" /> country.</returns>
-    public static GlobalizedString GetShortNameUpperCase(this Iso3166Code iso3166Code) =>
-        Iso3166Codes.Attributes[iso3166Code].ShortNameUpperCaseAttributes.ToGlobalizedString();
+    public static GlobalizedString GetShortNameUpperCase(this Iso3166Code iso3166Code, Iso639Code? languageDefault = null) =>
+        Iso3166Codes.Attributes[iso3166Code].ShortNameUpperCaseAttributes.ToGlobalizedString(languageDefault);
 
     /// <summary>
     /// Gets the status of the <paramref name="iso3166Code" />.

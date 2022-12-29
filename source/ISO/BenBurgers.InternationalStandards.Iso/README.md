@@ -8,6 +8,7 @@
     - [ISO 639 language codes](#ISO-639-language-codes)
     - [ISO 3166 country codes](#ISO-3166-country-codes)
     - [ISO 4217 currency codes](#ISO-4217-currency-codes)
+    - [Comparers](#Comparers)
 
 # Introduction
 
@@ -642,3 +643,14 @@ if (Value.TryToIso4217(out var code)) {
 * Invalid
 */
 ```
+
+## Comparers
+
+All ISO codes have comparers.
+These can be found in the namespaces.
+
+- `BenBurgers.InternationalStandards.Iso.Iso3166.Comparers`
+- `BenBurgers.InternationalStandards.Iso.Iso4217.Comparers`
+- `BenBurgers.InternationalStandards.Iso.Iso639.Comparers`
+
+A useful application could be in a `SortedDictionary<...>` with the ISO code as its items.

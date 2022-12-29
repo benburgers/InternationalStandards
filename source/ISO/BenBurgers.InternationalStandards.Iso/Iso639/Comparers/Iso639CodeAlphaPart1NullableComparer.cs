@@ -15,8 +15,8 @@ public sealed class Iso639CodeAlphaPart1NullableComparer : IComparer<Iso639Code?
         (x?.HasPart1() == true ? x?.ToPart1() : null, y?.HasPart1() == true ? y?.ToPart1() : null) switch
         {
             (null, null) => 0,
-            (null, _) => 1,
-            (_, null) => -1,
+            (null, _) => int.MinValue,
+            (_, null) => int.MaxValue,
             ({ } x1, { } y1) => x1.CompareTo(y1)
         };
 }
