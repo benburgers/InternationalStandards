@@ -52,8 +52,6 @@ public sealed class Iso639AlphaValueConverter : ValueConverter<Iso639Code, strin
         };
     }
 
-    private static Expression<Func<string, Iso639Code>> GetConvertFromProviderExpression(Iso639AlphaValueConverterOptions options)
-    {
-        return code => code.ToIso639(options.AllowDeprecated);
-    }
+    private static Expression<Func<string, Iso639Code>> GetConvertFromProviderExpression(Iso639AlphaValueConverterOptions options) =>
+        code => code.ToIso639(options.AllowDeprecated);
 }

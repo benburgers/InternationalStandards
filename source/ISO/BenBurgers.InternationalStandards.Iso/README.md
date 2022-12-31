@@ -5,10 +5,11 @@
 - [Packages](#Packages)
 - [Manual](#Manual)
     - [Supported ISO standards](#Supported-ISO-standards)
-    - [ISO 639 language codes](#ISO-639-language-codes)
-    - [ISO 3166 country codes](#ISO-3166-country-codes)
-    - [ISO 4217 currency codes](#ISO-4217-currency-codes)
-    - [Comparers](#Comparers)
+        - [ISO 639 language codes](#ISO-639-language-codes)
+        - [ISO 3166 country codes](#ISO-3166-country-codes)
+        - [ISO 4217 currency codes](#ISO-4217-currency-codes)
+        - [Comparers](#Comparers)
+        - [ISO 8601 date and time](#ISO-8601-date-and-time)
 
 # Introduction
 
@@ -20,6 +21,8 @@ The `BenBurgers.InternationalStandards.Iso` package contains codes and features 
 > The organization develops and publishes standardization in all technical and nontechnical fields other than electrical and electronic engineering.[^1]
 
 [^1]: [Wikipedia](https://en.wikipedia.org/wiki/International_Organization_for_Standardization), downloaded at 31 October 2022, 23:33 CET.
+
+You are kindly encouraged to buy the standards you use at the [ISO Store](https://www.iso.org/store.html) in order to fund their mission.
 
 # GitHub Sponsors
 
@@ -48,15 +51,16 @@ Please refer to [NuGet](https://www.nuget.org/profiles/benburgers) to download t
 
 The following are the currently supported ISO standards.
 
-| Name                         | Description         |
-| ---------------------------- | ------------------- |
-| ISO 639                      | Language codes      |
-| ISO 3166                     | Country codes       |
-| ISO 4217                     | Currency codes      |
+| Name                         | Description              |
+| ---------------------------- | ------------------------ |
+| ISO 639                      | Language codes           |
+| ISO 3166                     | Country codes            |
+| ISO 4217                     | Currency codes           |
+| ISO 8601                     | Date and Time formatting |
 
-## ISO 639 language codes
+### ISO 639 language codes
 
-### Legal
+#### Legal
 
 The [Austrian Standards](https://www.austrian-standards.at/en) is the Maintenance Agency of ISO 639-1 codes.
 Only they can designate ISO 639-1 codes.
@@ -72,16 +76,16 @@ This work is a derivation and enhancement and anything other than ISO 639-3 is t
 
 The ISO 639-3 codes in this version are effective from **11 March 2022** until the Maintenance Agency publishes new codes.
 
-### Codes
+#### Codes
 
 The `Iso639Code` enum in the `BenBurgers.InternationalStandards.Iso.Iso639` namespace defines the codes from the ISO 639 language codes standard.
 In order to effectively store, read, write and transfer the codes, extension methods have been made available in `Iso639CodeExtensions`.
 
-#### Part 1
+##### Part 1
 
 Before requesting a value for ISO 639-1, it is possible to request whether a Part 1 code has been designated by calling the `HasPart1` method.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -99,7 +103,7 @@ Console.Write(hasPart1.ToString());
 
 The method `ToPart1` returns the Alpha-2 code for ISO 639-1 or `null` if it has not been designated or deprecated if deprecated codes are not allowed.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -115,11 +119,11 @@ Console.Write(part1);
 */
 ```
 
-#### Part 2
+##### Part 2
 
 Before requesting a value for ISO 639-2T or ISO 639-2B, it is possible to request whether a Part 2 code has been designated by calling the `HasPart2` method.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -137,7 +141,7 @@ Console.Write(hasPart2.ToString());
 
 The method `ToPart2` returns the Alpha-3 code for either ISO 639-2T or ISO 639-2B, or `null` if it has not been designated or deprecated if deprecated codes are not allowed.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -156,11 +160,11 @@ Console.WriteLine(part2B);
 */
 ```
 
-#### Part 3
+##### Part 3
 
 Before requesting a value for ISO 639-3, it is possible to request whether a Part 3 code has been designated by calling the `HasPart3` method.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -178,7 +182,7 @@ Console.Write(hasPart3.ToString());
 
 The method `ToPart3` returns the Alpha-3 code for ISO 639-3, or `null` if it has not been designated or deprecated if deprecated codes are not allowed.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -194,11 +198,11 @@ Console.Write(part3);
 */
 ```
 
-#### Model
+##### Model
 
 For requesting a code's metadata all at once, the method `ToModel` returns a record containing the metadata.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -222,7 +226,7 @@ Console.WriteLine(languageType.ToString());
 */
 ```
 
-#### Language Type
+##### Language Type
 
 The ISO 639 standard defines the following language types:
 
@@ -241,7 +245,7 @@ The ISO 639 standard defines the following language types:
 
 For their descriptions and usages, please refer to [SIL International's page about language types](https://iso639-3.sil.org/about/types).
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -257,11 +261,11 @@ Console.Write(languageType.ToString());
 */
 ```
 
-#### From text
+##### From text
 
 Converting a code from text is possible with the `ToIso639` and `TryToIso639` extension methods on `string`.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -277,7 +281,7 @@ Console.Write(code.ToString());
 */
 ```
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso639;
@@ -297,24 +301,24 @@ if (Value.TryToIso639(out var code)) {
 */
 ```
 
-## ISO 3166 country codes
+### ISO 3166 country codes
 
-### Legal
+#### Legal
 
 The [ISO 3166 Maintenance Agency](https://www.iso.org/iso-3166-country-codes.html) is the sole authority of ISO 3166 codes.
 Only they can designate ISO 3166 codes.
 This work is a derivation and enhancement and anything other than the ISO 3166 codes is the responsibility of the respective copyright holders.
 
-### Codes
+#### Codes
 
 The `Iso3166Code` enum in the `BenBurgers.InternationalStandards.Iso.Iso3166` namespace defines the codes from the ISO 3166 country codes standard.
 In order to effectively store, read, write and transfer the codes, extension methods have been made available in `Iso3166CodeExtensions`.
 
-#### Alpha-2
+##### Alpha-2
 
 To request the Alpha-2 two-letter code for ISO 3166 codes, the `ToAlpha2` method may be called.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -330,11 +334,11 @@ Console.Write(alpha2);
 */
 ```
 
-#### Alpha-3
+##### Alpha-3
 
 To request the Alpha-3 three-letter code for ISO 3166 codes, the `ToAlpha3` method may be called.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -350,11 +354,11 @@ Console.Write(alpha3);
 */
 ```
 
-#### Numeric
+##### Numeric
 
 The numeric value of ISO 3166 codes is the integer value of the `enum` field.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -370,11 +374,11 @@ Console.Write(numeric.ToString());
 */
 ```
 
-#### Model
+##### Model
 
 For requesting a code's metadata all at once, the method `ToModel` returns a record containing the metadata.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -394,12 +398,12 @@ Console.WriteLine(alpha3.Value);
 */
 ```
 
-#### Name
+##### Name
 
 The extension method `GetName` provides a localized name (in one of the supported cultures of the packages) for the country.
 These names are not part of the ISO 3166 standard, but provided by the package itself.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -417,11 +421,11 @@ Console.Write(name);
 */
 ```
 
-#### From text
+##### From text
 
 The `ToIso3166` and `TryToIso3166` methods convert a code from `string` to the `enum` value.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -439,7 +443,7 @@ Console.WriteLine(code.ToString());
 
 Using `TryToIso3166`:
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso3166;
@@ -459,9 +463,9 @@ if (Value.TryToIso3166(out var code)) {
 */
 ```
 
-## ISO 4217 currency codes
+### ISO 4217 currency codes
 
-### Legal
+#### Legal
 
 The [SIX Financial Information AG](https://www.six-group.com/en/products-services/financial-information/data-standards.html) is the Maintenance Agency of ISO 4217 codes.
 Only they can designate ISO 4217 codes.
@@ -469,16 +473,16 @@ This work is a derivation and enhancement and anything other than the ISO 4217 c
 
 The ISO 4217 codes in this version were published at **23 September 2022**.
 
-### Codes
+#### Codes
 
 The `Iso4217Code` enum in the `BenBurgers.InternationalStandards.Iso.Iso4217` namespace defines the codes from the ISO 4217 currency codes standard.
 In order to effectively store, read, write and transfer the codes, extension methods have been made available in `Iso4217CodeExtensions`.
 
-#### Alpha-3
+##### Alpha-3
 
 To retrieve the Alpha-3 three-letter code of the ISO 4217 code, one may call the method `ToAlpha`.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -494,11 +498,11 @@ Console.Write(alpha);
 */
 ```
 
-#### Numeric
+##### Numeric
 
 The ISO 4217 numeric code is the integer value.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -514,11 +518,11 @@ Console.Write(numeric.ToString());
 */
 ```
 
-#### Model
+##### Model
 
 A model with all metadata can be requested with the method `ToModel`.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -542,11 +546,11 @@ Console.WriteLine(string.Join(", ", model.Entities));
 */
 ```
 
-#### Entities
+##### Entities
 
 The method `GetEntities` returns the entities that trade a currency.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -562,11 +566,11 @@ Console.Write(string.Join(", ", entities));
 */
 ```
 
-#### Reference Name
+##### Reference Name
 
 To get an ISO 4217 code's reference name, the method `GetReferenceName` may be called.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -582,11 +586,11 @@ Console.Write(referenceName);
 */
 ```
 
-#### Minor Units
+##### Minor Units
 
 A currency may also have a number of digits as decimals. The method `GetMinorUnits` returns that number, if applicable and available.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -602,11 +606,11 @@ Console.Write(minorUnits!.ToString());
 */
 ```
 
-#### From text
+##### From text
 
 The methods `ToIso4217` and `TryToIso4217` may be called on a `string` to convert a three-letter text to the ISO 4217 code.
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -624,7 +628,7 @@ Console.Write(code.ToString());
 
 Using `TryToIso4217`:
 
-##### Example
+###### Example
 
 ```csharp
 using BenBurgers.InternationalStandards.Iso.Iso4217;
@@ -644,7 +648,7 @@ if (Value.TryToIso4217(out var code)) {
 */
 ```
 
-## Comparers
+### Comparers
 
 All ISO codes have comparers.
 These can be found in the namespaces.
@@ -654,3 +658,45 @@ These can be found in the namespaces.
 - `BenBurgers.InternationalStandards.Iso.Iso639.Comparers`
 
 A useful application could be in a `SortedDictionary<...>` with the ISO code as its items.
+
+### ISO 8601 date and time
+
+The ISO 8601 standard describes how dates and times (or a combination thereof) are formatted.
+
+The `BenBurgers.InternationalStandards.Iso.Iso8601` namespace contains the following value types:
+
+- `Iso8601CalendarDate`
+- `Iso8601OrdinalDate`
+- `Iso8601Time`
+- `Iso8601DateTime`
+
+Please review the [official ISO 8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html) for more information.
+This is the only authority that maintains the standard.
+
+The value types support conversion from and to the .NET value types for times and dates by means of explicit casting or the methods provided.
+
+The `ToString` and (static) `Parse`/`TryParse` methods provide ways to print or read the formatted values.
+
+#### ISO 8601 Calendar Date
+
+An ISO 8601 Calendar Date may have the following format: `2023-02-02` (`yyyy-MM-dd`).
+From the least significant up to the most significant component, components may be omitted, such as `2023-02` and `2023`.
+The year is the only required component.
+
+#### ISO 8601 Ordinal Date
+
+An ISO 8601 Ordinal Date may have the following format: `2023-10` (`yyyy-DDD`).
+In this case the latter component is the day of the year, rather than month and day of month.
+
+#### ISO 8601 Time
+
+An ISO 8601 Time may have the following format: `23:10:05,0123+02:00` (`HH:mm:ss,ssss+HH:mm`).
+It is comprised of an hour, minute, second, fraction and UTC offset to indicate the time zone.
+As with the date, the least significant components may be omitted in order.
+The time zone may be included or omitted in any case.
+A special case of the time zone is the letter `Z` instead of `+02:00` or `-03:30`. The `Z` indicates the UTC time and is used instead of `+00:00`.
+
+#### ISO 8601 Date and Time
+
+The ISO 8601 Date and Time combination combines the Date and Time components as described above.
+If both are specified, they will be separated by the letter `T`; e.g. `2023-02-02T23:10:05,0123+02:00`.

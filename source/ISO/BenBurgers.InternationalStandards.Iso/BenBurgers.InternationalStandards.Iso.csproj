@@ -16,7 +16,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/benburgers/InternationalStandards</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;ISO639;ISO3166;ISO4217</PackageTags>
+		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;Date;Time;ISO639;ISO3166;ISO4217;ISO8601</PackageTags>
 		<PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>

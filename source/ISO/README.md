@@ -1,11 +1,13 @@
 # Introduction
 
-The collection of packages to which this package belongs contains codes, features and tools for standards of the International Organization for Standardization (ISO).
+This collection of packages contains codes, features and tools for standards of the International Organization for Standardization (ISO).
 
 > The *International Organization for Standardization* (*ISO*) is an international standard development organization composed of representatives from the national standards organizations of member countries.
 > The organization develops and publishes standardization in all technical and nontechnical fields other than electrical and electronic engineering.[^1]
 
 [^1]: [Wikipedia](https://en.wikipedia.org/wiki/International_Organization_for_Standardization), downloaded at 31 October 2022, 23:33 CET.
+
+You are kindly encouraged to buy the standards you use at the [ISO Store](https://www.iso.org/store.html) in order to fund their mission.
 
 # GitHub Sponsors
 

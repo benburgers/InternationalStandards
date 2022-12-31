@@ -5,9 +5,11 @@
 - [Packages](#Packages)
 - [Manual](#Manual)
     - [Supported ISO standards](#Supported-ISO-standards)
-    - [ISO 639 language codes](#ISO-639-language-codes)
-    - [ISO 3166 country codes](#ISO-3166-country-codes)
-    - [ISO 4217 currency codes](#ISO-4217-currency-codes)
+        - [ISO 639 language codes](#ISO-639-language-codes)
+        - [ISO 3166 country codes](#ISO-3166-country-codes)
+        - [ISO 4217 currency codes](#ISO-4217-currency-codes)
+        - [ISO 8601 date and time](#ISO-8601-date-and-time)
+    - [Supported languages](#Supported-languages)
 
 # Introduction
 
@@ -19,6 +21,8 @@ The `BenBurgers.InternationalStandards.Iso.IO` package contains JSON features fo
 > The organization develops and publishes standardization in all technical and nontechnical fields other than electrical and electronic engineering.[^1]
 
 [^1]: [Wikipedia](https://en.wikipedia.org/wiki/International_Organization_for_Standardization), downloaded at 31 October 2022, 23:33 CET.
+
+You are kindly encouraged to buy the standards you use at the [ISO Store](https://www.iso.org/store.html) in order to fund their mission.
 
 # GitHub Sponsors
 
@@ -139,6 +143,15 @@ writer.Flush();
 * {"Currency":"EUR"}
 */
 ```
+
+### ISO 8601 date and time
+
+Each ISO 8601 value type has its own JSON converter.
+
+- `Iso8601CalendarDateJsonConverter` for `Iso8601CalendarDate`.
+- `Iso8601DateTimeJsonConverter` for `Iso8601DateTime`.
+- `Iso8601OrdinalDateJsonConverter` for `Iso8601OrdinalDate`.
+- `Iso8601TimeJsonConverter` for `Iso8601Time`.
 
 ## Supported Languages
 

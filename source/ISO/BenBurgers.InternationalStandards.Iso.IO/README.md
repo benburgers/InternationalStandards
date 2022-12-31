@@ -20,6 +20,8 @@ The `BenBurgers.InternationalStandards.Iso.IO` package contains I/O features for
 
 [^1]: [Wikipedia](https://en.wikipedia.org/wiki/International_Organization_for_Standardization), downloaded at 31 October 2022, 23:33 CET.
 
+You are kindly encouraged to buy the standards you use at the [ISO Store](https://www.iso.org/store.html) in order to fund their mission.
+
 # GitHub Sponsors
 
 If you like my contributions, please have a look at my [GitHub Sponsors profile](https://github.com/sponsors/benburgers).
