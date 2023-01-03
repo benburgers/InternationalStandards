@@ -7,7 +7,9 @@ using BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.Operatio
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
+#if NET7_0_OR_GREATER
 using Microsoft.EntityFrameworkCore.Update;
+#endif
 
 namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations;
 
@@ -16,6 +18,18 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations;
 /// </summary>
 internal sealed class IsoMigrationsSqlGenerator : SqlServerMigrationsSqlGenerator
 {
+#if NET6_0
+    /// <summary>
+    /// Initializes a new instance of <see cref="IsoMigrationsSqlGenerator" />.
+    /// </summary>
+    /// <param name="dependencies">
+    /// The dependencies.
+    /// </param>
+    /// <param name="relationAnnotationProvider">
+    /// The relation annotation provider.
+    /// </param>
+#endif
+#if NET7_0_OR_GREATER
     /// <summary>
     /// Initializes a new instance of <see cref="IsoMigrationsSqlGenerator" />.
     /// </summary>
@@ -25,10 +39,23 @@ internal sealed class IsoMigrationsSqlGenerator : SqlServerMigrationsSqlGenerato
     /// <param name="commandBatchPreparer">
     /// The command batch preparer.
     /// </param>
+#endif
     public IsoMigrationsSqlGenerator(
         MigrationsSqlGeneratorDependencies dependencies,
+#if NET6_0
+        IRelationalAnnotationProvider relationAnnotationProvider)
+#endif
+#if NET7_0_OR_GREATER
         ICommandBatchPreparer commandBatchPreparer)
-        : base(dependencies, commandBatchPreparer)
+#endif
+        : base(
+            dependencies,
+#if NET6_0
+            relationAnnotationProvider)
+#endif
+#if NET7_0_OR_GREATER
+            commandBatchPreparer)
+#endif
     {
     }
 

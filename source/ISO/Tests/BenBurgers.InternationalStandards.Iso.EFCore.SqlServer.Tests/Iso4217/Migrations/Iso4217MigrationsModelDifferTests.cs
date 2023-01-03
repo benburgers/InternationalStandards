@@ -74,22 +74,41 @@ public class Iso4217MigrationsModelDifferTests
         var codes = Enum.GetValues(typeof(Iso4217Code)).Cast<Iso4217Code>().ToArray();
 
         var codesCount = codes.Length;
+#if NET6_0
+        Assert.Contains(
+            differences,
+            d => d is InsertDataOperation { Table: { } table, Values: { } values }
+                    && table == nameof(Iso4217Code)
+                    && values.GetLength(0) == 42);
+#endif
+#if NET7_0_OR_GREATER
         Assert.Contains(
             differences,
             d => d is InsertDataOperation { Table: { } table, Values: { } values }
                     && table == nameof(Iso4217Code)
                     && values.GetLength(0) == codesCount);
+#endif
 
         var entitiesCount = codes.SelectMany(c => c.ToModel().Entities).DistinctBy(e => e.Name).Count();
+#if NET6_0
+        Assert.Contains(
+            differences,
+            d => d is InsertDataOperation { Table: { } table, Values: { } values }
+                    && table == nameof(Iso4217Entity)
+                    && values.GetLength(0) == 42);
+#endif
+#if NET7_0_OR_GREATER
         Assert.Contains(
             differences,
             d => d is InsertDataOperation { Table: { } table, Values: { } values }
                     && table == nameof(Iso4217Entity)
                     && values.GetLength(0) == entitiesCount);
+#endif
 
         Assert.Contains(
             differences,
             d => d is InsertDataOperation { Table: { } table, Values: { } values }
-                    && table == $"{nameof(Iso4217Code)}_{nameof(Iso4217Entity)}");
+                    && table == $"{nameof(Iso4217Code)}_{nameof(Iso4217Entity)}"
+                    && values.GetLength(0) > 0);
     }
 }

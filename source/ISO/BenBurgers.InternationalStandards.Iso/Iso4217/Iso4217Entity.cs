@@ -13,9 +13,11 @@ namespace BenBurgers.InternationalStandards.Iso.Iso4217;
 /// </param>
 public sealed record Iso4217Entity(string Name)
 {
+    /// <summary>
+    /// Gets or initializes the ISO 4217 models that are associated with this entity.
+    /// </summary>
+    public IReadOnlyList<Iso4217Model> Models { get; init; } = new List<Iso4217Model>();
+
     /// <inheritdoc />
-    public override string ToString()
-    {
-        return this.Name;
-    }
+    public override string ToString() => this.Name;
 }

@@ -23,7 +23,17 @@
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>
 	</PropertyGroup>
 
-	<ItemGroup Label="Package References">
+	<ItemGroup Label="Package References NET 6.0" Condition="$(TargetFramework) == 'net6.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Label="Package References NET 7.0" Condition="$(TargetFramework) == 'net7.0'">
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
 		  <PrivateAssets>all</PrivateAssets>
 		</PackageReference>

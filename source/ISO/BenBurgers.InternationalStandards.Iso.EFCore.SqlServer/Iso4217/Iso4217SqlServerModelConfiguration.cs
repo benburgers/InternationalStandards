@@ -42,7 +42,7 @@ internal sealed class Iso4217SqlServerModelConfiguration : IEntityTypeConfigurat
         builder.ToTable(nameof(Iso4217Code), this.schemaName);
         builder
             .HasMany(m => m.Entities)
-            .WithMany()
+            .WithMany(e => e.Models)
             .UsingEntity(etp =>
             {
                 etp.ToTable($"{nameof(Iso4217Code)}_{nameof(Iso4217Entity)}", this.schemaName);
@@ -50,12 +50,13 @@ internal sealed class Iso4217SqlServerModelConfiguration : IEntityTypeConfigurat
                     Enum
                         .GetValues(typeof(Iso4217Code))
                         .Cast<Iso4217Code>()
-                        .SelectMany(c => {
+                        .SelectMany(c =>
+                        {
                             var model = c.ToModel();
                             return model.Entities.Select(
                                 e => new
                                 {
-                                    Iso4217ModelCurrencyNumber = model.CurrencyNumber,
+                                    ModelsCurrencyNumber = model.CurrencyNumber,
                                     EntitiesName = e.Name
                                 });
                         }));
