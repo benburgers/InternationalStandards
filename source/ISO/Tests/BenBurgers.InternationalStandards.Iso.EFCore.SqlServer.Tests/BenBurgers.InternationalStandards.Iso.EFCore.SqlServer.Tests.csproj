@@ -9,8 +9,6 @@
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
 		<PackageReference Include="xunit" Version="2.4.2" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -23,8 +21,14 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup Label="Project References">
-		<ProjectReference Include="..\..\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.csproj" />
+	<ItemGroup Label="Package References NET 6.0" Condition="$(TargetFramework) == 'net6.0'">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup Label="Package References NET 7.0" Condition="$(TargetFramework) == 'net7.0'">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Label="AppSettings">
@@ -37,6 +41,10 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<DependentUpon>appsettings.json</DependentUpon>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer\BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.csproj" />
 	</ItemGroup>
 
 </Project>

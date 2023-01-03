@@ -75,10 +75,19 @@ public class Iso639MigrationsModelDifferTests
         var codes = Enum.GetValues(typeof(Iso639Code)).Cast<Iso639Code>().ToArray();
 
         var codesCount = codes.Length;
+#if NET6_0
+        Assert.Contains(
+            differences,
+            d => d is InsertDataOperation { Table: { } table, Values: { } values }
+                    && table == nameof(Iso639Code)
+                    && values.GetLength(0) == 42);
+#endif
+#if NET7_0_OR_GREATER
         Assert.Contains(
             differences,
             d => d is InsertDataOperation { Table: { } table, Values: { } values }
                     && table == nameof(Iso639Code)
                     && values.GetLength(0) == codesCount);
+#endif
     }
 }

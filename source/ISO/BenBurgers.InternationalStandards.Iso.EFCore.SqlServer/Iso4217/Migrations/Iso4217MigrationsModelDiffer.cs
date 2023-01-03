@@ -7,11 +7,15 @@ using BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Exceptions;
 using BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Infrastructure;
 using BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Migrations.Operations;
 using BenBurgers.InternationalStandards.Iso.Iso4217;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Migrations.Internal;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Storage;
+#if NET6_0
+using Microsoft.EntityFrameworkCore.Update;
+#endif
 using Microsoft.EntityFrameworkCore.Update.Internal;
 using System.Diagnostics.CodeAnalysis;
 
@@ -23,6 +27,27 @@ namespace BenBurgers.InternationalStandards.Iso.EFCore.SqlServer.Iso4217.Migrati
 [SuppressMessage("Usage", "EF1001:Internal EF Core API usage.", Justification = "Enhancement of EF Core API.")]
 internal sealed class Iso4217MigrationsModelDiffer : MigrationsModelDiffer
 {
+#if NET6_0
+    /// <summary>
+    /// Initializes a new instance of <see cref="Iso4217MigrationsModelDiffer" />.
+    /// </summary>
+    /// <param name="typeMappingSource">
+    /// The type mapping source.
+    /// </param>
+    /// <param name="migrationsAnnotationProvider">
+    /// The migrations annotation provider.
+    /// </param>
+    /// <param name="changeDetector">
+    /// The change detector.
+    /// </param>
+    /// <param name="updateAdapterFactory">
+    /// The update adapter factory.
+    /// </param>
+    /// <param name="commandBatchPreparerDependencies">
+    /// The command batch preparer dependencies.
+    /// </param>
+#endif
+#if NET7_0_OR_GREATER
     /// <summary>
     /// Initializes a new instance of <see cref="Iso4217MigrationsModelDiffer" />.
     /// </summary>
@@ -38,12 +63,29 @@ internal sealed class Iso4217MigrationsModelDiffer : MigrationsModelDiffer
     /// <param name="commandBatchPreparerDependencies">
     /// The command batch preparer dependencies.
     /// </param>
+#endif
     public Iso4217MigrationsModelDiffer(
         IRelationalTypeMappingSource typeMappingSource,
         IMigrationsAnnotationProvider migrationsAnnotationProvider,
+#if NET6_0
+        IChangeDetector changeDetector,
+        IUpdateAdapterFactory updateAdapterFactory,
+#endif
+#if NET7_0_OR_GREATER
         IRowIdentityMapFactory rowIdentityMapFactory,
+#endif
         CommandBatchPreparerDependencies commandBatchPreparerDependencies)
-        : base(typeMappingSource, migrationsAnnotationProvider, rowIdentityMapFactory, commandBatchPreparerDependencies)
+        : base(
+            typeMappingSource,
+            migrationsAnnotationProvider,
+#if NET6_0
+            changeDetector,
+            updateAdapterFactory,
+#endif
+#if NET7_0_OR_GREATER
+            rowIdentityMapFactory,
+#endif
+            commandBatchPreparerDependencies)
     {
     }
 

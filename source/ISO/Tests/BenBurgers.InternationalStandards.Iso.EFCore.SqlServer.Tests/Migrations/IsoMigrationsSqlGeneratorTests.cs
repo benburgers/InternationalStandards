@@ -75,9 +75,17 @@ public class IsoMigrationsSqlGeneratorTests
 
         // Assert
         Assert.NotEmpty(commands);
+#if NET6_0
+        Assert.Equal(11, commands.Count);
+        Assert.Equal("EXEC ('DENY DELETE ON SCHEMA :: BBIso TO public')", commands[8].CommandText);
+        Assert.Equal("EXEC ('DENY INSERT ON SCHEMA :: BBIso TO public')", commands[9].CommandText);
+        Assert.Equal("EXEC ('DENY UPDATE ON SCHEMA :: BBIso TO public')", commands[10].CommandText);
+#endif
+#if NET7_0_OR_GREATER
         Assert.Equal(6, commands.Count);
         Assert.Equal("EXEC ('DENY DELETE ON SCHEMA :: BBIso TO public')", commands[3].CommandText);
         Assert.Equal("EXEC ('DENY INSERT ON SCHEMA :: BBIso TO public')", commands[4].CommandText);
         Assert.Equal("EXEC ('DENY UPDATE ON SCHEMA :: BBIso TO public')", commands[5].CommandText);
+#endif
     }
 }
