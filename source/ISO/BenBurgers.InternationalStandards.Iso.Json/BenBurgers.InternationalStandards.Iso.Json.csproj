@@ -11,7 +11,7 @@
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
 		<Description>JSON features for international standards as adopted by the International Organization for Standardization (ISO). This may include country codes, language codes and more.</Description>
-		<Copyright>© 2022 Ben Burgers and contributors.</Copyright>
+		<Copyright>© 2022-2023 Ben Burgers and contributors.</Copyright>
 		<PackageProjectUrl>https://github.com/users/benburgers/projects/1</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/benburgers/InternationalStandards</RepositoryUrl>
