@@ -23,6 +23,11 @@
 		<Configurations>Debug;Release;Test</Configurations>
 	</PropertyGroup>
 
+	<ItemGroup Label="Package References">
+		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.4.0" />
+		<PackageReference Include="BenBurgers.Text.Csv" Version="1.1.0" />
+	</ItemGroup>
+
 	<ItemGroup Label="Resources">
 		<Compile Update="**\ExceptionMessages.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -52,14 +57,6 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="BenBurgers.Text.Csv" Version="1.1.0" />
 	</ItemGroup>
 
 	<Target Name="ReleaseNotes" BeforeTargets="GenerateNuspec">

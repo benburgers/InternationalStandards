@@ -16,12 +16,16 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/benburgers/InternationalStandards</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;ISO639;ISO3166;ISO4217;JSON;Serialization</PackageTags>
+		<PackageTags>International;Standards;ISO;Code;Country;Currency;Language;Date;Time;ISO639;ISO3166;ISO4217;ISO8601;JSON;Serialization</PackageTags>
 		<PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Configurations>Debug;Release;Test</Configurations>
 		<PackageReleaseNotes>Imported from ReleaseNotes.txt</PackageReleaseNotes>
 	</PropertyGroup>
+
+	<ItemGroup Label="Package References">
+		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.4.0" />
+	</ItemGroup>
 
 	<ItemGroup Label="Package References NET 6.0" Condition="$(TargetFramework) == 'NET6.0'">
 		<PackageReference Include="System.Text.Json" Version="6.0.7" />
@@ -29,10 +33,6 @@
 	
 	<ItemGroup Label="Package References NET 7.0" Condition="$(TargetFramework) == 'NET7.0'">
 		<PackageReference Include="System.Text.Json" Version="7.0.1" />
-	</ItemGroup>
-
-	<ItemGroup Label="Project References">
-		<ProjectReference Include="..\BenBurgers.InternationalStandards.Iso\BenBurgers.InternationalStandards.Iso.csproj" />
 	</ItemGroup>
 
 	<ItemGroup Label="Resources">
