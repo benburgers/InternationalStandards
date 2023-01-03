@@ -1,5 +1,5 @@
 ﻿/*
- * © 2022 Ben Burgers and contributors.
+ * © 2022-2023 Ben Burgers and contributors.
  * This work is licensed by GNU General Public License version 3.
  */
 
@@ -29,7 +29,7 @@ internal class CopyrightNotice : CodeCommentStatementCollection
     {
         return new CodeCommentStatement[]
         {
-            new("© 2022 Ben Burgers and contributors."),
+            new("© 2022-2023 Ben Burgers and contributors."),
             new("This work is licensed by GNU General Public License version 3.")
         };
     }
