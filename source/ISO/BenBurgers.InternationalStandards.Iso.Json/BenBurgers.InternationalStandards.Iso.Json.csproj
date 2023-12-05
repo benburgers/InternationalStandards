@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup Label="Project Properties">
-		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>ISO standards JSON features</Title>
-		<Version>0.4.0</Version>
+		<Version>0.5.0</Version>
 		<Authors>benburgers</Authors>
 		<Company>Ben Burgers</Company>
 		<Product>Ben Burgers International Standards</Product>
@@ -24,15 +24,19 @@
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.4.0" />
+		<PackageReference Include="BenBurgers.InternationalStandards.Iso" Version="0.5.0" />
 	</ItemGroup>
 
 	<ItemGroup Label="Package References NET 6.0" Condition="$(TargetFramework) == 'NET6.0'">
-		<PackageReference Include="System.Text.Json" Version="6.0.7" />
+		<PackageReference Include="System.Text.Json" Version="6.0.9" />
 	</ItemGroup>
 	
 	<ItemGroup Label="Package References NET 7.0" Condition="$(TargetFramework) == 'NET7.0'">
-		<PackageReference Include="System.Text.Json" Version="7.0.1" />
+		<PackageReference Include="System.Text.Json" Version="7.0.4" />
+	</ItemGroup>
+
+	<ItemGroup Label="Package References NET 8.0" Condition="$(TargetFramework) == 'NET8.0'">
+		<PackageReference Include="System.Text.Json" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Label="Resources">

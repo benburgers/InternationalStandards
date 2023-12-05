@@ -1,3 +1,6 @@
+Version 0.5.0
+- .NET 8.0 support.
+
 Version 0.4.0
 - Added Entity Framework Core features for value converters and model builders.
 - ISO 3166: Breaking change; Iso3166AlphaMode moved from JSON package to main package.
