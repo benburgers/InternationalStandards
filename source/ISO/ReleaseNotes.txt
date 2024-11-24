@@ -1,3 +1,7 @@
+Version 0.6.0
+- .NET 9.0 support, .NET 6.0 and .NET 7.0 deprecated.
+- .NET Entity Framework Core 8 and 9 support.
+
 Version 0.5.0
 - .NET 8.0 support.
 

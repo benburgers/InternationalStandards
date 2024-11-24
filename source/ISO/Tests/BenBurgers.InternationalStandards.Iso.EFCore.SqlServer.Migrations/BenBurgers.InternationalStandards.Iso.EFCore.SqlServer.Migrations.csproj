@@ -1,19 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup Label="Project Settings">
-		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
-	<ItemGroup Label="Package References NET 6.0" Condition="$(TargetFramework) == 'net6.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+	<ItemGroup Label="Package References NET 8.0" Condition="$(TargetFramework) == 'net8.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 	</ItemGroup>
 	
-	<ItemGroup Label="Package References NET 7.0" Condition="$(TargetFramework) == 'net7.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+	<ItemGroup Label="Package References NET 9.0" Condition="$(TargetFramework) == 'net9.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 	</ItemGroup>
