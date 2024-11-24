@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// © 2022-2023 Ben Burgers and contributors.
+// © 2022-2024 Ben Burgers and contributors.
 // This work is licensed by GNU General Public License version 3.
 namespace BenBurgers.InternationalStandards.Iso.Iso639 {
     using BenBurgers.InternationalStandards.Iso.Iso639.Attributes;

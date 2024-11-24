@@ -1,5 +1,5 @@
 ﻿/*
- * © 2022-2023 Ben Burgers and contributors.
+ * © 2022-2024 Ben Burgers and contributors.
  * This work is licensed by GNU General Public License version 3.
  */
 
@@ -14,11 +14,10 @@ public class Iso8601CalendarDateJsonConverterTests
     public record MockRecord(Iso8601CalendarDate CalendarDate);
 
     public static readonly IEnumerable<object?[]> ConverterParameters =
-        new[]
-        {
-            new object?[] { "{\"CalendarDate\":\"2023-10-12\"}", new MockRecord(new Iso8601CalendarDate(2023, 10, 12)) },
-            new object?[] { "{\"CalendarDate\":\"2023-12-10\"}", new MockRecord(new Iso8601CalendarDate(2023, 12, 10)) }
-        };
+        [
+            ["{\"CalendarDate\":\"2023-10-12\"}", new MockRecord(new Iso8601CalendarDate(2023, 10, 12))],
+            ["{\"CalendarDate\":\"2023-12-10\"}", new MockRecord(new Iso8601CalendarDate(2023, 12, 10))]
+        ];
 
     [Theory(DisplayName = "Iso8601CalendarDateJsonConverter :: Deserialize")]
     [MemberData(nameof(ConverterParameters))]
